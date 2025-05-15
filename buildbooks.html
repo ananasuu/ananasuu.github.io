@@ -1,0 +1,32 @@
+    <h2>Buildbooks</h2>
+    <ul>
+    </ul>
+
+    <script>
+        const links = [
+            {
+                title: "Laudna - Critical Role",
+                url: "https://example.com/link1",
+                description: "Build book for Laudna from Critical Role, competed and placed 3rd at 2024 Dokomi.",
+                imageUrl: "https://example.com/image1.jpg"
+            },
+            {
+                title: "Marcille Donato - Delicious in Dungeon",
+                url: "https://example.com/link2",
+                description: "Build book for Marcille Donato from Delicious in Dungeon, competed and placed 1st at 2025 S.a.m.t Con.",
+                imageUrl: "https://example.com/image2.jpg"
+            }
+        ];
+
+        const ul = document.querySelector('ul');
+
+        links.forEach(link => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <a href="${link.url}">${link.title}</a>
+                <img src="${link.imageUrl}" alt="${link.title}" />
+                <p>${link.description}</p>
+            `;
+            ul.appendChild(li);
+        });
+    </script>

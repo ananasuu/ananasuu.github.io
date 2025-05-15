@@ -1,12 +1,26 @@
-<div>
-    <h2>Nützliche Links</h2>
-    <ul>
-        <li>
-            <img src="https://example.com/image1.jpg" alt="Image 1" />
-            <a href="#">Link 1</a>
-            <p>Description</p>
-        </li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
+    <h2>Helpful Links</h2>
+        <ul>
     </ul>
-</div>
+
+    <script>
+        const links = [
+            {
+                title: "Tutorial - How to tech",
+                url: "https://example.com/link1",
+                description: "Light up your cosplay with this tutorial on how to tech your cosplay.",
+                imageUrl: "https://example.com/image1.jpg"
+            }
+        ];
+
+        const ul = document.querySelector('ul');
+
+        links.forEach(link => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <a href="${link.url}" target="_blank">${link.title}</a>
+                <img src="${link.imageUrl}" alt="${link.title}" />
+                <p>${link.description}</p>
+            `;
+            ul.appendChild(li);
+        });
+    </script>
