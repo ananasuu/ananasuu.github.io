@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Ninus Cosplay Resourcen</title>
+</head>
+<body>
+        <h1>Ninus Cosplay Resourcen</h1>
+        <p>Welcome to my collection of helpful links, tools & build books!</p>
+        <div class="browser">        
+            <p class="tab-item active">Links</p>
+            <p class="tab-item">Tools</p>
+            <p class="tab-item">Build Books</p>
+            <div class="window">
+                
+            </div>
+        </div>
+
+    <script>
+        // Function to load content into the window
+        function loadContent(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('.window').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading content:', error));
+        }
+
+        // Add event listeners to tab items
+        document.querySelectorAll('.tab-item').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+                // Add active class to the clicked tab
+                tab.classList.add('active');
+
+                // Load content based on the tab clicked
+                if (tab.textContent === 'Links') {
+                    loadContent('links.html');
+                } else if (tab.textContent === 'Tools') {
+                    loadContent('tools.html');
+                } else if (tab.textContent === 'Build Books') {
+                    loadContent('buildbooks.html');
+                }
+            });
+        });
+
+        // Load initial content (Links tab)
+        loadContent('links.html');
+    </script>
+</body>
+</html>
