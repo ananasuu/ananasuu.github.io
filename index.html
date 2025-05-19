@@ -15,9 +15,9 @@
     <h1>Ninus Cosplay Resourcen</h1>
     <p>Welcome to my collection of helpful links, tools & build books!</p>
     <div class="browser">
+        <p class="tab-item">Build Books</p>
         <p class="tab-item active">Links</p>
         <p class="tab-item">Tools</p>
-        <p class="tab-item">Build Books</p>
         <div class="content">
         </div>
     </div>
@@ -46,6 +46,7 @@
                 contentDiv.appendChild(tools());
             } else if (tab === 'Build Books') {
                 contentDiv.appendChild(document.createElement('h2')).textContent = 'Ninus Build Books';
+                contentDiv.appendChild(document.createElement('p')).textContent = 'Here are some of my build books, I hope they help you with your own builds! All of them were created with canva.';
                 contentDiv.appendChild(buildbooks());
             }
         }
