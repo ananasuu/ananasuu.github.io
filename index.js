@@ -32,12 +32,10 @@ const toolLinks = [
             }
         ];
 
+        function simpleCard(links) {
+             const ul = document.createElement('ul');
 
-export function buildbooks() {
-        const ul = document.createElement('ul');
-        
-
-        bbLinks.forEach(link => {
+        links.forEach(link => {
             const li = document.createElement('li');
             li.innerHTML = `
                 <a href="${link.url}">${link.title}</a>
@@ -47,21 +45,15 @@ export function buildbooks() {
             ul.appendChild(li);
         });
         return ul;
+        }
+        
+
+export function buildbooks() {
+       return simpleCard(bbLinks);
 }
 
 export function links() {
-        const ul = document.createElement('ul');
-        
-        helpfulLinks.forEach(link => {
-            const li = document.createElement('li');
-            li.innerHTML = `
-                <a href="${link.url}" target="_blank">${link.title}</a>
-                <img src="${link.imageUrl}" alt="${link.title}" />
-                <p>${link.description}</p>
-            `;
-            ul.appendChild(li);
-        });
-        return ul;
+        return simpleCard(helpfulLinks);
 }
 
 export function tools() {
@@ -69,6 +61,7 @@ export function tools() {
         
         toolLinks.forEach(link => {
             const li = document.createElement('li');
+            li.classList.add('tool-link');
             li.innerHTML = `
                 <p>Use: ${link.use}</p>
                 <a href="${link.url}">${link.title}</a>
