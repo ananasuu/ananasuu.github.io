@@ -48,15 +48,19 @@ body {
         padding-inline: 1rem;
         padding-block: 0.5rem;
         margin: 0;
-                    border-color: #a75a2d;
+        border-color: #a75a2d;
 
+        &:hover {
+            cursor: pointer;
+        }
 
         &:not(.active) {
             background-color: #CF7F50;
         }
 
         &.active {
-            background-color: #DDAC8A;        }
+            background-color: #DDAC8A;
+        }
     }
 
     .content {
@@ -92,9 +96,11 @@ body {
                 padding: 0.75rem;
                 background-color: var(--yellow-bg);
 
-                :not(:last-of-type) {
-                    margin-bottom: 1rem;
+
+                &:not(:last-of-type) {
+                    margin-block-end: 0.75rem;
                 }
+
                 img {
                     grid-area: img;
                     width: 100px;
@@ -102,6 +108,7 @@ body {
                     object-fit: cover;
                     border-radius: 10px;
                 }
+
                 a {
                     grid-area: title;
                     font-size: 1.5rem;
@@ -109,6 +116,7 @@ body {
                     font-weight: bold;
                     margin-left: 1rem;
                 }
+
                 p {
                     grid-area: desc;
                     font-size: 1rem;
@@ -118,5 +126,31 @@ body {
         }
     }
 
-    
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        color: #333;
+        margin-block-start: 0.5rem;
+
+        a {
+            color: #333;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+
+        div {
+            margin-block-end: 0.5rem;
+        }
+    }
+
 }
