@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Ninus Cosplay Resourcen</title>
 </head>
-<body>
-        <h1>Ninus Cosplay Resourcen</h1>
-        <p>Welcome to my collection of helpful links, tools & build books!</p>
-        <div class="browser">        
-            <p class="tab-item active">Links</p>
-            <p class="tab-item">Tools</p>
-            <p class="tab-item">Build Books</p>
-            <div class="window">
-                
-            </div>
-        </div>
 
-    <script>
-        // Function to load content into the window
-        function loadContent(url) {
-            fetch(url)
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector('.window').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading content:', error));
+<body>
+    <h1>Ninus Cosplay Resourcen</h1>
+    <p>Welcome to my collection of helpful links, tools & build books!</p>
+    <div class="browser">
+        <p class="tab-item active">Links</p>
+        <p class="tab-item">Tools</p>
+        <p class="tab-item">Build Books</p>
+        <div class="content">
+        </div>
+    </div>
+
+    <script type="module">
+        import { buildbooks, links, tools } from './index.js';
+
+        const contentDiv = document.querySelector('.content');
+
+        function loadContent(tab = 'Links') {
+            if (tab === 'Links') {
+                contentDiv.appendChild(document.createElement('h2')).textContent = 'Helpful Links';
+                contentDiv.appendChild(links())
+            } else if (tab === 'Tools') {
+                contentDiv.appendChild(document.createElement('h2')).textContent = 'Helpful Tools';
+                contentDiv.appendChild(tools());
+            } else if (tab === 'Build Books') {
+                contentDiv.appendChild(document.createElement('h2')).textContent = 'Ninus Build Books';
+                contentDiv.appendChild(buildbooks());
+            }
         }
 
-        // Add event listeners to tab items
+        // Load content based on the tab clicked
         document.querySelectorAll('.tab-item').forEach(tab => {
             tab.addEventListener('click', () => {
                 // Remove active class from all tabs
                 document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
-                // Add active class to the clicked tab
                 tab.classList.add('active');
 
-                // Load content based on the tab clicked
-                if (tab.textContent === 'Links') {
-                    loadContent('links.html');
-                } else if (tab.textContent === 'Tools') {
-                    loadContent('tools.html');
-                } else if (tab.textContent === 'Build Books') {
-                    loadContent('buildbooks.html');
-                }
+                contentDiv.innerHTML = ''; // Clear previous content
+                loadContent(tab.textContent);
             });
         });
 
-        // Load initial content (Links tab)
-        loadContent('links.html');
+        loadContent(); // Load default content
     </script>
 </body>
+
 </html>

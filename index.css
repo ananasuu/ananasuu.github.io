@@ -1,7 +1,7 @@
 :root {
-    --yellow-bg: #fefff8;
-    --orange-browser: #ffedcb;
-    --orange-browser-border: 1px solid #f7d8a0;
+    --yellow-bg: #FDF7E9;
+    --orange-browser: #908E58;
+    --orange-browser-border: 1px solid #626B3C;
 }
 
 html {
@@ -9,7 +9,8 @@ html {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #fefff8;
+    background-color: var(--orange-browser);
+    font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -17,16 +18,21 @@ body {
     width: fit-content;
     max-width: 95%;
     max-height: 95%;
-    background-color: var(--orange-browser);
+    background-color: var(--yellow-bg);
     border: var(--orange-browser-border);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    box-sizing: border-box;
 
     .browser {
         display: grid;
         grid-template-columns: repeat(3, auto) 1fr;
         grid-template-rows: auto 1fr;
+
+        h2 {
+            margin-block: 0.5rem;
+        }
     }
 
     .tab-item {
@@ -42,9 +48,18 @@ body {
         padding-inline: 1rem;
         padding-block: 0.5rem;
         margin: 0;
+                    border-color: #a75a2d;
+
+
+        &:not(.active) {
+            background-color: #CF7F50;
+        }
+
+        &.active {
+            background-color: #DDAC8A;        }
     }
 
-    .window {
+    .content {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -53,6 +68,55 @@ body {
         padding: 10px;
         grid-row: 2;
         grid-column: 1 / 5;
-        border: var(--orange-browser-border)
+        border: 1px solid #a75a2d;
+        background-color: #DDAC8A;
+        box-sizing: border-box;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: grid;
+                grid-template-areas: 'img title title' 'img desc desc';
+                grid-template-columns: 1fr 2fr 2fr;
+                grid-template-rows: auto auto;
+                margin: 0;
+                box-sizing: border-box;
+                border-radius: 10px;
+                padding: 0.75rem;
+                background-color: var(--yellow-bg);
+
+                :not(:last-of-type) {
+                    margin-bottom: 1rem;
+                }
+                img {
+                    grid-area: img;
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+                a {
+                    grid-area: title;
+                    font-size: 1.5rem;
+                    color: black;
+                    font-weight: bold;
+                    margin-left: 1rem;
+                }
+                p {
+                    grid-area: desc;
+                    font-size: 1rem;
+                    margin-left: 1rem;
+                }
+            }
+        }
     }
+
+    
 }
