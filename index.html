@@ -8,63 +8,107 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Ninus Cosplay Resourcen</title>
+    <title>NinuMakes</title>
 </head>
 
-<body>
-    <h1>Ninus Cosplay Resourcen</h1>
-    <p>Welcome to my collection of helpful links, tools & build books!</p>
-    <div class="browser">
-        <p class="tab-item active">Build Books</p>
-        <p class="tab-item">Links</p>
-        <p class="tab-item">Tools</p>
-        <div class="content">
-        </div>
-    </div>
-    <footer>
-        <div>
-        <a href="Instagram" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" width="30" height="30"/></a>
-        <a href="email" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/gmail-new.png" alt="Gmail" width="30" height="30"/></a>
-        <a href="Tiktok" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/tiktok--v1.png" alt="Tiktok" width="30" height="30"/></a>
-        </div>
-        <p>Created by Nina Friedrich</p>
-        <p>Source code available on <a href="https://github.com/ananasuu/ananasuu.github.io">ananasuu's repository.</a></p>
-    </footer>
-</body>
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="" alt="" /></span>
+						<h1>NinuMakes</h1>
+						<p>Cosplay | Crafting | Developing<br /></p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Introduction</a></li>
+							<li><a href="#cosplays">Cosplays & Buildbooks</a></li>
+							<li><a href="#helpfulLinks">Helpful Links</a></li>
+							<li><a href="#tools">Tools</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Nina Friedrich</h2>
+										</header>
+										<p>Started by simply gathering matching clothes, ended up competing in completely selfmade outfits with magical props. I've been actively making cosplays from scratch since 2022 and started my career as a software developer shortly after.</p>
+									</div>
+									<span class="image"><img src="/assets/img/Pfp.png" alt="" /></span>
+								</div>
+							</section>
+
+							<section id="cosplays" class="main special">
+								<header class="major">
+									<h2>Cosplays & Buildbooks</h2>
+									<p>All my costumes! If you're interested in having a photoshoot with me, send me an <a href="https://www.instagram.com/ninumakes/" target="_blank">Instagram DM</a> or an <a href="mailto:nina.friedrich02@gmail.com">E-mail</a>!</p>
+									<p>If available, I've linked my build books. I hope they help you with your own builds! All of them were created with canva.</p>
+								</header>
+								<!--Cosplays are inserted here-->
+							</section>
+
+						 <section id="helpfulLinks" class="main special">
+								<header class="major">
+									<h2>Helpful Links</h2>
+									<p>Learning from others is the best way to improve your own skills. Here are some of my favorite resources!</p>
+									</header>
+								<!--Helpful links are inserted here-->
+								</ul>
+							</section>
+
+						 <section id="tools" class="main special">
+								<header class="major">
+									<h2>Tools</h2>
+									<p>Sometimes you're just missing the right tool for the job.</p> 
+								</header>
+								<!--Tools are inserted here-->
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+							<h2>Impressum</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>Nina Friedrich<br/> c/o autorenglück.de<br /> Franz-Mehring-Str. 15 <br/> 01237 Dresden</dd>
+								<dt>Email</dt>
+								<dd><a href="mailto:nina.friedrich02@gmail.com">nina.friedrich02@gmail.com</a></dd>
+							</dl>
+							<ul>
+								<li><a href="https://www.instagram.com/ninumakes/">
+									<img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" />
+								</a></li>
+								<li><a href="https://github.com/ananasuu">
+									<img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" />
+								</a></li>
+								<li><a href="https://www.tiktok.com/@ananasu.exe">
+									<img src="https://img.icons8.com/ios-filled/50/000000/tiktok--v1.png" alt="TikTok" />
+								</a></li>
+							</ul>
+							<p class="copyright">© Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
 
     <script type="module">
-        import { buildbooks, links, tools } from './index.js';
+        import {  links, tools, cosplays } from './index.js';
 
-        const contentDiv = document.querySelector('.content');
+            const linksSection = document.querySelector('#helpfulLinks');
+            const toolsSection = document.querySelector('#tools');
+            const cosplaysSection = document.querySelector('#cosplays');
 
-        function loadContent(tab = 'Build Books') {
-            if (tab === 'Links') {
-                contentDiv.appendChild(document.createElement('h2')).textContent = 'Helpful Links';
-                contentDiv.appendChild(links())
-            } else if (tab === 'Tools') {
-                contentDiv.appendChild(document.createElement('h2')).textContent = 'Helpful Tools';
-                contentDiv.appendChild(tools());
-            } else if (tab === 'Build Books') {
-                contentDiv.appendChild(document.createElement('h2')).textContent = 'Ninus Build Books';
-                contentDiv.appendChild(document.createElement('p')).textContent = 'Here are some of my build books, I hope they help you with your own builds! All of them were created with canva.';
-                contentDiv.appendChild(buildbooks());
-            }
-        }
-
-        // Load content based on the tab clicked
-        document.querySelectorAll('.tab-item').forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs
-                document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-
-                contentDiv.innerHTML = ''; // Clear previous content
-                loadContent(tab.textContent);
-            });
-        });
-
-        loadContent(); // Load default content
-    </script>
+            linksSection.appendChild(links());
+            toolsSection.appendChild(tools());
+            cosplaysSection.appendChild(cosplays());
+                </script>
 </body>
 
 </html>
