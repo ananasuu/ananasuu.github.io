@@ -1,31 +1,38 @@
 const helpfulLinks = [
     {
-        title: "Tutorial - Sewing a Corset",
+        title: "Sewing a Corset",
+        use: "Tutorial",
         url: "https://www.youtube.com/watch?v=alQGJQzRRFo&ab_channel=SarahSpaceman",
         description: "Easily pattern and sew a corset.",
         imageUrl: "http://img.youtube.com/vi/alQGJQzRRFo/hqdefault.jpg"
     }, {
-        title: "Cosplay Materials & Tools of the Trade",
+        title: "Materials & Tools",
+        use: "Collection",
         url: "https://www.belloflostsouls.net/2022/08/tools-of-the-trade-a-guide-to-cosplay-materials.html",
-        description: "A guide to cosplay materials and tools, amazing for beginners!",
+        description: "Cosplay materials and tools overview.",
         imageUrl: "https://www.belloflostsouls.net/wp-content/themes/bols-2022/img/logo-2021a.svg"
     },
     {
-        title: "Tutorial - Ears on a Budget",
+        title: "Ears on a Budget",
+        use: "Tutorial",
         url: "https://www.tiktok.com/@ananasu.exe/video/7289790044393442593",
-        description: "A tutorial on how to make animal ears on a budget.",
+        description: "How to make animal ears on a budget.",
         imageUrl: ""
     },
-        {
-            title: "Tutorial - Maidheadband",
-            url: "https://www.tiktok.com/@ananasu.exe/video/7246414817773260059",
-            description: "A tutorial on how to make a simple maid headband.",
-            imageUrl: ""
-        },
     {
-        title: "Tutorial - How to make horns",
+        title: "Maidheadband",
+        use: "Tutorial",
+
+        url: "https://www.tiktok.com/@ananasu.exe/video/7246414817773260059",
+        description: "How to make a simple maid headband.",
+        imageUrl: ""
+    },
+    {
+        title: "How to make horns",
+        use: "Tutorial",
+
         url: "https://www.tiktok.com/@ananasu.exe/video/7247592635219627290",
-        description: "A tutorial on how to make lightweight horns without a 3d-Printer.",
+        description: "How to make lightweight horns without a 3d-Printer.",
         imageUrl: ""
     },
 ];
@@ -56,42 +63,48 @@ const toolLinks = [
 
 const cosPortfolio = [
     {
-        title: "Marcille Donato - Delicious in Dungeon",
+        title: "Marcille Donato",
+        source: "Delicious in Dungeon",
         imageUrl: "assets/img/card_img/Marcille_Donato_NF.jpg",
         genres: "Silly, Powerful & Hungry!",
         description: "Marcille Donato is a character from a story about adventurers cooking and eating monsters. I made this cosplay for the 2025 S.a.m.t Con cosplay contest and placed 1st.",
         buildbookUrl: "https://drive.google.com/file/d/1fD7-P-gT0MA40vvP3u0L8dax4ZUXiO20/view?usp=drive_link"
     },
     {
-        title: "Frieren - Sousou no Frieren",
+        title: "Frieren",
+        source: "Frieren: Beyond Journey's End",
         imageUrl: "assets/img/card_img/Frieren_NF.jpg",
         genres: "Adventurous, Wise & Kind!",
         description: "Frieren is a character from a story about an elf mage who travels to understand humanity. I competed with this cosplay at the 2024 Bijutsu & won best in craftsmanship.",
         buildbookUrl: ""
     },
     {
-        title: "Laudna - Critical Role",
+        title: "Laudna",
+        source: "Critical Role",
         imageUrl: "assets/img/card_img/Laudna_NF.jpg",
         genres: "Dark, Spooky & Fun!",
         description: "Laudna is a character from Critical Role, a D&D show. I made this cosplay for the 2024 Dokomi cosplay contest and placed 3rd.",
         buildbookUrl: "https://drive.google.com/file/d/1p_WrvoevjBnTGTBLTPl9-cajugDPxGX6/view?usp=drive_link"
     },
     {
-        title: "Tohru - Miss Kobayashi's Dragon Maid",
+        title: "Tohru",
+        source: "Miss Kobayashi's Dragon Maid",
         imageUrl: "assets/img/card_img/Tohru_NF.jpg",
         genres: "Cute, Outgoing & Funny!",
         description: "Tohru is a dragon mastering her life with her savior Miss Kobayashi. This slice of life anime is a pure comfort show.",
         buildbookUrl: ""
     },
     {
-        title: "Haru - Beastars",
+        title: "Haru",
+        source: "Beastars",
         imageUrl: "assets/img/card_img/Haru_NF.jpg",
         genres: "Dramatic, Inspiring & Tough!",
         description: "Haru is living in a world where carnivores and herbivores are at odds. She is a strong character who fights for her beliefs.",
         buildbookUrl: ""
     },
     {
-        title: "Fearne Calloway - Critical Role",
+        title: "Fearne Calloway",
+        source: "Critical Role",
         imageUrl: "assets/img/card_img/Fearne_NF.jpg",
         genres: "Silly, Mischievous & Fun!",
         description: "Fearne is a character from Critical Role, a D&D show. Her fey nature healed something in me & she enchants enyone who meets her.",
@@ -105,8 +118,9 @@ export function links() {
     helpfulLinks.forEach(link => {
         const li = document.createElement('li');
         li.innerHTML = `
-                <a href="${link.url}">${link.title}</a>
-                <span><img src="${link.imageUrl}" alt="${link.title}" /></span>
+                <h3><a href="${link.url}">${link.title}</a></h3>
+                <p>${link.use}</p>
+                <img src="${link.imageUrl}" alt="" />
                 <p>${link.description}</p>
                 <a class="button" href="${link.url}">Visit Link</a>
             `;
@@ -124,8 +138,9 @@ export function cosplays() {
         const li = document.createElement('li');
         li.innerHTML = `
                 <h3>${cos.title}</h3>
-                <img src="${cos.imageUrl}" alt="${cos.title}" />
-                <p>${cos.genres}</p>
+                <p class="source">${cos.source}</p>
+                <img src="${cos.imageUrl}" alt="" />
+                <p class="genres">${cos.genres}</p>
                 <p>${cos.description}</p>
                 <a class="button primary" href="${cos.buildbookUrl}">Build Book</a>
             `;
@@ -142,7 +157,7 @@ export function tools() {
         li.innerHTML = `
                 <h3><a href="${link.url}">${link.title}</a></h3>
                 <p>Use: ${link.use}</p>
-                <span><img src="${link.imageUrl}" alt="${link.title}" /></span>
+                <img src="${link.imageUrl}" alt="" />
                 <p>${link.description}</p>
                 <a class="button" href="${link.url}">Visit Tool</a>
             `;

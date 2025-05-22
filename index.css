@@ -273,12 +273,6 @@ button,
 
 /* List */
 
-ul {
-	list-style: disc;
-	margin: 0 0 2em 0;
-	padding-left: 1em;
-}
-
 ul li {
 	padding-left: 0.5em;
 }
@@ -388,15 +382,6 @@ header.major h2:after {
 	#footer .copyright {
 		text-align: left;
 	}
-
-	.features li {
-		width: calc(50% - 2em);
-	}
-
-	.features li:nth-child(3) {
-		margin-top: 3em;
-	}
-
 }
 
 /* Spotlight */
