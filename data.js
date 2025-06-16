@@ -65,7 +65,7 @@ export const cosPortfolio = [
     {
         title: "Marcille Donato",
         source: "Delicious in Dungeon",
-        imageUrl: "assets/img/card_img/Marcille_Donato_NF.jpg",
+        imageUrl: "assets/img/card_img/Marcille_NF.jpg",
         genres: "Silly, Powerful & Hungry!",
         description: "Marcille Donato is a character from a story about adventurers cooking and eating monsters. I made this cosplay for the 2025 S.a.m.t Con cosplay contest and placed 1st.",
         buildbookUrl: "https://drive.google.com/file/d/1fD7-P-gT0MA40vvP3u0L8dax4ZUXiO20/view?usp=drive_link"

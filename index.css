@@ -104,6 +104,7 @@ body {
 	min-width: 430px;
 }
 
+
 /* Type */
 
 a {
@@ -344,7 +345,7 @@ header.major h2:after {
 	background-color: #ffffff;
 	color: var(--dark-font);
 	position: absolute;
-	width: min(calc(100% - 4em), 64em);
+	width: 100%;
 	padding: 1em;
 	background-color: var(--light-grey);
 	border-top-left-radius: var(--rounded-corners);
@@ -352,6 +353,7 @@ header.major h2:after {
 	cursor: default;
 	text-align: center;
 	box-sizing: border-box;
+
 }
 
 #nav+#main {
@@ -496,4 +498,5 @@ h2:after {
 #wrapper {
 	width: min(calc(100% - 4em), 64em);
 	margin-inline: auto;
+	position: relative;
 }
