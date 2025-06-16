@@ -480,15 +480,15 @@ h2:after {
 	box-sizing: border-box;
 }
 
-ul li img {
+#main ul li img {
 	width: 100%;
 	height: 200px;
 	object-fit: cover;
 	border-radius: var(--rounded-corners); 
 }
 
-ul li img[src$=".png"],
-ul li img[src$=".svg"]{
+#main ul li img[src$=".png"],
+#main ul li img[src$=".svg"]{
 	width: auto;
 	height: 200px;
 	object-fit:initial;
