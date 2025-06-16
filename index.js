@@ -29,11 +29,7 @@ export function cosplays() {
                 <img src="${cos.imageUrl}" alt="" />
                 <p class="genres">${cos.genres}</p>
                 <p>${cos.description}</p>
-                ${
-                    cos.buildbookUrl.length > 0
-                        ? `<a class="button primary" href="${cos.buildbookUrl}">Build Book</a>`
-                        : ''
-                }
+<a class="button primary" href="${cos.buildbookUrl}">Build Book</a>
             `;
         ul.appendChild(li);
     });

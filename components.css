@@ -40,13 +40,12 @@ section>header {
 	}
 
 	img {
-		width: 100%;
-		height: auto;
 		max-width: 100%;
 		border-radius: 8px;
 		grid-area: img;
 		margin-top: 0.5em;
 		align-self: center;
+		justify-self: center;
 	}
 
 	p:last-of-type {
