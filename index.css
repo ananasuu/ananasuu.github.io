@@ -1,3 +1,4 @@
+
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 @import '/components.css';
 
@@ -24,7 +25,7 @@
 * {
 	font-size: var(--font-size);
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
-	font-weight: 300;
+	font-weight: 350;
 	line-height: 1.65;
 	box-sizing: border-box;
 }
@@ -171,11 +172,44 @@ button,
 
 /* Image */
 
+
 .image, .image img {
 	border-radius: 8px;
 	border: 0;
 	display: inline-block;
 	position: relative;
+}
+
+/* Profilbild Hover mit Animation und Bildwechsel */
+.pfp-hover {
+	width: 272px;
+	height: 272px;
+	border-radius: 100%;
+	background-image: url('/assets/img/Nina_Pfp.jpg');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	overflow: hidden;
+}
+
+.pfp-hover::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: 100%;
+	background-image: url('/assets/img/Fun_Pfp.jpg');
+	background-size: cover;
+	background-position: center;
+	opacity: 0;
+	transform: scale(0.95) rotate(-2deg);
+	transition: opacity 0.5s cubic-bezier(.77,0,.18,1), transform 0.5s cubic-bezier(.77,0,.18,1);
+	z-index: 2;
+}
+
+.pfp-hover:hover::after {
+	opacity: 1;
+	transform: scale(1.1) rotate(-2deg);
 }
 
 /* List */
@@ -309,12 +343,8 @@ header.major h2:after {
 
 }
 
-.spotlight .image img {
-	border-radius: 100%;
-	width: 100%;
-	max-width: 17rem;
-	height: auto;
-}
+
+/* Runde Bilder direkt über die Klasse .rounded */
 
 /* Header */
 
@@ -480,11 +510,12 @@ h2:after {
 	box-sizing: border-box;
 }
 
+
 #main ul li img {
 	width: 100%;
 	height: 200px;
 	object-fit: cover;
-	border-radius: var(--rounded-corners); 
+	border-radius: var(--rounded-corners);
 }
 
 #main ul li img[src$=".png"],
@@ -509,13 +540,14 @@ a[href=""] {
 
 	padding: max(5em, 2.5em) max(5em, 1em) max(3em, 0.5em) max(5em, 1em);
 	width: calc(100% + 2em);
-	margin: 0 0 3em -2em;
+	margin: 0 0 1em -2em;
 }
 
 #footer .copyright {
 	width: 100%;
 	font-size: 0.8em;
 	text-align: center;
+	margin-top: 1rem;
 }
 
 #wrapper {
