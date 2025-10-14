@@ -17,28 +17,28 @@ export const helpfulLinks = [
         use: "Tutorial",
         url: "https://www.tiktok.com/@ananasu.exe/video/7289790044393442593",
         description: "How to make animal ears on a budget.",
-        imageUrl: "https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-p-0037-euttp/cc81863956734430857f52871b6252f3_1697286521~tplv-tiktokx-origin.image?dr=10395&x-expires=1750233600&x-signature=%2F0j1shSUbtWId65U7kv59gkm0U0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a"
+        imageUrl: "assets/img/tool_img/ears.avif"
     },
     {
         title: "Maidheadband",
         use: "Tutorial",
         url: "https://www.tiktok.com/@ananasu.exe/video/7246414817773260059",
         description: "How to make a simple maid headband.",
-        imageUrl: "https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-p-0037-euttp/091bfec8b32f4251a4737f23a771bfa8_1687461672~tplv-tiktokx-origin.image?dr=10395&x-expires=1750233600&x-signature=rUc8OhJbZGI9RLjzhRw89bavNZE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a"
+        imageUrl: "assets/img/tool_img/maidband.avif"
     },
     {
         title: "How to make horns",
         use: "Tutorial",
         url: "https://www.tiktok.com/@ananasu.exe/video/7247592635219627290",
         description: "How to make lightweight horns without a 3d-Printer.",
-        imageUrl: "https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-p-0037-euttp/091bfec8b32f4251a4737f23a771bfa8_1687461672~tplv-tiktokx-origin.image?dr=10395&x-expires=1750233600&x-signature=rUc8OhJbZGI9RLjzhRw89bavNZE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a"
+        imageUrl: "assets/img/tool_img/horns.jpeg"
     },
     {
         title: "How to 'understitching'",
         use: "Tutorial",
         url: "https://www.tiktok.com/@nikki.drafts/video/7515194801763962117?q=understitching&t=1750061393219",
         description: "Ever wondered why your seams don't lay flat? This is the solution!",
-        imageUrl: "https://p16-sign-va.tiktokcdn.com/tos-maliva-p-0068/oEReVQABfAEIA5DeIdtLuuIg0Fj7qlRApSEECA~tplv-photomode-zoomcover:720:720.jpeg?dr=10375&x-expires=1750233600&x-signature=bFMrL6RADu%2BXCC69G%2BSYr7aPXE8%3D&t=4d5b0474&ps=13740610&shp=b59d6b55&shcp=43f4a2f9&idc=no1a&ftpl=1"
+        imageUrl: "assets/img/tool_img/understitch.jpeg"
     }
 ];
 
