@@ -301,6 +301,10 @@ header.major h2:after {
 		margin-block: 3em;
 	}
 
+	.pfp-hover {
+		margin-top: 5em;
+	}
+
 	#footer {
 		padding: 4em 3em 2em 3em;
 		display: block;
@@ -370,7 +374,7 @@ header.major h2:after {
 
 /* Nav */
 
-#nav {
+nav {
 	transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 	background-color: #ffffff;
 	color: var(--dark-font);
@@ -383,21 +387,22 @@ header.major h2:after {
 	cursor: default;
 	text-align: center;
 	box-sizing: border-box;
+	z-index: 1000;
 
 }
 
-#nav+#main {
+nav+#main {
 	padding-top: 4.25em;
 }
 
-#nav ul {
+nav ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	width: 100%;
 }
 
-#nav ul li {
+nav ul li {
 	transition: margin 0.2s ease;
 	display: inline-block;
 	margin: 0 0.35em;
@@ -405,7 +410,7 @@ header.major h2:after {
 	vertical-align: middle;
 }
 
-#nav ul li a {
+nav ul li a {
 	transition: font-size 0.2s ease;
 	display: inline-block;
 	height: 2.25em;
@@ -416,7 +421,7 @@ header.major h2:after {
 	box-shadow: inset 0 0 0 1px transparent;
 }
 
-#nav ul li a:hover {
+nav ul li a:hover {
 	background-color: rgba(222, 222, 222, 0.25);
 }
 
@@ -437,13 +442,13 @@ header.major h2:after {
 #main h4,
 #main h5,
 #main h6,
-#nav a:hover,
-#nav h1,
-#nav h2,
-#nav h3,
-#nav h4,
-#nav h5,
-#nav h6,
+nav a:hover,
+nav h1,
+nav h2,
+nav h3,
+nav h4,
+nav h5,
+nav h6,
 #main label,
 #main dl dt {
 	color: var(--dark-font);
@@ -511,7 +516,8 @@ h2:after {
 }
 
 
-#main ul li img {
+#main ul li img,
+.cosplay-info img {
 	width: 100%;
 	height: 200px;
 	object-fit: cover;

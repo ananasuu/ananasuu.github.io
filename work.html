@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<title>Nina Friedrich</title>
+</head>
+
+<div id="wrapper">
+
+	<header id="header" class="alt">
+		<h1>Nina Friedrich</h1>
+		<p>Developing | Accessibility | Cosplay</p>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#about" class="active">About</a></li>
+			<li><a href="#resume">Resume</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#certificates">Certificates</a></li>
+			<li><a href="#projects">Projects</a></li>
+		</ul>
+	</nav>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- Introduction -->
+		<section class="main spotlight">
+			<div class="content">
+				<header class="major">
+					<h2>Nina Friedrich</h2>
+				</header>
+				<p>I’m passionate about building user-centered, maintainable and accessible frontends that create real
+					impact.</p>
+					<p>With hands-on experience in modern web development and responsive design, I focus on
+					crafting digital experiences that are not only visually appealing but also inclusive and
+					sustainable.</p>
+			</div>
+			<div class="pfp-hover"></div>
+		</section>
+
+		<section class="main special">
+			<header class="major">
+				<h2>About Me</h2>
+				<p>Get to know me better!</p>
+			</header>
+			<div id="about">
+				<!--About is inserted here-->
+			</div>
+			<div class="cosplay-info">
+				<h2>Interested in my Creativity?</h2>
+				<img src="assets/img/card_img/Marcille_NF.jpg" alt="" />
+				<p>Check out my cosplay portfolio to find out more about my work and passion for costume design.</p>
+				<a class="button primary" href="/">My Cosplay Portfolio</a>
+			</div>
+		</section>
+
+		<section id="resume" class="main special">
+			<header class="major">
+				<h2>Resume</h2>
+			</header>
+			<!--Resume is inserted here-->
+		</section>
+
+		<section id="skills" class="main special">
+			<header class="major">
+				<h2>Skills</h2>
+			</header>
+			<!--Skills are inserted here-->
+			</ul>
+		</section>
+
+		<section id="certificates" class="main special">
+			<header class="major">
+				<h2>Certificates</h2>
+				<p>While certificates can't fully capture practical skills, they do demonstrate a commitment to learning and
+					professional development. Here are some of the certifications I've earned to validate my knowledge
+					and expertise in various areas of web development and related fields.				</p>
+			</header>
+			<!--Certificates are inserted here-->
+		</section>
+
+		<section id="projects" class="main special">
+			<header class="major">
+				<h2>Projects</h2>
+				<p>Aufgrund der Vertraulichkeit unternehmensinterner Projekte können keine öffentlichen
+					Repositories bereitgestellt werden. Die beschriebenen Ergebnisse basieren auf meiner praktischen
+					Arbeit innerhalb der jeweiligen Entwicklungsumgebung.</p>
+			</header>
+			<!--Projects are inserted here-->
+		</section>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<h2>Impressum</h2>
+		<p>Nina Friedrich<br /> c/o autorenglück.de<br /> Franz-Mehring-Str. 15 <br /> 01237 Dresden <br /><a
+				href="mailto:nina.friedrich02@gmail.com">nina.friedrich02@gmail.com</a></p>
+		<ul>
+			<li><a href="https://www.instagram.com/ninumakes/">
+					<img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" />
+				</a></li>
+			<li><a href="https://github.com/ananasuu">
+					<img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" />
+				</a></li>
+			<li><a href="https://www.tiktok.com/@ananasu.exe">
+					<img src="https://img.icons8.com/ios-filled/50/000000/tiktok--v1.png" alt="TikTok" />
+				</a></li>
+		</ul>
+		<p class="copyright">© Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+	</footer>
+
+</div>
+
+<script type="module">
+	import { about, resume, skills, certificates, projects } from './index.js';
+
+	const aboutSection = document.querySelector('#about');
+	const resumeSection = document.querySelector('#resume');
+	const skillsSection = document.querySelector('#skills');
+	const certificatesSection = document.querySelector('#certificates');
+	const projectsSection = document.querySelector('#projects');
+
+	aboutSection.appendChild(about());
+	resumeSection.appendChild(resume());
+	skillsSection.appendChild(skills());
+	certificatesSection.appendChild(certificates());
+	projectsSection.appendChild(projects());
+
+</script>
+</body>
+
+</html>
