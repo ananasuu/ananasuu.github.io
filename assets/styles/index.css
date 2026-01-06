@@ -32,38 +32,8 @@
 }
 
 html,
-body,
-div,
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-img,
-ol,
-ul,
-li,
-article,
-aside,
-footer,
-header,
-menu,
-nav,
-section {
-	margin: 0;
-	padding: 0;
-	vertical-align: baseline;
-}
-
-footer,
-header,
-menu,
-nav,
-section {
-	display: block;
+body {
+	min-width: 430px;
 }
 
 body {
@@ -76,33 +46,25 @@ body {
 
 ul {
 	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		padding-left: 0;
+	}
 }
-
-
-html,
-body {
-	min-width: 430px;
-}
-
-
-/* Type */
 
 a {
 	transition: color 0.2s ease, border-bottom 0.2s ease;
 	text-decoration: none;
 	border-bottom: dotted 1px;
 	color: inherit;
-}
 
-h1,
-h2,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.7em 0;
+	&[ref=""] {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
 }
-
-/* Button */
 
 button,
 .button {
@@ -148,359 +110,33 @@ button,
 	}
 }
 
-/* Image */
+section {
+        padding: clamp(2.5em, 7vw, 7em) clamp(1em, 5vw, 5em) clamp(0.5em, 4vw, 4em) clamp(1em, 5vw, 5em);
 
 
-.image,
-.image img {
-	border-radius: 8px;
-	border: 0;
-	display: inline-block;
-	position: relative;
-}
-
-/* Profilbild Hover mit Animation und Bildwechsel */
-.pfp-hover {
-	width: 272px;
-	height: 272px;
-	border-radius: 100%;
-	background-image: url('/assets/img/Nina_Pfp.jpg');
-	background-size: cover;
-	background-position: center;
-	position: relative;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-	overflow: hidden;
-}
-
-.pfp-hover::after {
-	content: '';
-	position: absolute;
-	inset: 0;
-	border-radius: 100%;
-	background-image: url('/assets/img/Fun_Pfp.jpg');
-	background-size: cover;
-	background-position: center;
-	opacity: 0;
-	transform: scale(0.95) rotate(-2deg);
-	transition: opacity 0.5s cubic-bezier(.77, 0, .18, 1), transform 0.5s cubic-bezier(.77, 0, .18, 1);
-	z-index: 2;
-}
-
-.pfp-hover:hover::after {
-	opacity: 1;
-	transform: scale(1.1) rotate(-2deg);
-}
-
-/* List */
-
-ul li {
-	padding-left: 0.5em;
-}
-
-dl {
-	margin: 0 0 2em 0;
-
-	dt {
-		display: block;
-		font-weight: 400;
-		margin: 0 0 1em 0;
-		color: #ffffff;
-
-	}
-
-	dd {
-		margin-left: 2em;
-	}
-}
-
-
-/* Section/Article */
-
-section.special {
-	text-align: center;
-}
-
-header.major {
-	margin-bottom: 3em;
-}
-
-header.major h2 {
-	font-size: 2em;
-}
-
-header.major h2:after {
-	display: block;
-	content: '';
-	width: 3.25em;
-	height: 2px;
-	margin: 0.7em 0 1em 0;
-	border-radius: 2px;
-}
-
-section.special header.major h2:after {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-header.major.special {
-	text-align: center;
-}
-
-header.major.special h2:after {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-header.major h2:after {
-	background-color: rgba(255, 255, 255, 0.35);
-}
-
-@media screen and (max-width: 980px) {
-
-	.spotlight {
-		flex-direction: column-reverse;
+	&:not(:first-of-type) {
 		text-align: center;
 	}
 
-	.spotlight .content {
-		flex: 0 1 auto;
-		width: 100%;
-		justify-content: center;
-		width: calc(100% + 1em);
-	}
+	header {
+		margin-bottom: 3em;
 
-	.spotlight .content header.major h2:after {
-		margin-left: auto;
-		margin-right: auto;
-	}
+		h2 {
+			font-size: 2em;
+			width: fit-content;
+			justify-self: center;
 
-	.spotlight .image {
-		flex: 0 1 auto;
-		margin-left: 0;
-		margin-block: 3em;
-	}
-
-	.pfp-hover {
-		margin-top: 5em;
-	}
-
-	#footer {
-		padding: 4em 3em 2em 3em;
-		display: block;
-		margin: 0 0 3em 0;
-		width: 100%;
-	}
-
-	#footer .copyright {
-		text-align: left;
-	}
-}
-
-/* Spotlight */
-
-.spotlight {
-	display: flex;
-	align-items: center;
-	margin: 0 0 2em 0;
-}
-
-.spotlight .content {
-	flex: 1;
-}
-
-.spotlight .content> :last-child {
-	margin-bottom: 0;
-}
-
-.spotlight .content header.major {
-	margin: 0 0 2em 0;
-}
-
-.spotlight .image {
-	display: inline-block;
-	padding: 0.65em;
-	border-radius: 100%;
-	border: solid 1px;
-	max-width: 100%;
-	border-color: rgba(255, 255, 255, 0.35);
-
-}
-
-
-/* Runde Bilder direkt über die Klasse .rounded */
-
-/* Header */
-
-#header.alt {
-	padding-block: 3em;
-}
-
-#header {
-	text-align: center;
-
-	h1 {
-		margin: 0 0 0.25em 0;
-		font-size: 2.5em;
-	}
-}
-
-
-#header.alt>* {
-	transition: opacity 3s ease;
-	transition-delay: 0.5s;
-	opacity: 1;
-}
-
-/* Nav */
-
-nav {
-	transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-	background-color: #ffffff;
-	color: var(--dark-font);
-	position: absolute;
-	width: 100%;
-	padding: 1em;
-	background-color: var(--light-grey);
-	border-top-left-radius: var(--rounded-corners);
-	border-top-right-radius: var(--rounded-corners);
-	cursor: default;
-	text-align: center;
-	box-sizing: border-box;
-	z-index: 1000;
-
-}
-
-nav+#main {
-	padding-top: 4.25em;
-}
-
-nav ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	width: 100%;
-}
-
-nav ul li {
-	transition: margin 0.2s ease;
-	display: inline-block;
-	margin: 0 0.35em;
-	padding: 0;
-	vertical-align: middle;
-}
-
-nav ul li a {
-	transition: font-size 0.2s ease;
-	display: inline-block;
-	height: 2.25em;
-	line-height: 2.25em;
-	padding: 0 1.25em;
-	border: 0;
-	border-radius: 8px;
-	box-shadow: inset 0 0 0 1px transparent;
-}
-
-nav ul li a:hover {
-	background-color: rgba(222, 222, 222, 0.25);
-}
-
-/* Main */
-
-#main {
-	background-color: #ffffff;
-	border-radius: var(--rounded-corners);
-}
-
-#main,
-#main a:hover,
-#main strong,
-#main b,
-#main h1,
-#main h2,
-#main h3,
-#main h4,
-#main h5,
-#main h6,
-nav a:hover,
-nav h1,
-nav h2,
-nav h3,
-nav h4,
-nav h5,
-nav h6,
-#main label,
-#main dl dt {
-	color: var(--dark-font);
-}
-
-
-#main button,
-#main .button {
-	background-color: transparent;
-	box-shadow: inset 0 0 0 1px #dddddd;
-	color: var(--dark-font) !important;
-
-	&:hover {
-		background-color: rgba(222, 222, 222, 0.25);
-
-	}
-
-	&:active {
-		background-color: rgba(222, 222, 222, 0.5);
-	}
-
-	&.primary {
-		background-color: #8cc9f0;
-		color: #ffffff !important;
-		box-shadow: none;
-
-		&:hover,
-		&:active {
-			background-color: #7ec3ee;
+			&:after {
+				display: block;
+				content: '';
+				height: 3px;
+				margin: 0.5rem auto 1rem auto;
+				border-radius: 2px;
+				background-color: #dddddd;
+				background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+			}
 		}
 	}
-}
-
-#main :-moz-placeholder,
-#main ::-moz-placeholder,
-#main .formerize-placeholder {
-	color: rgba(99, 99, 99, 0.25) !important;
-}
-
-
-#main ul.alt li {
-	border-top-color: #dddddd;
-}
-
-h2:after {
-	background-color: #dddddd;
-	background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-}
-
-#main .spotlight .image {
-	border-color: #dddddd;
-}
-
-#main>.main {
-	border-top: solid 1px #dddddd;
-}
-
-#main>.main:first-child {
-	border-top: 0;
-}
-
-#main>.main {
-	padding: clamp(2.5em, 7vw, 7em) clamp(1em, 5vw, 5em) clamp(0.5em, 4vw, 4em) clamp(1em, 5vw, 5em);
-	box-sizing: border-box;
-}
-
-a[href=""] {
-	opacity: 0.5;
-	cursor: not-allowed;
-}
-
-#cosplays ul li img {
-	height: 450px
 }
 
 #wrapper {

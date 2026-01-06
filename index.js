@@ -139,7 +139,6 @@ export function about() {
     const div = document.createElement('div');
     aboutData.forEach(link => {
         const innerDiv = document.createElement('div');
-        innerDiv.classList.add('tool-link');
         innerDiv.classList.add('infocard');
         innerDiv.innerHTML = `
                 <h3>${link.title}</h3>

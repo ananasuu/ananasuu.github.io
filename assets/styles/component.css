@@ -85,10 +85,6 @@ section:has(.infocard) {
         }
     }
 
-    #cosplays ul li img {
-        height: 450px
-    }
-
     .infolinks>li {
         grid-template-areas: "title" "use" "img" "description" "link";
         grid-template-rows: auto auto 1fr auto auto;
@@ -104,6 +100,9 @@ section:has(.infocard) {
         img {
             align-self: center;
             justify-self: center;
+            height: 200px;
+            width: auto;
+            object-fit: cover;
         }
 
         p:last-of-type {
@@ -118,6 +117,10 @@ section:has(.infocard) {
     }
 
 }
+
+    #cosplays > ul > li > img {
+        height: 450px !important;
+    }
 
 
 /* Professional Info Styles */
@@ -204,22 +207,22 @@ section:has(.infocard) {
     }
 }
 
-#main ul li img,
+ul li img,
 .cosplay-info img,
-#main ul li img[src$=".png"],
-#main ul li img[src$=".svg"] {
+ul li img[src$=".png"],
+ul li img[src$=".svg"] {
     height: 200px;
 }
 
-#main ul li img,
+ul li img,
 .cosplay-info img {
     width: 100%;
     object-fit: cover;
     border-radius: var(--rounded-corners);
 }
 
-#main ul li img[src$=".png"],
-#main ul li img[src$=".svg"] {
+ul li img[src$=".png"],
+ul li img[src$=".svg"] {
     width: auto;
     object-fit: initial;
 }
