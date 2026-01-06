@@ -1,13 +1,27 @@
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
-@import '/base.css';
-@import '/component.css';
-@import '/layout.css';
+@import './component.css';
+@import './layout.css';
+@import './base.css';
 
 /*
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+:root {
+	--font-size: 20px;
+	--small-font-size: 16px;
+	--orange-bg: #e39a76;
+	--pink-bg: #934d75;
+	--orange-pink-gradient: 45deg, #e39a76 15%, #934d75 85%;
+	--white: #ffffff;
+	--black: #000000;
+	--dark-font: #636363;
+	--light-grey: #f7f7f7;
+	--rounded-corners: 0.25em;
+	--transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+}
 
 * {
 	font-size: var(--font-size);
@@ -58,6 +72,7 @@ body {
 	background-color: var(--pink-bg);
 	background-image: url("images/overlay.png"), linear-gradient(var(--orange-pink-gradient));
 	color: rgba(255, 255, 255, 0.65);
+}
 
 ul {
 	list-style: none;
@@ -134,6 +149,7 @@ button,
 }
 
 /* Image */
+
 
 .image,
 .image img {
@@ -483,6 +499,12 @@ a[href=""] {
 	cursor: not-allowed;
 }
 
-h3 {
-	margin: 0;
+#cosplays ul li img {
+	height: 450px
+}
+
+#wrapper {
+	width: min(calc(100% - 4em), 64em);
+	margin-inline: auto;
+	position: relative;
 }

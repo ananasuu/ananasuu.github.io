@@ -4,7 +4,8 @@ section:has(.infocard) {
         grid-column: 1/-1;
     }
 
-    ul:has(.infocard) {
+    ul:has(.infocard),
+    div:has(.infocard) {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-template-rows: auto;
@@ -14,19 +15,9 @@ section:has(.infocard) {
         gap: 1rem;
         justify-self: center;
         width: 100%;
-
-        h3 {
-            font-size: 1.5em;
-
-            a {
-                color: inherit;
-                text-decoration: none;
-            }
-        }
     }
 
     .infocard {
-        display: grid;
         grid-template-columns: 1fr;
         width: 100%;
         max-width: 45ch;
@@ -37,8 +28,15 @@ section:has(.infocard) {
         height: 100%;
 
         h3 {
-            line-height: 1em;
             grid-area: title;
+            font-size: 1.5em;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                font-size: 1em;
+
+            }
         }
 
         p {
@@ -88,8 +86,8 @@ section:has(.infocard) {
     }
 
     #cosplays ul li img {
-	height: 450px
-}
+        height: 450px
+    }
 
     .infolinks>li {
         grid-template-areas: "title" "use" "img" "description" "link";
@@ -206,28 +204,22 @@ section:has(.infocard) {
     }
 }
 
-#skills>div>div {
-    padding: 0.5rem 1rem;
-    font-size: 1em;
-}
-
-
 #main ul li img,
 .cosplay-info img,
 #main ul li img[src$=".png"],
 #main ul li img[src$=".svg"] {
-	height: 200px;
+    height: 200px;
 }
 
 #main ul li img,
 .cosplay-info img {
-	width: 100%;
-	object-fit: cover;
-	border-radius: var(--rounded-corners);
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--rounded-corners);
 }
 
 #main ul li img[src$=".png"],
-#main ul li img[src$=".svg"]{
-	width: auto;
-	object-fit:initial;
+#main ul li img[src$=".svg"] {
+    width: auto;
+    object-fit: initial;
 }
