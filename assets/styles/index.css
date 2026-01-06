@@ -1,26 +1,13 @@
-
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
-@import '/components.css';
+@import '/base.css';
+@import '/component.css';
+@import '/layout.css';
 
 /*
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
-:root {
-	--font-size: 20px;
-	--small-font-size: 16px;
-	--orange-bg: #e39a76;
-	--pink-bg: #934d75;
-	--orange-pink-gradient: 45deg, #e39a76 15%, #934d75 85%;
-	--white: #ffffff;
-	--black: #000000;
-	--dark-font: #636363;
-	--light-grey: #f7f7f7;
-	--rounded-corners: 0.25em;
-	--transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
-}
 
 * {
 	font-size: var(--font-size);
@@ -41,31 +28,10 @@ h4,
 h5,
 h6,
 p,
-a,
-address,
-em,
-i,
 img,
-strong,
-dl,
-dt,
-dd,
 ol,
 ul,
 li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-b,
-td,
 article,
 aside,
 footer,
@@ -75,7 +41,6 @@ nav,
 section {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	vertical-align: baseline;
 }
 
@@ -93,7 +58,6 @@ body {
 	background-color: var(--pink-bg);
 	background-image: url("images/overlay.png"), linear-gradient(var(--orange-pink-gradient));
 	color: rgba(255, 255, 255, 0.65);
-}
 
 ul {
 	list-style: none;
@@ -117,7 +81,6 @@ a {
 
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
@@ -172,8 +135,8 @@ button,
 
 /* Image */
 
-
-.image, .image img {
+.image,
+.image img {
 	border-radius: 8px;
 	border: 0;
 	display: inline-block;
@@ -189,7 +152,7 @@ button,
 	background-size: cover;
 	background-position: center;
 	position: relative;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 	overflow: hidden;
 }
 
@@ -203,7 +166,7 @@ button,
 	background-position: center;
 	opacity: 0;
 	transform: scale(0.95) rotate(-2deg);
-	transition: opacity 0.5s cubic-bezier(.77,0,.18,1), transform 0.5s cubic-bezier(.77,0,.18,1);
+	transition: opacity 0.5s cubic-bezier(.77, 0, .18, 1), transform 0.5s cubic-bezier(.77, 0, .18, 1);
 	z-index: 2;
 }
 
@@ -360,9 +323,9 @@ header.major h2:after {
 	text-align: center;
 
 	h1 {
-	margin: 0 0 0.25em 0;
-	font-size: 2.5em;
-}
+		margin: 0 0 0.25em 0;
+		font-size: 2.5em;
+	}
 }
 
 
@@ -515,49 +478,11 @@ h2:after {
 	box-sizing: border-box;
 }
 
-
-#main ul li img,
-.cosplay-info img {
-	width: 100%;
-	height: 200px;
-	object-fit: cover;
-	border-radius: var(--rounded-corners);
-}
-
-#main ul li img[src$=".png"],
-#main ul li img[src$=".svg"]{
-	width: auto;
-	height: 200px;
-	object-fit:initial;
-}
-
 a[href=""] {
 	opacity: 0.5;
 	cursor: not-allowed;
 }
 
-#cosplays ul li img {
-	height: 450px
-}
-
-/* Footer */
-
-#footer {
-
-	padding: max(5em, 2.5em) max(5em, 1em) max(3em, 0.5em) max(5em, 1em);
-	width: calc(100% + 2em);
-	margin: 0 0 1em -2em;
-}
-
-#footer .copyright {
-	width: 100%;
-	font-size: 0.8em;
-	text-align: center;
-	margin-top: 1rem;
-}
-
-#wrapper {
-	width: min(calc(100% - 4em), 64em);
-	margin-inline: auto;
-	position: relative;
+h3 {
+	margin: 0;
 }

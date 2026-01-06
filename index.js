@@ -3,8 +3,10 @@ import { aboutData, resumeData, skillsData, certificatesData, projectsData } fro
 
 export function links() {
     const ul = document.createElement('ul');
+    ul.classList.add('infolinks');
     helpfulLinks.forEach(link => {
         const li = document.createElement('li');
+        li.classList.add('infocard')
         li.innerHTML = `
                 <h3><a href="${link.url}">${link.title}</a></h3>
                 <p>${link.use}</p>
@@ -24,6 +26,7 @@ export function cosplays() {
 
     cosPortfolio.forEach(cos => {
         const li = document.createElement('li');
+        li.classList.add('infocard')
         li.innerHTML = `
                 <h3>${cos.title}</h3>
                 <p class="source">${cos.source}</p>
@@ -42,6 +45,7 @@ export function tools() {
     toolLinks.forEach(link => {
         const li = document.createElement('li');
         li.classList.add('tool-link');
+        li.classList.add('infocard')
         li.innerHTML = `
                 <h3><a href="${link.url}">${link.title}</a></h3>
                 <p>Use: ${link.use}</p>
@@ -61,6 +65,7 @@ export function skills() {
     const div = document.createElement('div');
     skillsData.forEach(link => {
         const innerDiv = document.createElement('div');
+        innerDiv.classList.add('infocard');
         innerDiv.innerHTML = `<h3>${link.title}</h3>`;
         const ul = document.createElement('ul');
         innerDiv.classList.add(link.title.replace(/\s+/g, '-').toLowerCase());
@@ -135,6 +140,7 @@ export function about() {
     aboutData.forEach(link => {
         const innerDiv = document.createElement('div');
         innerDiv.classList.add('tool-link');
+        innerDiv.classList.add('infocard');
         innerDiv.innerHTML = `
                 <h3>${link.title}</h3>
                 ${Array.isArray(link.content) 
