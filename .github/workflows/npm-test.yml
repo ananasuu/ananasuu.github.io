@@ -10,57 +10,36 @@ on:
   workflow_dispatch:
 
 jobs:
-  read-playwright-version:
-    name: '🏷️ Read Playwright Version'
-    runs-on: [self-hosted, linux]
-    outputs:
-      playwright-version: ${{ steps.get_playwright_version.outputs.playwright-version }}
-    steps:
-      - name: '☁️ Checkout repository'
-        uses: actions/checkout@v6
-        with:
-          ref: ${{ github.event.workflow_run.head_sha || github.event.pull_request.head.sha }}
-
-      - id: get_playwright_version
-        uses: atos-actions/get-playwright-version@v1
-
-  build:
-    name: '🛠️ Test Code'
-    runs-on: [self-hosted, linux]
-    needs: read-playwright-version
-    container: mcr.microsoft.com/playwright:${{ needs.read-playwright-version.outputs.playwright-version }} # Provide browser instances for test runners
+  test:
+    name: '🧫 Test Code'
+    runs-on: ubuntu-latest
 
     permissions:
       contents: read
-      packages: read
 
     steps:
       - name: '☁️ Checkout repository'
         uses: actions/checkout@v6
+
+      - name: '🔧 Setup Node.js'
+        uses: actions/setup-node@v4
         with:
-          ref: ${{ github.event.workflow_run.head_sha || github.event.pull_request.head.sha }}
+          node-version: 'lts/*'
+          cache: 'npm'
 
       - name: '⛓️ Install dependencies'
-        uses: atos-actions/npm-ci@v1
-        with:
-          npm_proxy: ${{ vars.NPM_PROXY }}
-          private_registry_url: https://npm.pkg.github.com/
-          private_registry_scope: '@eviden-parallel'
-          token: ${{ secrets.NPM_TOKEN || secrets.GITHUB_TOKEN }}
+        run: npm ci
 
-      - name: '📎 Download build output'
-        uses: atos-actions/download-artifact@v2
-        with:
-          name: build
-
-      - name: '🌍 Update browsers'
-        run: npx playwright install
+      - name: '🌍 Install Playwright browsers'
+        run: npx playwright install --with-deps
 
       - name: '🧫 Run tests'
         run: npm run test --if-present
 
       - name: '📤 Upload test results'
-        uses: actions/upload-artifact@v6 # TODO: Replace with atos-actions/upload-artifact when urn-id is supported in download-artifact
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: test-results
           path: test-results
+          retention-days: 30

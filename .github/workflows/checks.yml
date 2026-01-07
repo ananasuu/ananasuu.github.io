@@ -41,17 +41,9 @@ jobs:
     permissions:
       pull-requests: write
       contents: write
-  npm-build:
-    name: '▶️ actions'
-    uses: ./.github/workflows/npm-build.yml
-    permissions:
-      contents: read
-      packages: read
 
   npm-test:
     name: '▶️ actions'
-    needs: [npm-build]
     uses: ./.github/workflows/npm-test.yml
     permissions:
       contents: read
-      packages: read

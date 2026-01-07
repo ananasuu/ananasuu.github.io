@@ -12,8 +12,7 @@ on:
 jobs:
   codeql:
     name: '🪲 CodeQL'
-    runs-on: [self-hosted, linux]
-    container: node:lts
+    runs-on: ubuntu-latest
     permissions:
       actions: read
       contents: read
@@ -33,9 +32,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: '🧹 Clear previous database' # https://github.com/github/codeql-action/issues/611#issuecomment-872252659
-        run: |
-          rm -rf "${{ runner.temp }}/codeql_databases/${{ matrix.language }}"
+
 
       # Initializes the CodeQL tools for scanning.
       - name: ' 🪡 Initialize CodeQL'

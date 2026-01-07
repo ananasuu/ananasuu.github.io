@@ -10,17 +10,6 @@
 
 version: 2
 
-registries:
-  atos-actions:
-    type: git
-    url: https://github.com
-    username: x-access-token
-    password: ${{secrets.EVIDEN_ACTIONS_TOKEN}}
-  eviden-parallel:
-    type: npm-registry
-    url: https://npm.pkg.github.com
-    token: ${{secrets.EVIDEN_PARALLEL_TOKEN}}
-
 updates:
   - package-ecosystem: 'npm'
     directory: '/'
