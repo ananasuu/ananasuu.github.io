@@ -40,7 +40,7 @@ body {
 	-webkit-text-size-adjust: none;
 	-ms-overflow-style: scrollbar;
 	background-color: var(--pink-bg);
-	background-image: url("images/overlay.png"), linear-gradient(var(--orange-pink-gradient));
+	background-image: url("/assets/img/overlay.png"), linear-gradient(var(--orange-pink-gradient));
 	color: rgba(255, 255, 255, 0.65);
 }
 
@@ -59,11 +59,6 @@ a {
 	text-decoration: none;
 	border-bottom: dotted 1px;
 	color: inherit;
-
-	&[ref=""] {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
 }
 
 button,
@@ -109,6 +104,11 @@ button,
 		}
 	}
 }
+
+.button[href=""] {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
 
 section {
         padding: clamp(2.5em, 7vw, 7em) clamp(1em, 5vw, 5em) clamp(0.5em, 4vw, 4em) clamp(1em, 5vw, 5em);

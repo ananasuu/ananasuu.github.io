@@ -44,7 +44,6 @@ export function tools() {
     const ul = document.createElement('ul');
     toolLinks.forEach(link => {
         const li = document.createElement('li');
-        li.classList.add('tool-link');
         li.classList.add('infocard')
         li.innerHTML = `
                 <h3><a href="${link.url}">${link.title}</a></h3>
@@ -88,7 +87,6 @@ export function resume() {
     const ul = document.createElement('ul');
     resumeData.forEach(link => {
         const li = document.createElement('li');
-        li.classList.add('tool-link');
         li.innerHTML = `
                 <h3>${link.title}</h3>
                 <p>${link.institution}, ${link.start} - ${link.end || 'Present'}</p>
@@ -106,7 +104,6 @@ export function projects() {
     const ul = document.createElement('ul');
     projectsData.forEach(link => {
         const li = document.createElement('li');
-        li.classList.add('tool-link');
         li.innerHTML = `
                 <h3><a href="${link.url}">${link.title}</a></h3>
                 <p>${link.role}</p>
@@ -121,7 +118,6 @@ export function certificates() {
     const ul = document.createElement('ul');
     certificatesData.forEach(link => {
         const li = document.createElement('li');
-        li.classList.add('tool-link');
         li.innerHTML = `
                 <h3>${link.title}</h3>
                 <img src="/assets/img/institution_logos/${link.institution.toLowerCase()}.jpg" alt="" />
