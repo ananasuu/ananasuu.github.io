@@ -1,16 +1,14 @@
-export const aboutData = [
-    {
-        title: "Interests",
-        content: [
-            "Textile crafts (sewing, crocheting)",
-            "Cosplaying & attending conventions",
-            "Crafting",
-            "Board games & role-playing games like Dungeons & Dragons",
-            "Reading",
-            "Sports (weightlifting)",
-        ]
-    }
-];
+export const aboutData = {
+    title: "Interests",
+    content: [
+        "Textile crafts (sewing, crocheting)",
+        "Cosplaying & attending conventions",
+        "Crafting",
+        "Board games & role-playing games like Dungeons & Dragons",
+        "Reading",
+        "Sports (weightlifting)",
+    ]
+};
 
 export const resumeData = [
     {

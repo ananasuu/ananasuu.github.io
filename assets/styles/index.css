@@ -144,3 +144,44 @@ section {
 	margin-inline: auto;
 	position: relative;
 }
+
+section:has(#about) {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+
+	.cosplay-info, .infocard {
+		grid-template-columns: 1fr;
+        width: 100%;
+		max-width: 600px;
+        padding: 1rem;
+        margin: 0;
+        height: 100%;
+
+	}
+}
+
+@media (min-width: 600px) {
+	section:has(#about) {
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: space-evenly;
+
+		.cosplay-info, .infocard {
+		grid-template-columns: 1fr;
+        width: 100%;
+		max-width: 45ch;
+        padding: 1rem;
+        margin: 0;
+        height: 100%;
+	}
+
+	.cosplay-info {
+		justify-self: end;
+		
+		h3 {
+			font-size: 1.5em;
+			margin-block-start: 0;
+		}
+	}
+	}
+}

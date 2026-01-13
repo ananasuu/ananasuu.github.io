@@ -27,9 +27,10 @@ section:has(.infocard) {
         border-radius: 8px;
         height: 100%;
 
-        h3 {
+        >h3 {
             grid-area: title;
             font-size: 1.5em;
+            margin-block: 0;
 
             a {
                 color: inherit;
@@ -41,6 +42,16 @@ section:has(.infocard) {
 
         p {
             margin: 0;
+
+            &.source,
+            &.genres {
+                color: var(--light-font);
+                margin-block-end: 0.5em;
+            }
+
+            &.genres+p {
+                margin-block-end: 1em;
+            }
         }
 
         img {
@@ -64,7 +75,8 @@ section:has(.infocard) {
         grid-template-rows: auto auto auto auto 1fr;
 
         .source,
-        .genres {
+        .genres,
+        .use {
             font-size: 1em;
             line-height: 1em;
             margin-block-start: 0.25em;
@@ -86,41 +98,46 @@ section:has(.infocard) {
     }
 
     .infolinks>li {
-        grid-template-areas: "title" "use" "img" "description" "link";
-        grid-template-rows: auto auto 1fr auto auto;
+        height: 100%;
 
-        h3 {
-            margin-block-end: auto;
-        }
+        >.infocard {
+            grid-template-areas: "title" "use" "img" "description";
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-columns: 1fr;
+            display: grid;
 
-        p:first-of-type {
-            grid-area: use;
-        }
+            h3 {
+                margin-block-end: auto;
+                grid-area: title;
+            }
 
-        img {
-            align-self: center;
-            justify-self: center;
-            height: 200px;
-            width: auto;
-            object-fit: cover;
-        }
+            .use {
+                grid-area: use;
+                height: fit-content;
+            }
 
-        p:last-of-type {
-            grid-area: description;
-            height: fit-content;
-            align-self: end;
-        }
+            img {
+                align-self: center;
+                justify-self: center;
+                height: 200px;
+                width: 100%;
+                object-fit: cover;
+                grid-area: img;
+            }
 
-        >a {
-            margin-block-start: 0.5rem;
+            p:last-of-type {
+                grid-area: description;
+                height: fit-content;
+                align-self: end;
+            }
         }
     }
 
 }
 
-    #cosplays > ul > li > img {
-        height: 450px !important;
-    }
+#cosplays>ul>li>img {
+    height: 450px !important;
+}
 
 
 /* Professional Info Styles */
