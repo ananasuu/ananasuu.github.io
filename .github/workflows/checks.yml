@@ -20,14 +20,14 @@ concurrency:
 
 jobs:
   pr-lint:
-    name: '▶️ actions'
+    name: "▶️ actions"
     uses: ./.github/workflows/pr-lint.yml
     permissions:
       contents: read
       pull-requests: write
 
   codeql:
-    name: '▶️ actions'
+    name: "▶️ actions"
     needs: [pr-lint]
     uses: ./.github/workflows/codeql.yml
     permissions:
@@ -36,14 +36,14 @@ jobs:
       security-events: write
 
   dependencies:
-    name: '▶️ actions'
+    name: "▶️ actions"
     uses: ./.github/workflows/dependencies.yml
     permissions:
       pull-requests: write
       contents: write
 
   npm-test:
-    name: '▶️ actions'
+    name: "▶️ actions"
     uses: ./.github/workflows/npm-test.yml
     permissions:
       contents: read

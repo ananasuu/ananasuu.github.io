@@ -5,7 +5,11 @@ import { lighthouseTest, thresholds } from './fixtures/performance.ts';
 // Define all pages in the static website
 const pages = [
 	{ url: '/', title: 'Cosplay Portfolio', tags: ['@cosplay', '@homepage'] },
-	{ url: '/work.html', title: 'Professional Portfolio', tags: ['@work', '@professional'] },
+	{
+		url: '/work.html',
+		title: 'Professional Portfolio',
+		tags: ['@work', '@professional'],
+	},
 ];
 
 function getTagsForPage(page: { tags: string[] }): string[] {
@@ -37,7 +41,10 @@ for (const page of pages) {
 
 		// Performance Tests
 		test.describe('performance', { tag: [...tags, '@performance'] }, () => {
-			lighthouseTest.skip(({ browserName }) => browserName !== 'chromium', 'Lighthouse tests are only supported in Chromium');
+			lighthouseTest.skip(
+				({ browserName }) => browserName !== 'chromium',
+				'Lighthouse tests are only supported in Chromium',
+			);
 
 			lighthouseTest(`lighthouse tests of ${page.url}`, async ({ page: playwright, port }) => {
 				await playwright.goto(page.url);

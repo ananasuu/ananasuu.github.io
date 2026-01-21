@@ -42,4 +42,3 @@ export async function pageTests(url: string, tags: string[]): Promise<void> {
 		});
 	});
 }
-

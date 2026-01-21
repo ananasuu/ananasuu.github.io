@@ -12,7 +12,7 @@
 	--dark-font: #636363;
 	--light-font: #888888;
 	--light-grey: #f7f7f7;
-    --rounded-card-corners: 8px;
+	--rounded-card-corners: 8px;
 	--rounded-corners: 0.25em;
-	--transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+	--transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }

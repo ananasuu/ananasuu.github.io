@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   dependency-review:
-    name: '⛓️ Dependency Review'
+    name: "⛓️ Dependency Review"
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'pull_request' }}
 
@@ -23,10 +23,10 @@ jobs:
       contents: write
 
     steps:
-      - name: '☁️ Checkout repository'
+      - name: "☁️ Checkout repository"
         uses: actions/checkout@v6
 
-      - name: '🛡️ Dependency Review'
+      - name: "🛡️ Dependency Review"
         uses: actions/dependency-review-action@v4
         with:
           retry-on-snapshot-warnings: true

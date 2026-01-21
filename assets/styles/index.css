@@ -1,7 +1,7 @@
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
-@import './component.css';
-@import './layout.css';
-@import './base.css';
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400";
+@import "./component.css";
+@import "./layout.css";
+@import "./base.css";
 
 /*
 	Stellar by HTML5 UP
@@ -41,7 +41,9 @@ ul {
 }
 
 a {
-	transition: color 0.2s ease, border-bottom 0.2s ease;
+	transition:
+		color 0.2s ease,
+		border-bottom 0.2s ease;
 	text-decoration: none;
 	border-bottom: dotted 1px;
 	color: inherit;
@@ -51,7 +53,7 @@ button,
 .button {
 	appearance: none;
 	transition: var(--transition);
-        border-radius: var(--rounded-card-corners);
+	border-radius: var(--rounded-card-corners);
 	border: 0;
 	cursor: pointer;
 	display: inline-block;
@@ -69,7 +71,6 @@ button,
 
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.075);
-
 	}
 
 	&:active {
@@ -92,19 +93,18 @@ button,
 }
 
 .button[href=""] {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
+	opacity: 0.5;
+	cursor: not-allowed;
+}
 
 h2 {
 	font-size: var(--font-size-xl);
-			width: fit-content;
-			justify-self: center;
+	width: fit-content;
+	justify-self: center;
 }
 
 section {
-        padding: clamp(2.5em, 7vw, 7em) clamp(1em, 5vw, 5em) clamp(0.5em, 4vw, 4em) clamp(1em, 5vw, 5em);
-
+	padding: clamp(2.5em, 7vw, 7em) clamp(1em, 5vw, 5em) clamp(0.5em, 4vw, 4em) clamp(1em, 5vw, 5em);
 
 	&:not(:first-of-type) {
 		text-align: center;
@@ -114,11 +114,9 @@ section {
 		margin-bottom: 3em;
 
 		h2 {
-			
-
 			&:after {
 				display: block;
-				content: '';
+				content: "";
 				height: 3px;
 				margin: 0.5rem auto 1rem auto;
 				border-radius: 2px;
@@ -144,14 +142,14 @@ section:has(#about) {
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 
-	.cosplay-info, .infocard {
+	.cosplay-info,
+	.infocard {
 		grid-template-columns: 1fr;
-        width: 100%;
+		width: 100%;
 		max-width: 600px;
-        padding: 1rem;
-        margin: 0;
-        height: 100%;
-
+		padding: 1rem;
+		margin: 0;
+		height: 100%;
 	}
 }
 
@@ -160,21 +158,22 @@ section:has(#about) {
 		grid-template-columns: repeat(2, 1fr);
 		justify-content: space-evenly;
 
-		.cosplay-info, .infocard {
-		grid-template-columns: 1fr;
-        width: 100%;
-		max-width: 45ch;
-        padding: 1rem;
-        margin: 0;
-        height: 100%;
-	}
-
-	.cosplay-info {
-		justify-self: end;
-		
-		h3 {
-			margin-block-start: 0;
+		.cosplay-info,
+		.infocard {
+			grid-template-columns: 1fr;
+			width: 100%;
+			max-width: 45ch;
+			padding: 1rem;
+			margin: 0;
+			height: 100%;
 		}
-	}
+
+		.cosplay-info {
+			justify-self: end;
+
+			h3 {
+				margin-block-start: 0;
+			}
+		}
 	}
 }

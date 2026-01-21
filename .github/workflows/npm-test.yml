@@ -11,32 +11,32 @@ on:
 
 jobs:
   test:
-    name: '🧫 Test Code'
+    name: "🧫 Test Code"
     runs-on: ubuntu-latest
 
     permissions:
       contents: read
 
     steps:
-      - name: '☁️ Checkout repository'
+      - name: "☁️ Checkout repository"
         uses: actions/checkout@v6
 
-      - name: '🔧 Setup Node.js'
+      - name: "🔧 Setup Node.js"
         uses: actions/setup-node@v4
         with:
-          node-version: 'lts/*'
-          cache: 'npm'
+          node-version: "lts/*"
+          cache: "npm"
 
-      - name: '⛓️ Install dependencies'
+      - name: "⛓️ Install dependencies"
         run: npm ci
 
-      - name: '🌍 Install Playwright browsers'
+      - name: "🌍 Install Playwright browsers"
         run: npx playwright install --with-deps
 
-      - name: '🧫 Run tests'
+      - name: "🧫 Run tests"
         run: npm run test --if-present
 
-      - name: '📤 Upload test results'
+      - name: "📤 Upload test results"
         if: always()
         uses: actions/upload-artifact@v4
         with:
