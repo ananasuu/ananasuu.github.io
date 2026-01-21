@@ -24,20 +24,13 @@ section:has(.infocard) {
         padding: 1rem;
         margin: 0;
         background-color: var(--light-grey);
-        border-radius: 8px;
+        border-radius: var(--rounded-card-corners);
         height: 100%;
 
         >h3 {
             grid-area: title;
-            font-size: 1.5em;
+            font-size: var(--font-size-large);
             margin-block: 0;
-
-            a {
-                color: inherit;
-                text-decoration: none;
-                font-size: 1em;
-
-            }
         }
 
         p {
@@ -46,6 +39,7 @@ section:has(.infocard) {
             &.source,
             &.genres {
                 color: var(--light-font);
+                font-size: var(--font-size-small);
                 margin-block-end: 0.5em;
             }
 
@@ -58,10 +52,8 @@ section:has(.infocard) {
             width: 100%;
             height: auto;
             max-width: 100%;
-            border-radius: 8px;
+        border-radius: var(--rounded-card-corners);
             grid-area: img;
-            margin-top: 0.5em;
-
         }
 
         a {
@@ -105,6 +97,8 @@ section:has(.infocard) {
             grid-template-rows: auto auto 1fr auto;
             grid-template-columns: 1fr;
             display: grid;
+            border-bottom: none;
+
 
             h3 {
                 margin-block-end: auto;
@@ -119,10 +113,13 @@ section:has(.infocard) {
             img {
                 align-self: center;
                 justify-self: center;
-                height: 200px;
+                height: 220px;
                 width: 100%;
-                object-fit: cover;
+                object-fit: contain;
                 grid-area: img;
+                background-color: white;
+        border-radius: var(--rounded-card-corners);
+                padding: 1rem;
             }
 
             p:last-of-type {
@@ -149,7 +146,7 @@ section:has(.infocard) {
 
     >li {
         background: var(--light-grey);
-        border-radius: 8px;
+        border-radius: var(--rounded-card-corners);
         padding: 1rem;
     }
 }
@@ -157,17 +154,19 @@ section:has(.infocard) {
 #resume>ul {
     text-align: left;
     border-inline-start: 1px solid var(--dark-font);
-    padding-inline-start: 1em;
+    padding-inline-start: 0.5em;
 
     >li {
         h3 {
-            font-size: 1.5em;
+            font-size: var(--font-size-large);
+            margin-block-end: 0;
         }
 
         p {
             &:first-of-type {
                 font-style: italic;
-                margin-block-end: 1rem;
+                font-size: var(--font-size-small);
+                margin: 0 0 1rem 0;
             }
 
             &:last-of-type:not(:only-of-type) {
@@ -183,26 +182,28 @@ section:has(.infocard) {
 }
 
 #certificates>ul {
-    >li {
+    >li>a {
         display: grid;
-        grid-template-areas: "logo title icon" "logo issuer icon" "logo date icon";
-        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "logo title" "logo issuer" "logo date";
+        grid-template-columns: auto 1fr;
         align-items: start;
         justify-content: start;
         column-gap: 1rem;
         text-align: left;
+        border-bottom: none;
 
         img {
             grid-area: logo;
             max-width: 64px;
             max-height: 64px;
-            border-radius: 8px;
+        border-radius: var(--rounded-card-corners);
             align-self: center;
         }
 
         h3 {
             grid-area: title;
-            font-size: 1.25em;
+            font-size: var(--font-size-large);
+            margin: 0;
         }
 
         p {
@@ -214,12 +215,9 @@ section:has(.infocard) {
 
             &:last-of-type {
                 grid-area: date;
+                font-size: var(--font-size-small);
+                color: var(--light-font)
             }
-        }
-
-        a {
-            grid-area: icon;
-            align-self: center;
         }
     }
 }

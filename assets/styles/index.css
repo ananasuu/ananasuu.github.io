@@ -9,20 +9,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-:root {
-	--font-size: 20px;
-	--small-font-size: 16px;
-	--orange-bg: #e39a76;
-	--pink-bg: #934d75;
-	--orange-pink-gradient: 45deg, #e39a76 15%, #934d75 85%;
-	--white: #ffffff;
-	--black: #000000;
-	--dark-font: #636363;
-	--light-grey: #f7f7f7;
-	--rounded-corners: 0.25em;
-	--transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
-}
-
 * {
 	font-size: var(--font-size);
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -65,7 +51,7 @@ button,
 .button {
 	appearance: none;
 	transition: var(--transition);
-	border-radius: 8px;
+        border-radius: var(--rounded-card-corners);
 	border: 0;
 	cursor: pointer;
 	display: inline-block;
@@ -110,6 +96,12 @@ button,
 		cursor: not-allowed;
 	}
 
+h2 {
+	font-size: var(--font-size-xl);
+			width: fit-content;
+			justify-self: center;
+}
+
 section {
         padding: clamp(2.5em, 7vw, 7em) clamp(1em, 5vw, 5em) clamp(0.5em, 4vw, 4em) clamp(1em, 5vw, 5em);
 
@@ -122,9 +114,7 @@ section {
 		margin-bottom: 3em;
 
 		h2 {
-			font-size: 2em;
-			width: fit-content;
-			justify-self: center;
+			
 
 			&:after {
 				display: block;
@@ -135,6 +125,10 @@ section {
 				background-color: #dddddd;
 				background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 			}
+		}
+
+		p {
+			font-size: var(--font-size-medium);
 		}
 	}
 }
@@ -179,7 +173,6 @@ section:has(#about) {
 		justify-self: end;
 		
 		h3 {
-			font-size: 1.5em;
 			margin-block-start: 0;
 		}
 	}
