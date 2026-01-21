@@ -7,13 +7,40 @@
       name="description"
       content="Nina's professional portfolio showcasing her skills in developing accessible and user-centered web applications."
     />
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="assets/styles/index.css" as="style" />
     <link rel="stylesheet" href="assets/styles/index.css" />
+    <!-- Preload JavaScript modules -->
+    <link rel="modulepreload" href="./index.js" />
+    <link rel="modulepreload" href="./data.js" />
+    <link rel="modulepreload" href="./workdata.js" />    
+    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload Google Fonts CSS -->
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <title>Nina Friedrich</title>
   </head>
 
@@ -51,7 +78,18 @@
               visually appealing but also inclusive and sustainable.
             </p>
           </div>
-          <div class="pfp-hover"></div>
+          <div class="pfp-hover">
+            <picture>
+              <source srcset="/assets/img/Nina_Pfp.avif" type="image/avif" />
+              <img
+                src="/assets/img/Nina_Pfp.jpg"
+                alt="Nina Friedrich"
+                fetchpriority="high"
+                width="272"
+                height="272"
+              />
+            </picture>
+          </div>
         </section>
 
         <section>
