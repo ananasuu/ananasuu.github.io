@@ -111,7 +111,10 @@ main {
       width: 272px;
       height: 272px;
       border-radius: 100%;
-      background-image: url("/assets/img/Nina_Pfp.jpg");
+      background-image: image-set(
+        url("/assets/img/Nina_Pfp.avif") type("image/avif"),
+        url("/assets/img/Nina_Pfp.jpg") type("image/jpeg")
+      );
       background-size: cover;
       background-position: center;
       position: relative;
@@ -128,7 +131,10 @@ main {
         position: absolute;
         inset: 0;
         border-radius: 100%;
-        background-image: url("/assets/img/Fun_Pfp.jpg");
+        background-image: image-set(
+          url("/assets/img/Fun_Pfp.avif") type("image/avif"),
+          url("/assets/img/Fun_Pfp.jpg") type("image/jpeg")
+        );
         background-size: cover;
         background-position: center;
         opacity: 0;

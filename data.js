@@ -11,8 +11,7 @@ export const helpfulLinks = [
     use: "Collection",
     url: "https://www.belloflostsouls.net/2022/08/tools-of-the-trade-a-guide-to-cosplay-materials.html",
     description: "Cosplay materials and tools overview.",
-    imageUrl:
-      "https://www.belloflostsouls.net/wp-content/themes/bols-2022/img/logo-2021a.svg",
+    imageUrl: "/assets/img/belloflostsouls_logo.svg",
   },
   {
     title: "Ears on a Budget",
@@ -52,7 +51,7 @@ export const toolLinks = [
     url: "https://nifegun.com/scale_tool/scale_tool.html",
     description:
       "Ever wondered how to actually have the right scale for your props? Use this!",
-    imageUrl: "https://nifegun.com/scale_tool/images/atlas_gauntlet.png",
+    imageUrl: "/assets/img/scale_tool_gauntlet.png",
   },
   {
     title: "Cosplayshop.be",
@@ -60,8 +59,7 @@ export const toolLinks = [
     url: "https://cosplayshop.be/de/",
     description:
       "Ordering materials in the EU can be a pain, but this shop has nice stuff!",
-    imageUrl:
-      "https://cosplayshop.be/wp-content/themes/cosplayshop/img/logo.svg",
+    imageUrl: "/assets/img/cosplayshop_logo.svg",
   },
   {
     title: "Kamui Cosplay",
@@ -69,8 +67,7 @@ export const toolLinks = [
     url: "https://www.kamuicosplay.com/",
     description:
       "Kamui Cosplay is a well-known cosplayer and prop maker. She has a lot of tutorials and patterns for sale.",
-    imageUrl:
-      "https://www.kamuicosplay.com/wp-content/uploads/2020/09/Kamui_Logo.png",
+    imageUrl: "/assets/img/kamui_logo.png",
   },
   {
     title: "Dr Cos",
@@ -78,7 +75,7 @@ export const toolLinks = [
     url: "https://dr-cos.info/",
     description:
       "A great source for both free and paid patterns. They have a wide range of styles and sizes.",
-    imageUrl: "https://dr-cos.info/svg/icon-logo-en.svg",
+    imageUrl: "/assets/img/drcos_logo.svg",
   },
 ];
 

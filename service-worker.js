@@ -1,4 +1,4 @@
-const CACHE_VERSION = "v1.0.0";
+const CACHE_VERSION = "v1.0.1";
 const CACHE_NAME = `ninumakes-${CACHE_VERSION}`;
 
 // Cache duration: 30 days for static assets (in seconds)

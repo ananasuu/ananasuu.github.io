@@ -12,11 +12,15 @@ export function links() {
   ul.classList.add("infolinks");
   helpfulLinks.forEach((link) => {
     const li = document.createElement("li");
+    const avifUrl = link.imageUrl.replace(/\.(jpg|jpeg|png)$/i, '.avif');
     li.innerHTML = `
         <a class="infocard" href="${link.url}">
                 <h3>${link.title}</h3>
                 <p class="use">${link.use}</p>
-                <img src="${link.imageUrl}" alt="${link.title}" />
+                <picture>
+                  <source srcset="${avifUrl}" type="image/avif">
+                  <img src="${link.imageUrl}" alt="${link.title}" loading="lazy" />
+                </picture>
                 <p>${link.description}</p>
 </a>            
 `;
@@ -33,10 +37,14 @@ export function cosplays() {
   cosPortfolio.forEach((cos) => {
     const li = document.createElement("li");
     li.classList.add("infocard");
+    const avifUrl = cos.imageUrl.replace(/\.(jpg|jpeg|png)$/i, '.avif');
     li.innerHTML = `
                 <h3>${cos.title}</h3>
                 <p class="source">${cos.source}</p>
-                <img src="${cos.imageUrl}" alt="${cos.title} from ${cos.source}" />
+                <picture>
+                  <source srcset="${avifUrl}" type="image/avif">
+                  <img src="${cos.imageUrl}" alt="${cos.title} from ${cos.source}" loading="lazy" />
+                </picture>
                 <p class="genres">${cos.genres}</p>
                 <p>${cos.description}</p>
 <a class="button primary" href="${cos.buildbookUrl}">Build Book</a>
