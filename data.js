@@ -4,7 +4,7 @@ export const helpfulLinks = [
     use: "Tutorial",
     url: "https://www.youtube.com/watch?v=alQGJQzRRFo&ab_channel=SarahSpaceman",
     description: "Easily pattern and sew a corset.",
-    imageUrl: "http://img.youtube.com/vi/alQGJQzRRFo/hqdefault.jpg",
+    imageUrl: "/assets/img/corset_tutorial.jpg",
   },
   {
     title: "Materials & Tools",

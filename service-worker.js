@@ -144,6 +144,12 @@ async function cacheFirst(request) {
     }
     throw error;
   }
+}
+
+// Network-first strategy: Try network, fall back to cache
+async function networkFirst(request) {
+  const cache = await caches.open(CACHE_NAME);
+
   try {
     const response = await fetch(request);
 
