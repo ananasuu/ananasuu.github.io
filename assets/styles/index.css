@@ -106,7 +106,7 @@ h2 {
 }
 
 section {
-  padding: clamp(2.5em, 7vw, 7em) clamp(1em, 5vw, 5em) clamp(0.5em, 4vw, 4em)
+  padding: clamp(2.5em, 7vw, 7em) clamp(1em, 5vw, 5em) clamp(2.5em, 7vw, 7em)
     clamp(1em, 5vw, 5em);
 
   &:not(:first-of-type) {
