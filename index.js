@@ -7,18 +7,33 @@ import {
   skillsData,
 } from "./workdata.js";
 
+// Bilder mit vorhandenen AVIF-Versionen
+const hasAvif = new Set([
+  '/assets/img/card_img/Fearne_NF.jpg',
+  '/assets/img/card_img/Frieren_NF.jpg',
+  '/assets/img/card_img/Haru_NF.jpg',
+  '/assets/img/card_img/Laudna_NF.jpg',
+  '/assets/img/card_img/Marcille_NF.jpg',
+  '/assets/img/card_img/Tohru_NF.jpg',
+  '/assets/img/Fun_Pfp.jpg',
+  '/assets/img/Nina_Pfp.jpg'
+]);
+
 export function links() {
   const ul = document.createElement("ul");
   ul.classList.add("infolinks");
   helpfulLinks.forEach((link) => {
     const li = document.createElement("li");
-    const avifUrl = link.imageUrl.replace(/\.(jpg|jpeg|png)$/i, '.avif');
+    const ext = link.imageUrl.match(/\.(jpg|jpeg|png|svg|avif)$/i)?.[1]?.toLowerCase();
+    const isJpg = ext === 'jpg' || ext === 'jpeg';
+    const shouldUseAvif = isJpg && hasAvif.has(link.imageUrl);
+    const avifUrl = link.imageUrl.replace(/\.(jpg|jpeg)$/i, '.avif');
     li.innerHTML = `
-        <a class="infocard" href="${link.url}">
+        <a class="infocard link" href="${link.url}">
                 <h3>${link.title}</h3>
                 <p class="use">${link.use}</p>
                 <picture>
-                  <source srcset="${avifUrl}" type="image/avif">
+                  ${shouldUseAvif ? `<source srcset="${avifUrl}" type="image/avif">` : ''}
                   <img src="${link.imageUrl}" alt="${link.title}" loading="lazy" />
                 </picture>
                 <p>${link.description}</p>
@@ -32,13 +47,11 @@ export function links() {
 export function cosplays() {
   console.log(cosPortfolio);
   const ul = document.createElement("ul");
-  ul.classList.add("features");
-
   cosPortfolio.forEach((cos) => {
     const li = document.createElement("li");
-    li.classList.add("infocard");
     const avifUrl = cos.imageUrl.replace(/\.(jpg|jpeg|png)$/i, '.avif');
     li.innerHTML = `
+        <div class="infocard costume">
                 <h3>${cos.title}</h3>
                 <p class="source">${cos.source}</p>
                 <picture>
@@ -47,7 +60,8 @@ export function cosplays() {
                 </picture>
                 <p class="genres">${cos.genres}</p>
                 <p>${cos.description}</p>
-<a class="button primary" href="${cos.buildbookUrl}">Build Book</a>
+                <a class="button primary" href="${cos.buildbookUrl}">Build Book</a>
+        </div>
             `;
     ul.appendChild(li);
   });
@@ -59,11 +73,18 @@ export function tools() {
   ul.classList.add("infolinks");
   toolLinks.forEach((link) => {
     const li = document.createElement("li");
+    const ext = link.imageUrl.match(/\.(jpg|jpeg|png|svg|avif)$/i)?.[1]?.toLowerCase();
+    const isJpg = ext === 'jpg' || ext === 'jpeg';
+    const shouldUseAvif = isJpg && hasAvif.has(link.imageUrl);
+    const avifUrl = link.imageUrl.replace(/\.(jpg|jpeg)$/i, '.avif');
     li.innerHTML = `
-        <a class="infocard" href="${link.url}">
+        <a class="infocard link" href="${link.url}">
                 <h3>${link.title}</h3>
-                <p class="use">Use: ${link.use}</p>
-                <img src="${link.imageUrl}" alt="${link.title}" />
+                <p class="use">${link.use}</p>
+                <picture>
+                  ${shouldUseAvif ? `<source srcset="${avifUrl}" type="image/avif">` : ''}
+                  <img src="${link.imageUrl}" alt="${link.title}" loading="lazy" />
+                </picture>
                 <p>${link.description}</p>
                 </a>
             `;

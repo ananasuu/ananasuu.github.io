@@ -189,7 +189,8 @@ footer {
     li {
       padding: 0;
 
-      a > img {
+      a > img,
+	  a > picture {
         max-width: 32px;
         max-height: 32px;
       }
@@ -230,6 +231,6 @@ footer {
   }
 
   .pfp-hover {
-    margin-top: 3.5em;
+    margin-top: 5.5em;
   }
 }

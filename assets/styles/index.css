@@ -18,7 +18,7 @@
 
 html,
 body {
-  min-width: 430px;
+  min-width: 400px;
 }
 
 body {
@@ -28,6 +28,7 @@ body {
   background-image:
     url("/assets/img/overlay.png"), linear-gradient(var(--orange-pink-gradient));
   color: rgba(255, 255, 255, 0.65);
+  margin: 0;
 }
 
 ul {
@@ -176,5 +177,14 @@ section:has(#about) {
         margin-block-start: 0;
       }
     }
+  }
+}
+
+picture {
+
+  img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
   }
 }

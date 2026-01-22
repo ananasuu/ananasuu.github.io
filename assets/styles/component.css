@@ -1,33 +1,86 @@
 /* Infocard Styles */
 section:has(.infocard) {
-  > header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  grid-template-rows: auto;
+  align-items: start;
+  gap: 1rem;
+
+  >header {
     grid-column: 1 / -1;
   }
 
   ul:has(.infocard),
   div:has(.infocard) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     grid-template-rows: auto;
-    place-items: center;
     align-items: start;
-    justify-items: center;
     gap: 1rem;
-    justify-self: center;
-    width: 100%;
+    grid-column: 1 / -1;
+
+    li:has(.link) {
+      width: 100%;
+    }
+
+    li {
+      height: 100%;
+    }
   }
 
   .infocard {
+    display: grid;
     grid-template-columns: 1fr;
     width: 100%;
-    max-width: 45ch;
     padding: 1rem;
     margin: 0;
     background-color: var(--light-grey);
     border-radius: var(--rounded-card-corners);
     height: 100%;
 
-    > h3 {
+    &.link {
+      grid-template-areas: "title" "use" "img" "description";
+      grid-template-rows: auto auto 1fr auto;
+      border-bottom: none;
+
+      h3 {
+        margin-block-end: auto;
+      }
+
+      picture {
+        height: 220px;
+
+        img {
+          object-fit: contain;
+        }
+      }
+
+      p:last-of-type {
+        grid-area: description;
+        align-self: end;
+      }
+    }
+
+    &.costume,
+    &.cosplay-info {
+      grid-template-areas: "title" "source" "img" "genres" "description" "link";
+      grid-template-rows: auto auto auto auto 1fr;
+
+
+      a {
+        margin-block-start: 0.75rem;
+      }
+
+      picture {
+        height: 450px !important;
+
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+
+    >h3 {
       grid-area: title;
       font-size: var(--font-size-large);
       margin-block: 0;
@@ -35,125 +88,82 @@ section:has(.infocard) {
 
     p {
       margin: 0;
+      height: fit-content;
+
 
       &.source,
-      &.genres {
+      &.genres,
+      &.use {
         color: var(--light-font);
         font-size: var(--font-size-small);
         margin-block-end: 0.5em;
       }
 
-      &.genres + p {
-        margin-block-end: 1em;
+      .use {
+        grid-area: use;
+      }
+
+      .source {
+        grid-area: source;
+      }
+
+      .genres {
+        margin-block-end: 0.5em;
+        grid-area: genres;
+        margin-block-start: 0.25em;
+
+
+        +p {
+          margin-block-end: 1em;
+        }
       }
     }
 
-    img {
+    picture {
       width: 100%;
       height: auto;
       max-width: 100%;
       border-radius: var(--rounded-card-corners);
       grid-area: img;
+      align-self: center;
+      justify-self: center;
+      background-color: white;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: var(--rounded-card-corners);
+      }
     }
 
     a {
       grid-area: link;
     }
   }
-
-  #cosplays li,
-  section:has(.cosplay-info) > div {
-    grid-template-areas: "title" "source" "img" "genres" "description" "link";
-    grid-template-rows: auto auto auto auto 1fr;
-
-    .source,
-    .genres,
-    .use {
-      font-size: 1em;
-      line-height: 1em;
-      margin-block-start: 0.25em;
-    }
-
-    .source {
-      margin-block-end: auto;
-      grid-area: source;
-    }
-
-    .genres {
-      margin-block-end: 0.5em;
-      grid-area: genres;
-    }
-
-    a {
-      margin-block-start: 0.75rem;
-    }
-  }
-
-  .infolinks > li {
-    height: 100%;
-
-    > .infocard {
-      grid-template-areas: "title" "use" "img" "description";
-      grid-template-rows: auto auto 1fr auto;
-      grid-template-columns: 1fr;
-      display: grid;
-      border-bottom: none;
-
-      h3 {
-        margin-block-end: auto;
-        grid-area: title;
-      }
-
-      .use {
-        grid-area: use;
-        height: fit-content;
-      }
-
-      img {
-        align-self: center;
-        justify-self: center;
-        height: 220px;
-        width: 100%;
-        object-fit: contain;
-        grid-area: img;
-        background-color: white;
-        border-radius: var(--rounded-card-corners);
-        padding: 1rem;
-      }
-
-      p:last-of-type {
-        grid-area: description;
-        height: fit-content;
-        align-self: end;
-      }
-    }
-  }
 }
 
-#cosplays > ul > li > img {
-  height: 450px !important;
-}
 
 /* Professional Info Styles */
-#resume > ul,
-#certificates > ul {
+#resume>ul,
+#certificates>ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 
-  > li {
+  >li {
     background: var(--light-grey);
     border-radius: var(--rounded-card-corners);
     padding: 1rem;
   }
 }
 
-#resume > ul {
+#resume>ul {
   text-align: left;
   border-inline-start: 1px solid var(--dark-font);
   padding-inline-start: 0.5em;
 
-  > li {
+  >li {
     h3 {
       font-size: var(--font-size-large);
       margin-block-end: 0;
@@ -178,8 +188,8 @@ section:has(.infocard) {
   }
 }
 
-#certificates > ul {
-  > li > a {
+#certificates>ul {
+  >li>a {
     display: grid;
     grid-template-areas: "logo title" "logo issuer" "logo date";
     grid-template-columns: auto 1fr;
@@ -189,7 +199,8 @@ section:has(.infocard) {
     text-align: left;
     border-bottom: none;
 
-    img {
+    img,
+    picture {
       grid-area: logo;
       max-width: 64px;
       max-height: 64px;
@@ -219,15 +230,16 @@ section:has(.infocard) {
   }
 }
 
-ul li img,
-.cosplay-info img,
-ul li img[src$=".png"],
-ul li img[src$=".svg"] {
+ul li picture,
+.cosplay-info picture,
+ul li picture[src$=".png"],
+ul li picture[src$=".svg"] {
   height: 200px;
 }
 
-ul li img,
-.cosplay-info img {
+.cosplay-info picture,
+ul li picture,
+.cosplay-info picture {
   width: 100%;
   object-fit: cover;
   border-radius: var(--rounded-corners);

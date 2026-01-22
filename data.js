@@ -18,21 +18,21 @@ export const helpfulLinks = [
     use: "Tutorial",
     url: "https://www.tiktok.com/@ananasu.exe/video/7289790044393442593",
     description: "How to make animal ears on a budget.",
-    imageUrl: "assets/img/tool_img/ears.avif",
+    imageUrl: "/assets/img/tool_img/ears.avif",
   },
   {
     title: "Maidheadband",
     use: "Tutorial",
     url: "https://www.tiktok.com/@ananasu.exe/video/7246414817773260059",
     description: "How to make a simple maid headband.",
-    imageUrl: "assets/img/tool_img/maidband.avif",
+    imageUrl: "/assets/img/tool_img/maidband.avif",
   },
   {
     title: "How to make horns",
     use: "Tutorial",
     url: "https://www.tiktok.com/@ananasu.exe/video/7247592635219627290",
     description: "How to make lightweight horns without a 3d-Printer.",
-    imageUrl: "assets/img/tool_img/horns.jpeg",
+    imageUrl: "/assets/img/tool_img/horns.jpeg",
   },
   {
     title: "How to 'understitching'",
@@ -40,7 +40,7 @@ export const helpfulLinks = [
     url: "https://www.tiktok.com/@nikki.drafts/video/7515194801763962117?q=understitching&t=1750061393219",
     description:
       "Ever wondered why your seams don't lay flat? This is the solution!",
-    imageUrl: "assets/img/tool_img/understitch.jpeg",
+    imageUrl: "/assets/img/tool_img/understitch.jpeg",
   },
 ];
 
@@ -83,7 +83,7 @@ export const cosPortfolio = [
   {
     title: "Marcille Donato",
     source: "Delicious in Dungeon",
-    imageUrl: "assets/img/card_img/Marcille_NF.jpg",
+    imageUrl: "/assets/img/card_img/Marcille_NF.jpg",
     genres: "Silly, Powerful & Hungry!",
     description:
       "Marcille Donato is a character from a story about adventurers cooking and eating monsters. I made this cosplay for the 2025 S.a.m.t Con cosplay contest and placed 1st.",
@@ -93,7 +93,7 @@ export const cosPortfolio = [
   {
     title: "Frieren",
     source: "Frieren: Beyond Journey's End",
-    imageUrl: "assets/img/card_img/Frieren_NF.jpg",
+    imageUrl: "/assets/img/card_img/Frieren_NF.jpg",
     genres: "Adventurous, Wise & Kind!",
     description:
       "Frieren is a character from a story about an elf mage who travels to understand humanity. I competed with this cosplay at the 2024 Bijutsu & won best in craftsmanship.",
@@ -102,7 +102,7 @@ export const cosPortfolio = [
   {
     title: "Laudna",
     source: "Critical Role",
-    imageUrl: "assets/img/card_img/Laudna_NF.jpg",
+    imageUrl: "/assets/img/card_img/Laudna_NF.jpg",
     genres: "Dark, Spooky & Fun!",
     description:
       "Laudna is a character from Critical Role, a D&D show. I made this cosplay for the 2024 Dokomi cosplay contest and placed 3rd.",
@@ -112,7 +112,7 @@ export const cosPortfolio = [
   {
     title: "Tohru",
     source: "Miss Kobayashi's Dragon Maid",
-    imageUrl: "assets/img/card_img/Tohru_NF.jpg",
+    imageUrl: "/assets/img/card_img/Tohru_NF.jpg",
     genres: "Cute, Outgoing & Funny!",
     description:
       "Tohru is a dragon mastering her life with her savior Miss Kobayashi. This slice of life anime is a pure comfort show.",
@@ -121,7 +121,7 @@ export const cosPortfolio = [
   {
     title: "Haru",
     source: "Beastars",
-    imageUrl: "assets/img/card_img/Haru_NF.jpg",
+    imageUrl: "/assets/img/card_img/Haru_NF.jpg",
     genres: "Dramatic, Inspiring & Tough!",
     description:
       "Haru is living in a world where carnivores and herbivores are at odds. She is a strong character who fights for her beliefs.",
@@ -130,7 +130,7 @@ export const cosPortfolio = [
   {
     title: "Fearne Calloway",
     source: "Critical Role",
-    imageUrl: "assets/img/card_img/Fearne_NF.jpg",
+    imageUrl: "/assets/img/card_img/Fearne_NF.jpg",
     genres: "Silly, Mischievous & Fun!",
     description:
       "Fearne is a character from Critical Role, a D&D show. Her fey nature healed something in me & she enchants enyone who meets her.",
