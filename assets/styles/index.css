@@ -79,12 +79,12 @@ button,
   }
 
   &.primary {
-    background-color: #8cc9f0;
+    background-color: var(--primary-button-color);
     color: #ffffff !important;
     box-shadow: none;
 
     &:hover {
-      background-color: #9acff2;
+      background-color: var(--primary-button-hover-color);
     }
 
     &:active {
@@ -96,6 +96,7 @@ button,
 .button[href=""] {
   opacity: 0.5;
   cursor: not-allowed;
+  background-color: var(--primary-button-disabled-color);
 }
 
 h2 {

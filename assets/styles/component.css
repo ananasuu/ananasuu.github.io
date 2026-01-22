@@ -37,6 +37,8 @@ section:has(.infocard) {
     background-color: var(--light-grey);
     border-radius: var(--rounded-card-corners);
     height: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.15);
+
 
     &.link {
       grid-template-areas: "title" "use" "img" "description";
@@ -155,6 +157,7 @@ section:has(.infocard) {
     background: var(--light-grey);
     border-radius: var(--rounded-card-corners);
     padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.15);
   }
 }
 

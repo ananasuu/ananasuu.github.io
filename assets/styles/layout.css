@@ -12,6 +12,7 @@
 h1 {
   margin: 0 0 0.25em 0;
   font-size: 2.5em;
+  color: var(--light-pink-text);
 }
 
 #wrapper > nav {
