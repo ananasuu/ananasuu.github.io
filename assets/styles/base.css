@@ -18,7 +18,7 @@
   --rounded-card-corners: 8px;
   --rounded-corners: 0.25em;
   --transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  --primary-button-color: #45a7e3;
-  --primary-button-hover-color: #2d8ac9;
-  --primary-button-disabled-color: #8fa8c3;
+  --primary-button-color: #1a7bb9;
+  --primary-button-hover-color: #145a8f;
+  --primary-button-disabled-color: #627689;
 }

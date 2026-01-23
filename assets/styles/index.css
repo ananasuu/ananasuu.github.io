@@ -94,7 +94,6 @@ button,
 }
 
 .button[href=""] {
-  opacity: 0.5;
   cursor: not-allowed;
   background-color: var(--primary-button-disabled-color);
 }
