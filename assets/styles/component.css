@@ -72,7 +72,7 @@ section:has(.infocard) {
         height: 220px;
 
         img {
-          object-fit: contain;
+          object-fit: contain !important;
         }
       }
 
