@@ -119,7 +119,7 @@ export function skills() {
 
 export function resume() {
   const ul = document.createElement("ul");
-  resumeData.forEach((link) => {
+  [...resumeData].reverse().forEach((link) => {
     const li = document.createElement("li");
     li.innerHTML = `
                 <h3>${link.title}</h3>
