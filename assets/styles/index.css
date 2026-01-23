@@ -140,52 +140,30 @@ section {
   position: relative;
 }
 
-section:has(#about) {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-
-  .cosplay-info,
-  .infocard {
-    grid-template-columns: 1fr;
-    width: 100%;
-    max-width: 600px;
-    padding: 1rem;
-    margin: 0;
-    height: 100%;
-  }
-}
-
-@media (min-width: 600px) {
-  section:has(#about) {
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-evenly;
-
-    .cosplay-info,
-    .infocard {
-      grid-template-columns: 1fr;
-      width: 100%;
-      max-width: 45ch;
-      padding: 1rem;
-      margin: 0;
-      height: 100%;
-    }
-
-    .cosplay-info {
-      justify-self: end;
-
-      h3 {
-        margin-block-start: 0;
-      }
-    }
-  }
-}
-
 picture {
 
   img {
     height: 100%;
     width: auto;
     object-fit: cover;
+  }
+}
+
+#projects li {
+  text-align: left;
+  h3 a, h3 {
+    font-size: var(--font-size-larger);
+    margin: 0;
+  }
+
+  p:first-of-type{
+    font-size: var(--font-size-small);
+    color: var(--light-font);
+    margin: 0;
+}
+
+  p:last-of-type {
+    margin-block-start: 0;
+    margin-block-end: 1.5rem;
   }
 }

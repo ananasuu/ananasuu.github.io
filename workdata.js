@@ -12,52 +12,52 @@ export const aboutData = {
 
 export const resumeData = [
   {
-    title: "Abitur",
+    title: "Abitur (German High School Diploma)",
     institution: "Gesamtschule Niederzier/Merzenich",
     start: "2019",
     end: "2021",
     description:
-      "Nach einem Umzug aus Niedersachsen/Hamburg wechselte ich auf diese Schule. Meinen Abschluss habe ich mit den Prüfungsfächern Englisch und Sozialwissenschaften als Leistungskurse, Deutsch als mündliche Prüfung und Mathematik als schriftliche Prüfung absolviert.",
+      "After relocating from Lower Saxony/Hamburg, I transferred to this school. I completed my degree with English and Social Sciences as advanced courses, German as an oral exam, and Mathematics as a written exam.",
     grade: "1.9",
   },
   {
-    title: "Rechtswissenschaftsstudium",
-    institution: "Heinrich Heine Universität Düsseldorf",
+    title: "Law Studies",
+    institution: "Heinrich Heine University Düsseldorf",
     start: "2021",
     end: "2022",
     description:
-      "Direkt nach dem Abitur begann ich mein Studium. Nach einem Jahr stellte ich jedoch fest, dass ich lieber näher am Zahn der Zeit arbeiten möchte. Trotzdem konnte ich einen guten Einblick in juristische Denkweisen und Arbeitsweisen gewinnen. Hierzu gehörte auch ein Praktikum in einer Anwaltskanzlei.",
+      "Started my studies immediately after graduation. After one year, I realized I preferred working in a more contemporary field. Nevertheless, I gained valuable insights into legal thinking and working methods, including an internship at a lawyer's office.",
     grade: "",
   },
   {
     title:
-      "Duale Ausbildung zum Fachinformatiker für Anwendungsentwicklung, Betrieblicher Teil",
+      "Dual Vocational Training as IT Specialist for Application Development, Operational Part",
     institution: "cycos AG",
     start: "2022",
     end: "Summer 2025",
     description: [
-      "Gestartet in einem Unternehmen in Düren, aus welchem ich nach Aachen wechselte",
-      "Entwicklung und Pflege moderner & barrierefreier (Web-)Oberflächen",
-      "Anwendung interner Komponentenbibliotheken",
-      "Datenbanknahe Webentwicklung",
-      "Unterstützung im First-Level-Support",
-      "Repräsentation des Unternehmens auf Berufsmessen & bei Aktionärsveranstaltungen",
+      "Started at a company in Düren, then transferred to Aachen",
+      "Development and maintenance of modern & accessible (web) interfaces",
+      "Application of internal component libraries",
+      "Database-driven web development",
+      "First-level support assistance",
+      "Company representation at career fairs & shareholder events",
     ],
-    grade: "88/100 Punkte in der IHK-Prüfung",
+    grade: "88/100 points in the Chamber of Industry and Commerce (IHK) exam",
   },
   {
     title:
-      "Duale Ausbildung zum Fachinformatiker für Anwendungsentwicklung, Schulischer Teil",
+      "Dual Vocational Training as IT Specialist for Application Development, Academic Part",
     institution: "Berufskolleg für Technik Düren",
     start: "2022",
     end: "Summer 2025",
     description: [
-      "Vermittlung von theoretischen Grundlagen der Informatik",
-      "Softwareentwicklungsmethoden & -prozesse",
-      "Datenbanken & Netzwerktechnik",
-      "Projektarbeit im Team",
+      "Teaching of theoretical computer science fundamentals",
+      "Software development methods & processes",
+      "Databases & network technology",
+      "Team project work",
     ],
-    grade: "1,5",
+    grade: "1.5",
   },
   {
     title: "Junior Software Developer",
@@ -65,9 +65,9 @@ export const resumeData = [
     start: "Summer 2025",
     end: "",
     description: [
-      "Fortsetzen meiner vorherigen Aufgaben",
-      "Designanpassungen",
-      "Unterstützung der neuen Auszubildenden",
+      "Continuing my previous responsibilities",
+      "Design adjustments",
+      "Supporting new trainees",
     ],
     grade: "",
   },
@@ -91,9 +91,9 @@ export const skillsData = [
     title: "Softskills",
     skills: [
       "Teamwork",
-      "Auffassungsgabe",
+      "Quick comprehension",
       "Communication",
-      "Präsentationsfähigkeit",
+      "Presentation skills",
       "Creativity",
     ],
   },
@@ -154,7 +154,7 @@ export const skillsData = [
         experience: "3 Years",
       },
       {
-        skill: "Acccessibility nach WCAG",
+        skill: "Accessibility according to WCAG",
         experience: "3 Years",
       },
       {
@@ -221,7 +221,7 @@ export const certificatesData = [
     issued: "Feb. 2023",
   },
   {
-    title: "HTML5 Grundkurs",
+    title: "HTML5 Fundamentals",
     institution: "LinkedIn",
     link: "",
     issued: "Nov. 2022",
@@ -230,24 +230,24 @@ export const certificatesData = [
 
 export const projectsData = [
   {
-    title: "Firmenhomepage Modernisierung und Wartung",
-    role: "Frontend-Entwicklerin, Designunterstützung ",
+    title: "Company Homepage Modernization and Maintenance",
+    role: "Frontend Developer, Design Support",
     description:
-      "Migration der Unternehmens-Website von einem extern gewarteten CMS zu einer modernen, intern betriebenen Astro-basierten Lösung. Fokus lag auf Performance, Barrierefreiheit und langfristiger Wartbarkeit. Es werden noch immer stetig Verbesserungen eingepflegt.",
+      "Migration of the company website from an externally managed CMS to a modern, internally operated Astro-based solution. Focus was on performance, accessibility, and long-term maintainability. Continuous improvements are still being implemented.",
     url: "",
   },
   {
-    title: "Einkaufsverwaltungssystem für lokale Händler",
-    role: "Projektmanagement, Frontend-Entwicklerin, UI/UX Design",
+    title: "Purchase Management System for Local Vendors",
+    role: "Project Management, Frontend Developer, UI/UX Design",
     description:
-      "Konzeption und Umsetzung eines webbasierten Systems zur Verwaltung interner Bestellungen bei lokalen Händlern. Statt manueller E-Mail-Bestellungen ermöglicht die Anwendung die automatisierte Erstellung, Verarbeitung und Nachverfolgung von Bestellungen sowie Auswertungen des Verbrauchsverhaltens.",
+      "Conception and implementation of a web-based system for managing internal orders with local vendors. Instead of manual email orders, the application enables automated creation, processing, and tracking of orders as well as consumption pattern analysis.",
     url: "",
   },
   {
-    title: "Steckbriefgenerator",
-    role: "Frontend-Entwicklerin",
+    title: "Employee Profile Generator",
+    role: "Frontend Developer",
     description:
-      "Entwicklung einer internen Plattform, die Mitarbeiter-Fähigkeitsprofile automatisiert erstellt und direkt in kundenspezifische Vorlagen integriert. Ziel war die deutliche Reduzierung des manuellen Aufwands bei der Erstellung.",
+      "Development of an internal platform that automatically creates employee skills profiles and integrates them directly into customer-specific templates. The goal was to significantly reduce manual effort in creation.",
     url: "",
   },
 ];

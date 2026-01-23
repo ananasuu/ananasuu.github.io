@@ -40,6 +40,20 @@ section:has(.infocard) {
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.15);
 
+    ul {
+      list-style: initial;
+      padding: 1.5rem;
+
+      li {
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    &#about {
+      grid-template-areas: "title" "description";
+      grid-template-rows: auto 1fr;
+    }
 
     &.link {
       grid-template-areas: "title" "use" "img" "description";
@@ -65,6 +79,12 @@ section:has(.infocard) {
       p:last-of-type {
         grid-area: description;
         align-self: end;
+      }
+    }
+
+    &.cosplay-info {
+      h3 {
+        margin-block-end: 0.5rem;
       }
     }
 
@@ -106,12 +126,17 @@ section:has(.infocard) {
         margin-block-end: 0.5em;
       }
 
-      .use {
+      &.use {
         grid-area: use;
       }
 
-      .source {
+      &.source {
         grid-area: source;
+      }
+
+      &.description {
+        grid-area: description;
+        margin-block-start: 0.5em;
       }
 
       .genres {
@@ -119,13 +144,22 @@ section:has(.infocard) {
         grid-area: genres;
         margin-block-start: 0.25em;
 
-
         +p {
           margin-block-end: 1em;
         }
       }
     }
 
+    &:not(:has(p)) {
+      grid-template-areas: "title" "list";
+      grid-template-rows: auto 1fr;
+
+      li {
+        height: initial;
+      }
+    }
+
+    &.cosplay-info img,
     picture {
       width: 100%;
       height: auto;
@@ -169,7 +203,39 @@ section:has(.infocard) {
 #resume>ul {
   text-align: left;
   border-inline-start: 1px solid var(--dark-font);
-  padding-inline-start: 0.5em;
+  padding-inline-start: 1em;
+  padding-block: 0.5rem;
+  margin-block: 2rem;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: -33px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--dark-font);
+    box-shadow: 
+      0 11px 0 1px var(--dark-font),
+      0 22px 0 2px var(--dark-font);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    bottom: -15px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--dark-font);
+    box-shadow: 
+      0 11px 0 -1px var(--dark-font),
+      0 22px 0 -2px var(--dark-font);
+  }
 
   >li {
     h3 {
