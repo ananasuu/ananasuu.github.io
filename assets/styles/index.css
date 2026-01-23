@@ -167,3 +167,16 @@ picture {
     margin-block-end: 1.5rem;
   }
 }
+
+#skills {
+  header{
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    margin-bottom: 0;
+  }
+
+  ul{
+    padding-block: 0.5rem;
+  }
+}
