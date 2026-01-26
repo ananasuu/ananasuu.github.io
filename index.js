@@ -50,19 +50,20 @@ export function cosplays() {
   cosPortfolio.forEach((cos) => {
     const li = document.createElement("li");
     const avifUrl = cos.imageUrl.replace(/\.(jpg|jpeg|png)$/i, '.avif');
+    const isDisabled = !cos.buildbookUrl || cos.buildbookUrl.trim() === '';
     li.innerHTML = `
-        <div class="infocard costume">
-                <h3>${cos.title}</h3>
-                <p class="source">${cos.source}</p>
-                <picture>
-                  <source srcset="${avifUrl}" type="image/avif">
-                  <img src="${cos.imageUrl}" alt="${cos.title} from ${cos.source}" loading="lazy" />
-                </picture>
-                <p class="genres">${cos.genres}</p>
-                <p>${cos.description}</p>
-                <a class="button primary" href="${cos.buildbookUrl}">Build Book</a>
-        </div>
-            `;
+      <div class="infocard costume">
+          <h3>${cos.title}</h3>
+          <p class="source">${cos.source}</p>
+          <picture>
+            <source srcset="${avifUrl}" type="image/avif">
+            <img src="${cos.imageUrl}" alt="${cos.title} from ${cos.source}" loading="lazy" />
+          </picture>
+          <p class="genres">${cos.genres}</p>
+          <p>${cos.description}</p>
+          <a class="button primary" href="${cos.buildbookUrl || ''}" ${isDisabled ? 'aria-disabled="true"' : ''}>Build Book</a>
+      </div>
+        `;
     ul.appendChild(li);
   });
   return ul;

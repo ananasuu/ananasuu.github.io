@@ -60,10 +60,6 @@ section:has(.infocard) {
       grid-template-rows: auto auto 1fr auto;
       border-bottom: none;
 
-      &:hover {
-        background-color: var(--link-card-light-grey-hover);
-      }
-
       h3 {
         margin-block-end: auto;
       }
@@ -159,11 +155,16 @@ section:has(.infocard) {
       }
     }
 
+
+    &.cosplay-info img,
+    &:not(.costume) picture {
+      aspect-ratio: 1 / 1;
+    }
+
     &.cosplay-info img,
     picture {
       width: 100%;
       height: auto;
-      aspect-ratio: 1 / 1;
       max-width: 100%;
       border-radius: var(--rounded-card-corners);
       grid-area: img;
@@ -219,7 +220,7 @@ section:has(.infocard) {
     height: 4px;
     border-radius: 50%;
     background: var(--dark-font);
-    box-shadow: 
+    box-shadow:
       0 11px 0 1px var(--dark-font),
       0 22px 0 2px var(--dark-font);
   }
@@ -233,7 +234,7 @@ section:has(.infocard) {
     height: 8px;
     border-radius: 50%;
     background: var(--dark-font);
-    box-shadow: 
+    box-shadow:
       0 11px 0 -1px var(--dark-font),
       0 22px 0 -2px var(--dark-font);
   }
@@ -266,6 +267,11 @@ section:has(.infocard) {
 #certificates {
   /* Reserve space to prevent layout shift during content loading */
   min-height: 200px;
+}
+
+.infocard.link:hover,
+#certificates>ul>li:hover {
+  background-color: var(--link-card-light-grey-hover);
 }
 
 #certificates>ul {
