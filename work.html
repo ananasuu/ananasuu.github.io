@@ -26,7 +26,8 @@
     <meta property="twitter:image" content="https://ananasuu.github.io/assets/img/Fun_Pfp.jpg" />
     <!-- Preload critical CSS -->
     <link rel="preload" href="assets/styles/index.css" as="style" />
-    <link rel="stylesheet" href="assets/styles/index.css" />
+    <link rel="stylesheet" href="assets/styles/index.css" media="print" onload="this.media='all'; this.onload=null;" />
+    <noscript><link rel="stylesheet" href="assets/styles/index.css" /></noscript>
     <!-- Preload LCP image -->
     <link rel="preload" href="/assets/img/Nina_Pfp.avif" as="image" type="image/avif" fetchpriority="high" />
     <link rel="preload" href="/assets/img/Nina_Pfp.jpg" as="image" type="image/jpeg" fetchpriority="high" />
