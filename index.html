@@ -26,7 +26,11 @@
     <meta property="twitter:image" content="https://ananasuu.github.io/assets/img/Nina_Pfp.jpg" />
     <!-- Preload critical CSS -->
     <link rel="preload" href="assets/styles/index.css" as="style" />
-    <link rel="stylesheet" href="assets/styles/index.css" />
+    <link rel="stylesheet" href="assets/styles/index.css" media="print" onload="this.media='all'; this.onload=null;" />
+    <noscript><link rel="stylesheet" href="assets/styles/index.css" /></noscript>
+    <!-- Preload LCP image -->
+    <link rel="preload" href="/assets/img/Nina_Pfp.avif" as="image" type="image/avif" fetchpriority="high" />
+    <link rel="preload" href="/assets/img/Nina_Pfp.jpg" as="image" type="image/jpeg" fetchpriority="high" />
     <!-- Preload JavaScript modules -->
     <link rel="modulepreload" href="./index.js" />
     <link rel="modulepreload" href="./data.js" />
@@ -186,6 +190,8 @@
                 <img
                   src="/assets/img/icons8_instagram.png"
                   alt="Instagram"
+                  width="50"
+                  height="50"
                 />
               </a>
             </li>
@@ -194,6 +200,8 @@
                 <img
                   src="/assets/img/icons8_github.png"
                   alt="GitHub"
+                  width="50"
+                  height="50"
                 />
               </a>
             </li>
@@ -202,6 +210,8 @@
                 <img
                   src="/assets/img/icons8_tiktok.png"
                   alt="TikTok"
+                  width="50"
+                  height="50"
                 />
               </a>
             </li>
