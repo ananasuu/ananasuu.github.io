@@ -1,10 +1,10 @@
-const CACHE_VERSION = "v1.0.1";
+const CACHE_VERSION = "v1.0.2";
 const CACHE_NAME = `ninumakes-${CACHE_VERSION}`;
 
 // Cache duration: 30 days for static assets (in seconds)
 const CACHE_MAX_AGE = 30 * 24 * 60 * 60;
 
-// Assets to cache immediately on install (only critical files)
+// Assets to cache immediately on install (critical files)
 const PRECACHE_ASSETS = [
   "/",
   "/index.html",
@@ -12,6 +12,14 @@ const PRECACHE_ASSETS = [
   "/index.js",
   "/data.js",
   "/workdata.js",
+  "/assets/styles/index.css",
+  "/assets/styles/base.css",
+  "/assets/styles/layout.css",
+  "/assets/styles/component.css",
+  "/assets/img/Nina_Pfp.avif",
+  "/assets/img/Nina_Pfp.jpg",
+  "/assets/img/Fun_Pfp.avif",
+  "/assets/img/overlay.png",
 ];
 
 // All assets folder content will be cached on first request
@@ -106,13 +114,33 @@ async function cacheFirst(request) {
 
   if (cached) {
     // Check if cache is still fresh (within max age)
-    const cachedDate = new Date(cached.headers.get("date") || 0);
-    const now = new Date();
-    const ageInSeconds = (now - cachedDate) / 1000;
+    const cacheDate = cached.headers.get("sw-cache-date");
+    if (cacheDate) {
+      const cachedDate = new Date(cacheDate);
+      const now = new Date();
+      const ageInSeconds = (now - cachedDate) / 1000;
 
-    // If cache is still fresh, return it
-    if (ageInSeconds < CACHE_MAX_AGE) {
-      return cached;
+      // If cache is still fresh, return it and optionally revalidate in background
+      if (ageInSeconds < CACHE_MAX_AGE) {
+        // Revalidate in background for assets older than 7 days
+        if (ageInSeconds > 7 * 24 * 60 * 60) {
+          fetch(request)
+            .then((response) => {
+              if (response.ok) {
+                const headers = new Headers(response.headers);
+                headers.set("sw-cache-date", new Date().toISOString());
+                const responseWithHeaders = new Response(response.body, {
+                  status: response.status,
+                  statusText: response.statusText,
+                  headers: headers,
+                });
+                cache.put(request, responseWithHeaders);
+              }
+            })
+            .catch(() => {});
+        }
+        return cached;
+      }
     }
   }
 
@@ -121,14 +149,14 @@ async function cacheFirst(request) {
 
     // Cache successful responses with custom headers
     if (response.ok) {
-      const clonedResponse = response.clone();
-      // Add cache timestamp
-      const headers = new Headers(clonedResponse.headers);
+      const headers = new Headers(response.headers);
       headers.set("sw-cache-date", new Date().toISOString());
+      // Override GitHub Pages cache headers
+      headers.set("Cache-Control", `public, max-age=${CACHE_MAX_AGE}, immutable`);
 
-      const responseWithHeaders = new Response(await clonedResponse.blob(), {
-        status: clonedResponse.status,
-        statusText: clonedResponse.statusText,
+      const responseWithHeaders = new Response(await response.clone().blob(), {
+        status: response.status,
+        statusText: response.statusText,
         headers: headers,
       });
 
