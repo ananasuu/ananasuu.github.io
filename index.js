@@ -157,7 +157,7 @@ export function certificates() {
     li.innerHTML = `
         <a href="${link.link}">
                 <h3>${link.title}</h3>
-                <img src="/assets/img/institution_logos/${link.institution.toLowerCase()}.jpg" alt="${link.institution} logo" />
+                <img src="/assets/img/institution_logos/${link.institution.toLowerCase()}.jpg" alt="${link.institution} logo" width="64" height="64" />
                 <p>${link.institution}</p>
                 <p>Issued: ${link.issued}</p>
                 </a>

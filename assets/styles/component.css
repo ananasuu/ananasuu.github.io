@@ -163,6 +163,7 @@ section:has(.infocard) {
     picture {
       width: 100%;
       height: auto;
+      aspect-ratio: 1 / 1;
       max-width: 100%;
       border-radius: var(--rounded-card-corners);
       grid-area: img;
@@ -262,6 +263,11 @@ section:has(.infocard) {
   }
 }
 
+#certificates {
+  /* Reserve space to prevent layout shift during content loading */
+  min-height: 400px;
+}
+
 #certificates>ul {
   >li>a {
     display: grid;
@@ -276,6 +282,8 @@ section:has(.infocard) {
     img,
     picture {
       grid-area: logo;
+      width: 64px;
+      height: 64px;
       max-width: 64px;
       max-height: 64px;
       border-radius: var(--rounded-card-corners);
