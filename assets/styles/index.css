@@ -10,7 +10,7 @@
 
 * {
   font-size: var(--font-size);
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif, "Source Sans Pro";
   font-weight: 350;
   line-height: 1.65;
   box-sizing: border-box;
@@ -29,8 +29,6 @@ body {
     url("/assets/img/overlay.png"), linear-gradient(var(--orange-pink-gradient));
   color: rgba(255, 255, 255, 0.65);
   margin: 0;
-  /* Fallback fonts to reduce layout shifts during web font loading */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 ul {

@@ -24,10 +24,8 @@
     <meta property="twitter:title" content="NinuMakes - Cosplay & Crafting Portfolio" />
     <meta property="twitter:description" content="Nina's creative portfolio showcasing her cosplay and crafting skills while also showcasing good resources." />
     <meta property="twitter:image" content="https://ananasuu.github.io/assets/img/Nina_Pfp.jpg" />
-    <!-- Preload critical CSS -->
-    <link rel="preload" href="assets/styles/index.css" as="style" />
-    <link rel="stylesheet" href="assets/styles/index.css" media="print" onload="this.media='all'; this.onload=null;" />
-    <noscript><link rel="stylesheet" href="assets/styles/index.css" /></noscript>
+    <!-- Critical CSS loaded synchronously -->
+    <link rel="stylesheet" href="assets/styles/index.css" />
     <!-- Preload LCP image -->
     <link rel="preload" href="/assets/img/Nina_Pfp.avif" as="image" type="image/avif" fetchpriority="high" />
     <link rel="preload" href="/assets/img/Nina_Pfp.jpg" as="image" type="image/jpeg" fetchpriority="high" />
@@ -48,7 +46,7 @@
     />
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
@@ -58,7 +56,7 @@
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap"
         rel="stylesheet"
       />
     </noscript>
