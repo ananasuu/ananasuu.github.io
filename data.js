@@ -59,7 +59,7 @@ export const toolLinks = [
     url: "https://cosplayshop.be/de/",
     description:
       "Ordering materials in the EU can be a pain, but this shop has nice stuff!",
-    imageUrl: "/assets/img/cosplayshop_logo.svg",
+    imageUrl: "/assets/img/cosplaybe_logo.svg",
   },
   {
     title: "Kamui Cosplay",
