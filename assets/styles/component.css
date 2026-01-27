@@ -186,6 +186,11 @@ section:has(.infocard) {
   }
 }
 
+/* Special styling for section containing #about - max 2 columns */
+section:has(#about) {
+  grid-template-columns: repeat(auto-fit, minmax(clamp(400px, calc((100% - 1rem) / 2), 100%), 1fr)) !important;
+}
+
 
 /* Professional Info Styles */
 #resume>ul,
