@@ -108,7 +108,7 @@ export function skills() {
                         if (typeof skill === "string") {
                           return `<li>${skill}</li>`;
                         }
-                        return `<li>${skill.skill} - ${skill.level || skill.experience}</li>`;
+                        return `<li><span>${skill.skill}</span><span>${skill.level || skill.experience}</span></li>`;
                       })
                       .join("")}
             `;

@@ -280,6 +280,7 @@ section:has(#about) {
 }
 
 #certificates>ul {
+  width: 100%;
   >li>a {
     display: grid;
     grid-template-areas: "logo title" "logo issuer" "logo date";
