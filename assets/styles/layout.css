@@ -94,12 +94,36 @@ main {
   .spotlight {
     margin: 0 0 2em 0;
 
+    /* Standard spotlight layout (für index.html) */
+    &:not(:has(.spotlight-top)) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .content {
+        width: 70%;
+
+        &> :last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    /* Erweiterte spotlight layout mit top/bottom (für work.html) */
     .spotlight-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 5em;
       grid-column: 1/-1;
+
+      .content {
+        width: 70%;
+
+        &> :last-child {
+          margin-bottom: 0;
+        }
+      }
     }
 
     .spotlight-bottom {
@@ -107,14 +131,6 @@ main {
 
       header.major {
         margin: 2em 0 2em 0;
-      }
-    }
-
-    .content {
-      width: 70%;
-
-      &> :last-child {
-        margin-bottom: 0;
       }
     }
 
@@ -321,6 +337,13 @@ footer {
   }
 
   .spotlight {
+    /* Standard spotlight (index.html) */
+    &:not(:has(.spotlight-top)) {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    /* Erweiterte spotlight mit top/bottom (work.html) */
     .spotlight-top {
       flex-direction: column-reverse;
       text-align: center;
