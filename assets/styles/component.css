@@ -50,9 +50,27 @@ section:has(.infocard) {
       }
     }
 
+    &#about, &.cosplay-info {
+      h3 {
+        margin-block: 0.5rem 1rem;
+      }
+    }
+
+    &.cosplay-info {
+      p.description {
+        margin-block: 1rem;
+      }
+    }
+
     &#about {
       grid-template-areas: "title" "description";
-      grid-template-rows: auto 1fr;
+      grid-template-rows: auto auto 1fr;
+
+      ul {
+        margin-top: 1rem;
+        width: 85%;
+        justify-self: center;
+      }
     }
 
     &.link {
