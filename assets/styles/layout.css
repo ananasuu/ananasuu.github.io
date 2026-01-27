@@ -92,10 +92,23 @@ main {
   }
 
   .spotlight {
-    display: flex;
-    align-items: center;
     margin: 0 0 2em 0;
-    justify-content: space-between;
+
+    .spotlight-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 5em;
+      grid-column: 1/-1;
+    }
+
+    .spotlight-bottom {
+      width: 100%;
+
+      header.major {
+        margin: 2em 0 2em 0;
+      }
+    }
 
     .content {
       width: 70%;
@@ -265,6 +278,7 @@ footer {
     span:last-of-type {
       justify-self: start;
       text-align: left;
+      color: var(--light-font)
     }
   }
 }
@@ -307,8 +321,10 @@ footer {
   }
 
   .spotlight {
-    flex-direction: column-reverse;
-    text-align: center;
+    .spotlight-top {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
 
     .content {
       width: 100%;
