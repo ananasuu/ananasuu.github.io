@@ -83,6 +83,8 @@ section:has(.infocard):not(.spotlight),
       grid-template-areas: "title" "use" "img" "description";
       grid-template-rows: auto auto 1fr auto;
       border-bottom: none;
+      background-color: var(--light-grey);
+      transition: background-color 0.2s ease;
 
       h3 {
         margin-block-end: auto;
@@ -207,6 +209,11 @@ section:has(.infocard):not(.spotlight),
     a {
       grid-area: link;
     }
+
+    /* Hover effect for link cards */
+    &.link:hover {
+      background-color: var(--link-card-light-grey-hover);
+    }
   }
 }
 
@@ -299,7 +306,6 @@ section:has(#about) {
   min-height: 200px;
 }
 
-.infocard.link:hover,
 #certificates>ul>li:hover {
   background-color: var(--link-card-light-grey-hover);
 }
