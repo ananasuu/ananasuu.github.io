@@ -102,8 +102,24 @@ export function skills() {
     innerDiv.innerHTML = `<h3>${link.title}</h3>`;
     const ul = document.createElement("ul");
     innerDiv.classList.add(link.title.replace(/\s+/g, "-").toLowerCase());
+    
+    // Sortiere Skills nach Experience/Years (höchste zuerst)
+    const sortedSkills = [...link.skills].sort((a, b) => {
+      // Strings bleiben in ihrer ursprünglichen Reihenfolge
+      if (typeof a === "string" || typeof b === "string") {
+        return 0;
+      }
+      
+      // Extrahiere numerische Werte aus experience (z.B. "3 Years" -> 3)
+      const valueA = a.experience ? parseFloat(a.experience) : 0;
+      const valueB = b.experience ? parseFloat(b.experience) : 0;
+      
+      // Sortiere absteigend (höchste zuerst)
+      return valueB - valueA;
+    });
+    
     ul.innerHTML = `
-                    ${link.skills
+                    ${sortedSkills
                       .map((skill) => {
                         if (typeof skill === "string") {
                           return `<li>${skill}</li>`;
