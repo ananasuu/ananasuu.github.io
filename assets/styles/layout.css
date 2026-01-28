@@ -1,8 +1,8 @@
-#wrapper > header {
+#wrapper>header {
   padding-block: 3em;
   text-align: center;
 
-  > * {
+  >* {
     transition: opacity 3s ease;
     transition-delay: 0.5s;
     opacity: 1;
@@ -15,7 +15,7 @@ h1 {
   color: var(--light-pink-text);
 }
 
-#wrapper > nav {
+#wrapper>nav {
   transition:
     background-color 0.2s ease,
     border-top-left-radius 0.2s ease,
@@ -67,11 +67,13 @@ h1 {
   }
 }
 
-nav + main {
+nav+main {
   padding-top: 3.25em;
 }
 
 main {
+  container-type: inline-size;
+  container-name: main-content;
   background-color: #ffffff;
   border-radius: var(--rounded-corners);
   color: var(--dark-font);
@@ -80,7 +82,7 @@ main {
     border-color: #dddddd;
   }
 
-  > section:not(:first-of-type) {
+  >section:not(:first-of-type) {
     border-top: solid 1px #dddddd;
     box-sizing: border-box;
 
@@ -90,16 +92,45 @@ main {
   }
 
   .spotlight {
-    display: flex;
-    align-items: center;
     margin: 0 0 2em 0;
-    justify-content: space-between;
 
-    .content {
-      width: 70%;
+    /* Standard spotlight layout (für index.html) */
+    &:not(:has(.spotlight-top)) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-      & > :last-child {
-        margin-bottom: 0;
+      .content {
+        width: 70%;
+
+        &> :last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    /* Erweiterte spotlight layout mit top/bottom (für work.html) */
+    .spotlight-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 5em;
+      grid-column: 1/-1;
+
+      .content {
+        width: 70%;
+
+        &> :last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .spotlight-bottom {
+      width: 100%;
+
+      header.major {
+        margin: 2em 0 2em 0;
       }
     }
 
@@ -136,10 +167,8 @@ main {
         position: absolute;
         inset: 0;
         border-radius: 100%;
-        background-image: image-set(
-          url("/assets/img/Fun_Pfp.avif") type("image/avif"),
-          url("/assets/img/Fun_Pfp.jpg") type("image/jpeg")
-        );
+        background-image: image-set(url("/assets/img/Fun_Pfp.avif") type("image/avif"),
+            url("/assets/img/Fun_Pfp.jpg") type("image/jpeg"));
         background-size: cover;
         background-position: center;
         opacity: 0;
@@ -152,11 +181,11 @@ main {
     }
   }
 
-  section:first-of-type h2 {
+  >section:first-of-type h2 {
     justify-self: start;
   }
 
-  section > header {
+  section>header {
     margin: 0 0 2em 0;
   }
 }
@@ -167,7 +196,7 @@ footer {
   align-items: center;
   justify-content: center;
 
-  > ul {
+  >ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -190,8 +219,8 @@ footer {
     li {
       padding: 0;
 
-      a > img,
-	  a > picture {
+      a>img,
+      a>picture {
         max-width: 32px;
         max-height: 32px;
       }
@@ -211,14 +240,114 @@ footer {
   }
 }
 
+/* Skills & Certificates Container Layout */
+.skills-certificates-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  border-top: solid 1px #dddddd;
+
+  section {
+    text-align: center;
+    justify-items: center;
+  }
+
+  section:last-of-type {
+    border-top: solid 1px #dddddd;
+  }
+}
+
+#skills {
+  display: block;
+
+  div {
+    width: 100%;
+
+    div {
+      width: 100%;
+    }
+  }
+
+  li {
+    text-align: center;
+    list-style: none;
+
+    &:not(:first-of-type) {
+      border-top: solid 1px #dddddd;
+      margin-block-start: 0.25rem;
+      padding-block-start: 0.25rem;
+    }
+  }
+
+  li:has(span) {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+
+    span:first-of-type {
+      justify-self: end;
+      text-align: right;
+    }
+
+    span:last-of-type {
+      justify-self: start;
+      text-align: left;
+      color: var(--light-font)
+    }
+  }
+}
+
+@container main-content (min-width: 1000px) {
+  .skills-certificates-container {
+    grid-template-columns: 1fr 40%;
+
+    #skills {
+      div div {
+        padding-inline: 0;
+        background-color: var(--light-grey);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.15);
+      }
+
+      header {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    section:last-of-type {
+      border-top: none;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--link-card-light-grey-hover);
+      margin: clamp(2.5em, 6vw, 7em) clamp(1em, 5vw, 5em) clamp(2.5em, 7vw, 7em) 0;
+      padding: 1rem;
+      border-radius: var(--rounded-card-corners);
+    }
+
+    section:first-of-type {
+      padding-inline-end: 2.5rem;
+    }
+  }
+}
+
 @media screen and (max-width: 980px) {
   section:first-of-type h2 {
     justify-self: center !important;
   }
 
   .spotlight {
-    flex-direction: column-reverse;
-    text-align: center;
+    /* Standard spotlight (index.html) */
+    &:not(:has(.spotlight-top)) {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    /* Erweiterte spotlight mit top/bottom (work.html) */
+    .spotlight-top {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
 
     .content {
       width: 100%;

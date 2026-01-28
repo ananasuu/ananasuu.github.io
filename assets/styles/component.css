@@ -1,5 +1,6 @@
 /* Infocard Styles */
-section:has(.infocard) {
+section:has(.infocard):not(.spotlight),
+.spotlight-bottom {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   grid-template-rows: auto;
@@ -39,6 +40,7 @@ section:has(.infocard) {
     height: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.15);
+    text-align: center;
 
     ul {
       list-style: initial;
@@ -50,9 +52,31 @@ section:has(.infocard) {
       }
     }
 
+    &#about, &.cosplay-info {
+      h3 {
+        margin-block: 0.5rem 1rem;
+      }
+    }
+
+    &.cosplay-info {
+      p.description {
+        margin-block: 1rem;
+      }
+    }
+
     &#about {
       grid-template-areas: "title" "description";
-      grid-template-rows: auto 1fr;
+      grid-template-rows: auto auto 1fr;
+
+      ul {
+        margin-top: 1rem;
+        width: 85%;
+        justify-self: center;
+      }
+
+      p {
+        margin: 0;
+      }
     }
 
     &.link {
@@ -186,6 +210,11 @@ section:has(.infocard) {
   }
 }
 
+/* Special styling for section containing #about - max 2 columns */
+section:has(#about) {
+  grid-template-columns: repeat(auto-fit, minmax(clamp(400px, calc((100% - 1rem) / 2), 100%), 1fr)) !important;
+}
+
 
 /* Professional Info Styles */
 #resume>ul,
@@ -243,6 +272,7 @@ section:has(.infocard) {
     h3 {
       font-size: var(--font-size-large);
       margin-block-end: 0;
+      margin-block-start: 0;
     }
 
     p {
@@ -275,6 +305,7 @@ section:has(.infocard) {
 }
 
 #certificates>ul {
+  width: 100%;
   >li>a {
     display: grid;
     grid-template-areas: "logo title" "logo issuer" "logo date";

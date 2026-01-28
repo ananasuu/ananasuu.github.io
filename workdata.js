@@ -76,7 +76,7 @@ export const resumeData = [
 export const skillsData = [
   {
     title: "Mobility",
-    skills: ["Driver's license class B, own car available"],
+    skills: ["Driver's license class B", "Own car available"],
   },
   {
     title: "Languages",
@@ -84,7 +84,7 @@ export const skillsData = [
       { skill: "German", level: "Native" },
       { skill: "English", level: "B2/C1" },
       { skill: "French", level: "B1" },
-      { skill: "Latin", level: "Basic Knowledge" },
+      { skill: "Latin", level: "Basics" },
     ],
   },
   {
@@ -124,10 +124,6 @@ export const skillsData = [
         skill: "CI/CD-Pipelines",
         experience: "1.5 Years",
       },
-      {
-        skill: "Lighthouse & Playwright Axe-Core",
-        experience: "1 Year",
-      },
     ],
   },
   {
@@ -154,7 +150,7 @@ export const skillsData = [
         experience: "3 Years",
       },
       {
-        skill: "Accessibility according to WCAG",
+        skill: "Accessibility (WCAG)",
         experience: "3 Years",
       },
       {
