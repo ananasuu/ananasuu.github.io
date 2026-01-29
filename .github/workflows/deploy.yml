@@ -1,0 +1,31 @@
+name: Deploy Astro to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main   # Oder dein Branch, von dem deployt werden soll
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Repo auschecken
+      - uses: actions/checkout@v4
+
+      # 2️⃣ Node einrichten
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      # 3️⃣ Abhängigkeiten installieren
+      - run: npm ci
+
+      # 4️⃣ Build ausführen
+      - run: npm run build
+
+      # 5️⃣ GitHub Pages deployen
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist   # <- das ist dein Astro Build Output
