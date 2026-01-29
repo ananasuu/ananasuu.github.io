@@ -1,0 +1,95 @@
+[
+  {
+    "title": "Abitur (German High School Diploma)",
+    "institution": "Gesamtschule Niederzier/Merzenich",
+    "start": "2019",
+    "end": "2021",
+    "description": "After relocating from Lower Saxony/Hamburg, I transferred to this school. I completed my degree with English and Social Sciences as advanced courses, German as an oral exam, and Mathematics as a written exam.",
+    "grade": "1.9",
+    "de": {
+      "title": "Abitur",
+      "description": "Nach dem Umzug aus Niedersachsen/Hamburg wechselte ich an diese Schule. Ich schloss mein Abitur mit Englisch und Sozialwissenschaften als Leistungskursen, Deutsch als mündlicher Prüfung und Mathematik als schriftlicher Prüfung ab."
+    }
+  },
+  {
+    "title": "Law Studies",
+    "institution": "Heinrich Heine University Düsseldorf",
+    "start": "2021",
+    "end": "2022",
+    "description": "Started my studies immediately after graduation. After one year, I realized I preferred working in a more contemporary field. Nevertheless, I gained valuable insights into legal thinking and working methods, including an internship at a lawyer's office.",
+    "grade": "",
+    "de": {
+      "title": "Jurastudium",
+      "description": "Begann mein Studium direkt nach dem Abitur. Nach einem Jahr stellte ich fest, dass ich lieber in einem zeitgemäßeren Bereich arbeiten möchte. Dennoch gewann ich wertvolle Einblicke in juristisches Denken und Arbeitsweisen, einschließlich eines Praktikums in einer Anwaltskanzlei."
+    }
+  },
+  {
+    "title": "Dual Vocational Training as IT Specialist for Application Development, Operational Part",
+    "institution": "cycos AG",
+    "start": "2022",
+    "end": "Summer 2025",
+    "description": [
+      "Started at a company in Düren, then transferred to Aachen",
+      "Development and maintenance of modern & accessible (web) interfaces",
+      "Application of internal component libraries",
+      "Database-driven web development",
+      "First-level support assistance",
+      "Company representation at career fairs & shareholder events"
+    ],
+    "grade": "88/100 points in the Chamber of Industry and Commerce (IHK) exam",
+    "de": {
+      "title": "Duale Berufsausbildung zur Fachinformatikerin für Anwendungsentwicklung, Betrieblicher Teil",
+      "description": [
+        "Begann in einem Unternehmen in Düren, dann Wechsel nach Aachen",
+        "Entwicklung und Wartung moderner & barrierefreier (Web-)Oberflächen",
+        "Anwendung interner Komponentenbibliotheken",
+        "Datenbankgestützte Webentwicklung",
+        "Unterstützung im First-Level-Support",
+        "Unternehmensvertretung auf Berufsmessen & Aktionärsveranstaltungen"
+      ],
+      "grade": "88/100 Punkte in der IHK-Prüfung"
+    }
+  },
+  {
+    "title": "Dual Vocational Training as IT Specialist for Application Development, Academic Part",
+    "institution": "Berufskolleg für Technik Düren",
+    "start": "2022",
+    "end": "Summer 2025",
+    "description": [
+      "Teaching of theoretical computer science fundamentals",
+      "Software development methods & processes",
+      "Databases & network technology",
+      "Team project work"
+    ],
+    "grade": "1.5",
+    "de": {
+      "title": "Duale Berufsausbildung zur Fachinformatikerin für Anwendungsentwicklung, Schulischer Teil",
+      "description": [
+        "Vermittlung theoretischer Informatikgrundlagen",
+        "Softwareentwicklungsmethoden & -prozesse",
+        "Datenbanken & Netzwerktechnik",
+        "Teamprojektarbeit"
+      ]
+    }
+  },
+  {
+    "title": "Junior Software Developer",
+    "institution": "cycos AG",
+    "start": "Summer 2025",
+    "end": "",
+    "description": [
+      "Continuing my previous responsibilities",
+      "Design adjustments",
+      "Supporting new trainees"
+    ],
+    "grade": "",
+    "de": {
+      "title": "Junior Software-Entwicklerin",
+      "description": [
+        "Fortführung meiner bisherigen Tätigkeiten",
+        "Design-Anpassungen",
+        "Unterstützung neuer Auszubildender"
+      ]
+    }
+  }
+]
