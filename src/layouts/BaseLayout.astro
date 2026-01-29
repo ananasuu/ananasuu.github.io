@@ -89,7 +89,7 @@ const imprint = await import('../data/imprint.json').then(m => m.default);
           <h2>Impressum</h2>
           <p>
             {imprint.name}<br />
-            {imprint.name} <br />
+            {imprint.address} <br />
             {imprint.street} <br />
             {imprint.city} <br /><a href={"mailto:" + imprint.email}
               >{imprint.email}</a
