@@ -1,9 +1,5 @@
 ---
 const imprint = await import('../data/imprint.json').then(m => m.default);
-
-const lang = Astro.currentLocale ?? 'en';
-
-
 ---
 
 <!doctype html>
@@ -69,14 +65,6 @@ const lang = Astro.currentLocale ?? 'en';
       />
     </noscript>
     <title>NinuMakes - Cosplay & Crafting Portfolio</title>
-    
-{lang === 'en' && (
-      <script>
-        if (location.hostname.endsWith('.de')) {
-          location.replace('/de/');
-        }
-      </script>
-    )}
 
     <!-- Structured Data -->
     <script type="application/ld+json">
