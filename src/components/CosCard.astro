@@ -6,7 +6,6 @@ interface Props {
 }
 
 const locale = getLocaleFromUrl(Astro.url.pathname) as Props['locale'];
-console.log('Pathname:', Astro.url.pathname, 'Locale:', locale);
 const cosPortfolio = await import('../data/creative/cosplays.json').then(m => m.default);
 ---
 

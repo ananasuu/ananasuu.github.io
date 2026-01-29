@@ -6,10 +6,11 @@
  * @param {string} pathname - The URL pathname
  * @returns {string} The determined locale ('de' or 'en')
  */
-export function getLocaleFromUrl(pathname: string): string {
-    const lower = pathname.toLowerCase();
-    return lower.startsWith('/de') || lower.includes('/de/') ? 'de' : 'en';
+export function getLocaleFromUrl(pathname: string): 'de' | 'en' {
+    const path = pathname.trim().toLowerCase();
+    return path.startsWith('/de') ? 'de' : 'en';
 }
+
 
 /**
  * Gets the current locale, with fallback to browser language detection.
@@ -30,13 +31,8 @@ export function getCurrentLocale(pathname?: string): string {
  */
 export function getLocalizedContent<T extends Record<string, any>>(
     content: T & { de?: Partial<T> },
-    locale: string
+    locale: 'de' | 'en'
 ): T {
-    if (locale === 'de' && content.de) {
-        const { de, ...baseContent } = content;
-        return { ...baseContent, ...de } as T;
-    }
-    
     const { de, ...baseContent } = content;
-    return baseContent as T;
+    return locale === 'de' && de ? { ...baseContent, ...de } as T : baseContent as T;
 }
