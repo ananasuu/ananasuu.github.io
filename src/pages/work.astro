@@ -1,0 +1,161 @@
+---
+import ListCard from '../components/ListCard.astro';
+import Certificates from '../components/Certificates.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Projects from '../components/Projects.astro';
+import Resume from '../components/Resume.astro';
+---
+
+<BaseLayout>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1>Nina Friedrich</h1>
+        <p>Developing | Accessibility | Cosplay</p>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#about" class="active">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <main>
+        <!-- Introduction -->
+        <section class="spotlight">
+          <div class="spotlight-top">
+            <div class="content">
+            <header class="major">
+              <h2>Nina Friedrich</h2>
+            </header>
+            <p>
+              I’m passionate about building user-centered, maintainable and
+              accessible frontends that create real impact.
+            </p>
+            <p>
+              With hands-on experience in modern web development and responsive
+              design, I focus on crafting digital experiences that are not only
+              visually appealing but also inclusive and sustainable.
+            </p>
+            </div>
+          <div class="pfp-hover">
+            <picture>
+              <source srcset="/assets/img/Nina_Pfp.avif" type="image/avif" />
+              <img
+                src="/assets/img/Nina_Pfp.jpg"
+                alt="Nina Friedrich"
+                fetchpriority="high"
+                width="272"
+                height="272"
+              />
+            </picture>
+          </div>
+          </div>
+          
+          <div class="spotlight-bottom">
+            <div id="about" class="infocard">
+              <h3>Interests</h3>
+              <ListCard title="interests" />
+            </div>
+            <div class="cosplay-info infocard">
+              <h3>Interested in my Creativity?</h3>
+              <img src="assets/img/card_img/Marcille_NF.jpg" alt="" width="1440" height="1440" />
+              <p class="description">
+                Check out my cosplay portfolio to find out more about my work and
+                passion for costume design.
+              </p>
+              <a class="button primary" href="/">My Cosplay Portfolio</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="resume">
+          <header class="major">
+            <h2>Resume</h2>
+          </header>
+          <Resume />
+        </section>
+
+        <div class="skills-certificates-container">
+
+          <section id="certificates">
+            <header class="major">
+              <h2>Certificates</h2>
+              <p>
+                While certificates can't fully capture practical skills, they do
+                demonstrate a commitment to learning and professional development.
+                Here are some of the certifications I've earned to validate my
+                knowledge and expertise in various areas of web development and
+                related fields.
+              </p>
+            </header>
+            <Certificates />
+          </section>
+
+          <section id="skills">
+            <header class="major">
+              <h2>Skills</h2>
+              <p>
+                Pinpointing my skills is hard, since I like to learn new things & am open to challenges that extend my current knowledge! This list might not cover everything, but it shows my interests.
+              </p>
+            </header>
+            <ListCard title="skills" />
+          </section>
+        </div>
+
+        <section id="projects">
+          <header class="major">
+            <h2>Projects</h2>
+            <p>
+              Due to the confidentiality of internal company projects, public
+              repositories cannot be provided. The described results are based
+              on my practical work within the respective development
+              environments.
+            </p>
+          </header>
+          <Projects />
+        </section>
+      </main>
+      
+    <script type="module">
+      import {
+        about,
+        certificates,
+        projects,
+        resume,
+        skills,
+      } from "./index.js";
+
+      const aboutSection = document.querySelector("#about");
+      const resumeSection = document.querySelector("#resume");
+      const skillsSection = document.querySelector("#skills");
+      const certificatesSection = document.querySelector("#certificates");
+      const projectsSection = document.querySelector("#projects");
+
+      aboutSection.appendChild(about());
+      resumeSection.appendChild(resume());
+      skillsSection.appendChild(skills());
+      certificatesSection.appendChild(certificates());
+      projectsSection.appendChild(projects());
+    </script>
+    <script>
+      // Register Service Worker for caching and offline functionality
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+              console.log("Service Worker registered:", registration.scope);
+            })
+            .catch((error) => {
+              console.error("Service Worker registration failed:", error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

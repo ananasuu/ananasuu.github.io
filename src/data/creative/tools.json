@@ -1,0 +1,31 @@
+
+[
+  {
+    "title": "Nifegun",
+    "use": "Scaling Tool",
+    "url": "https://nifegun.com/scale_tool/scale_tool.html",
+    "description": "Ever wondered how to actually have the right scale for your props? Use this!",
+    "imageUrl": "/assets/img/scale_tool_gauntlet.png"
+  },
+  {
+    "title": "Cosplayshop.be",
+    "use": "Cosplay Materials, EU",
+    "url": "https://cosplayshop.be/de/",
+    "description": "Ordering materials in the EU can be a pain, but this shop has nice stuff!",
+    "imageUrl": "/assets/img/cosplaybe_logo.svg"
+  },
+  {
+    "title": "Kamui Cosplay",
+    "use": "Tutorials & Patterns",
+    "url": "https://www.kamuicosplay.com/",
+    "description": "Kamui Cosplay is a well-known cosplayer and prop maker. She has a lot of tutorials and patterns for sale.",
+    "imageUrl": "/assets/img/kamui_logo.png"
+  },
+  {
+    "title": "Dr Cos",
+    "use": "Patterns",
+    "url": "https://dr-cos.info/",
+    "description": "A great source for both free and paid patterns. They have a wide range of styles and sizes.",
+    "imageUrl": "/assets/img/drcos_logo.svg"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Company Homepage Modernization and Maintenance",
+    "role": "Frontend Developer, Design Support",
+    "description": "Migration of the company website from an externally managed CMS to a modern, internally operated Astro-based solution. Focus was on performance, accessibility, and long-term maintainability. Continuous improvements are still being implemented.",
+    "url": ""
+  },
+  {
+    "title": "Purchase Management System for Local Vendors",
+    "role": "Project Management, Frontend Developer, UI/UX Design",
+    "description": "Conception and implementation of a web-based system for managing internal orders with local vendors. Instead of manual email orders, the application enables automated creation, processing, and tracking of orders as well as consumption pattern analysis.",
+    "url": ""
+  },
+  {
+    "title": "Employee Profile Generator",
+    "role": "Frontend Developer",
+    "description": "Development of an internal platform that automatically creates employee skills profiles and integrates them directly into customer-specific templates. The goal was to significantly reduce manual effort in creation.",
+    "url": ""
+  }
+]

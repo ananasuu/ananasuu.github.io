@@ -1,0 +1,49 @@
+---
+const { title } = Astro.props;
+
+// Lade die entsprechende JSON-Datei basierend auf dem title
+let lists = [];
+let isSimpleArray = false;
+
+if (title === 'skills') {
+  lists = await import('../data/work/skills.json').then(m => m.default);
+} else if (title === 'certificates') {
+  lists = await import('../data/work/certificates.json').then(m => m.default);
+} else if (title === 'interests') {
+  const data = await import('../data/work/interests.json').then(m => m.default);
+  isSimpleArray = true;
+  lists = [{ title: 'Interests', description: "Somehow I've managed to reach the point of having so many hobbies, that I sometimes get hit with decision fatigue! But I love them nontheless", items: data }];
+}
+---
+
+{isSimpleArray ? (
+  <div class="list-cards">
+    {lists.map((list) => (
+      <div>
+        <h3>{list.title}</h3>
+        <p>{list.description}</p>
+        <ul>
+          {list.items.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+) : (
+  <div>
+    {lists.map((list) => (
+      <div class="infocard">
+        <h3>{list.title}</h3>
+        {list.description && <p>{list.description}</p>}
+        <ul>
+          {Array.isArray(list.skills) && list.skills.map((skill: any) => (
+            <li>
+              {typeof skill === 'string' ? skill : <><span>{skill.skill}</span><span>{skill.experience}</span></>}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+)}

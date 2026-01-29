@@ -1,0 +1,16 @@
+---
+    const certificatesData = await import('../data/work/certificates.json').then(m => m.default);
+---
+
+<ul>
+    {certificatesData.map((link) => (
+        <li>
+            <a href={link.link}>
+                <h3>{link.title}</h3>
+                <img src={`/assets/img/institution_logos/${link.institution.toLowerCase()}.jpg`} alt={`${link.institution} logo`} width="64" height="64" />
+                <p>{link.institution}</p>
+                <p>Issued: {link.issued}</p>
+            </a>
+        </li>
+    ))}
+</ul>

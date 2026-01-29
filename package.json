@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "My personal website, displaying both my passion for creative work like cosplay, as well as my professional skills in software development.",
   "scripts": {
-    "start": "python3 -m http.server 4321",
-    "build": "echo 'Static HTML - no build step required'",
+    "start": "astro dev",
     "clean": "echo 'Static HTML - no clean step required'",
     "lint": "prettier --check --ignore-unknown --no-error-on-unmatched-pattern . && biome ci .",
     "lint:fix": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern .&& biome check . --write",
@@ -14,7 +13,11 @@
     "test": "npx playwright test",
     "test:visual": "npx chromatic --exit-zero-on-changes --playwright --project-token=$CHROMATIC_PROJECT_TOKEN",
     "test:a11y": "npx playwright test -g 'a11y'",
-    "test:performance": "npx playwright test -g 'performance'"
+    "test:performance": "npx playwright test -g 'performance'",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "repository": {
     "type": "git",
@@ -26,10 +29,11 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",
-    "@chromatic-com/playwright": "^0.12.8",
+    "@chromatic-com/playwright": "^0.12.3",
     "@commitlint/cli": "^20.3.1",
     "@commitlint/config-conventional": "^20.3.1",
     "@playwright/test": "^1.58.0",
+    "astro": "^5.16.16",
     "husky": "^9.1.7",
     "lighthouse": "^13.0.1",
     "lint-staged": "^16.2.7",

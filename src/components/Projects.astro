@@ -1,0 +1,14 @@
+---
+const projectData = await import('../data/work/projects.json').then(m => m.default);
+---
+
+<ul>
+{projectData.map((link) => (
+    <li>
+        <h3><a href={link.url}>{link.title}</a></h3>
+        <p>{link.role}</p>
+        <p>{link.description}</p>
+    </li>
+))}
+</ul>
+ 

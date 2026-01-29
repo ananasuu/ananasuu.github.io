@@ -1,0 +1,87 @@
+[
+  {
+    "title": "Mobility",
+    "skills": ["Driver's license class B", "Own car available"]
+  },
+  {
+    "title": "Languages",
+    "skills": [
+      { "skill": "German", "experience": "Native" },
+      { "skill": "English", "experience": "B2/C1" },
+      { "skill": "French", "experience": "B1" },
+      { "skill": "Latin", "experience": "Basics" }
+    ]
+  },
+  {
+    "title": "Softskills",
+    "skills": [
+      "Teamwork",
+      "Quick comprehension",
+      "Communication",
+      "Presentation skills",
+      "Creativity"
+    ]
+  },
+  {
+    "title": "Technologies & Tools",
+    "skills": [
+      {
+        "skill": "JavaScript",
+        "experience": "3 Years"
+      },
+      {
+        "skill": "HTML & CSS",
+        "experience": "3 Years"
+      },
+      {
+        "skill": "Figma",
+        "experience": "1 Year"
+      },
+      {
+        "skill": "Github",
+        "experience": "3 Years"
+      },
+      {
+        "skill": "Python",
+        "experience": "1 Year"
+      },
+      {
+        "skill": "CI/CD-Pipelines",
+        "experience": "1.5 Years"
+      }
+    ]
+  },
+  {
+    "title": "Frameworks & Concepts",
+    "skills": [
+      {
+        "skill": "Astro",
+        "experience": "2 Years"
+      },
+      {
+        "skill": "Svelte",
+        "experience": "1 Year"
+      },
+      {
+        "skill": "Vue",
+        "experience": "0.5 Year"
+      },
+      {
+        "skill": "Design Systems",
+        "experience": "3 Years"
+      },
+      {
+        "skill": "Responsive Web Design",
+        "experience": "3 Years"
+      },
+      {
+        "skill": "Accessibility (WCAG)",
+        "experience": "3 Years"
+      },
+      {
+        "skill": "NPM",
+        "experience": "2 Years"
+      }
+    ]
+  }
+]

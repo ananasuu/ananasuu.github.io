@@ -1,0 +1,38 @@
+---
+const {linkCategory} = Astro.props;
+
+let links = [];
+if (linkCategory === 'helpful') {
+  links = await import('../data/creative/helpful.json').then(m => m.default);
+} else if (linkCategory === 'tool') {
+  links = await import('../data/creative/tools.json').then(m => m.default);
+}
+
+// Liste der Bilder, die eine AVIF-Version haben
+const hasAvif = new Set([
+  '/assets/img/tool_img/ears.avif',
+  '/assets/img/tool_img/maidband.avif'
+]);
+---
+
+<ul class="infolinks">
+    {links.map((link) => {
+        const ext = link.imageUrl.match(/\.(jpg|jpeg|png|svg|avif)$/i)?.[1]?.toLowerCase();
+        const isJpg = ext === 'jpg' || ext === 'jpeg';
+        const avifUrl = link.imageUrl.replace(/\.(jpg|jpeg)$/i, '.avif');
+        const shouldUseAvif = isJpg && hasAvif.has(avifUrl);
+        return (
+            <li>
+                <a class="infocard link" href={link.url}>
+                <h3>{link.title}</h3>
+                <p class="use">{link.use}</p>
+                <picture>
+                  {shouldUseAvif && <source srcset={avifUrl} type="image/avif" />}
+                  <img src={link.imageUrl} alt={link.title} loading="lazy" />
+                </picture>
+                <p>{link.description}</p>
+            </a>
+            </li>
+        );
+    })}
+</ul>
