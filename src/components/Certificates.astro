@@ -1,15 +1,19 @@
 ---
-    const certificatesData = await import('../data/work/certificates.json').then(m => m.default);
+import { getLocaleFromUrl } from '../utils/i18n/i18n';
+
+const certificatesData = await import('../data/work/certificates.json').then(m => m.default);
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const issuedLabel = locale === 'de' ? 'Ausgestellt' : 'Issued';
 ---
 
 <ul>
-    {certificatesData.map((link) => (
+    {certificatesData.map((cert) => (
         <li>
-            <a href={link.link}>
-                <h3>{link.title}</h3>
-                <img src={`/assets/img/institution_logos/${link.institution.toLowerCase()}.jpg`} alt={`${link.institution} logo`} width="64" height="64" />
-                <p>{link.institution}</p>
-                <p>Issued: {link.issued}</p>
+            <a href={cert.link}>
+                <h3>{cert.title}</h3>
+                <img src={`/assets/img/institution_logos/${cert.institution.toLowerCase()}.jpg`} alt={`${cert.institution} logo`} width="64" height="64" />
+                <p>{cert.institution}</p>
+                <p>{issuedLabel}: {cert.issued}</p>
             </a>
         </li>
     ))}

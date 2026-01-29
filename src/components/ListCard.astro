@@ -1,18 +1,28 @@
 ---
+import { getLocaleFromUrl, getLocalizedContent } from '../utils/i18n/i18n';
+
 const { title } = Astro.props;
+const locale = getLocaleFromUrl(Astro.url.pathname);
 
 // Lade die entsprechende JSON-Datei basierend auf dem title
 let lists = [];
 let isSimpleArray = false;
 
 if (title === 'skills') {
-  lists = await import('../data/work/skills.json').then(m => m.default);
+  const rawData = await import('../data/work/skills.json').then(m => m.default);
+  lists = rawData.map(item => getLocalizedContent(item, locale));
 } else if (title === 'certificates') {
-  lists = await import('../data/work/certificates.json').then(m => m.default);
+  const rawData = await import('../data/work/certificates.json').then(m => m.default);
+  lists = rawData.map(item => getLocalizedContent(item, locale));
 } else if (title === 'interests') {
   const data = await import('../data/work/interests.json').then(m => m.default);
   isSimpleArray = true;
-  lists = [{ title: 'Interests', description: "Somehow I've managed to reach the point of having so many hobbies, that I sometimes get hit with decision fatigue! But I love them nontheless", items: data }];
+  // Interests hat ein anderes Format: { en: "...", de: "..." }
+  const localizedItems = data.map(item => locale === 'de' ? item.de : item.en);
+  const description = locale === 'de' 
+    ? "Irgendwie habe ich es geschafft, so viele Hobbys zu haben, dass ich manchmal von Entscheidungsmüdigkeit getroffen werde! Aber ich liebe sie trotzdem"
+    : "Somehow I've managed to reach the point of having so many hobbies, that I sometimes get hit with decision fatigue! But I love them nontheless";
+  lists = [{ title: locale === 'de' ? 'Interessen' : 'Interests', description, items: localizedItems }];
 }
 ---
 

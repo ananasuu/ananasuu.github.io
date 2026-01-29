@@ -1,14 +1,19 @@
 ---
+import { getLocaleFromUrl, getLocalizedContent } from '../utils/i18n/i18n';
+
 const projectData = await import('../data/work/projects.json').then(m => m.default);
+const locale = getLocaleFromUrl(Astro.url.pathname);
 ---
 
 <ul>
-{projectData.map((link) => (
+{projectData.map((project) => {
+    const localizedProject = getLocalizedContent(project, locale);
+    return (
     <li>
-        <h3><a href={link.url}>{link.title}</a></h3>
-        <p>{link.role}</p>
-        <p>{link.description}</p>
+        <h3><a href={localizedProject.url}>{localizedProject.title}</a></h3>
+        <p>{localizedProject.role}</p>
+        <p>{localizedProject.description}</p>
     </li>
-))}
+    );
+})}
 </ul>
- 

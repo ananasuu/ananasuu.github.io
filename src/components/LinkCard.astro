@@ -1,5 +1,8 @@
 ---
+import { getLocaleFromUrl, getLocalizedContent } from '../utils/i18n/i18n';
+
 const {linkCategory} = Astro.props;
+const locale = getLocaleFromUrl(Astro.url.pathname);
 
 let links = [];
 if (linkCategory === 'helpful') {
@@ -17,20 +20,21 @@ const hasAvif = new Set([
 
 <ul class="infolinks">
     {links.map((link) => {
-        const ext = link.imageUrl.match(/\.(jpg|jpeg|png|svg|avif)$/i)?.[1]?.toLowerCase();
+        const localizedLink = getLocalizedContent(link, locale);
+        const ext = localizedLink.imageUrl.match(/\.(jpg|jpeg|png|svg|avif)$/i)?.[1]?.toLowerCase();
         const isJpg = ext === 'jpg' || ext === 'jpeg';
-        const avifUrl = link.imageUrl.replace(/\.(jpg|jpeg)$/i, '.avif');
+        const avifUrl = localizedLink.imageUrl.replace(/\.(jpg|jpeg)$/i, '.avif');
         const shouldUseAvif = isJpg && hasAvif.has(avifUrl);
         return (
             <li>
-                <a class="infocard link" href={link.url}>
-                <h3>{link.title}</h3>
-                <p class="use">{link.use}</p>
+                <a class="infocard link" href={localizedLink.url}>
+                <h3>{localizedLink.title}</h3>
+                <p class="use">{localizedLink.use}</p>
                 <picture>
                   {shouldUseAvif && <source srcset={avifUrl} type="image/avif" />}
-                  <img src={link.imageUrl} alt={link.title} loading="lazy" />
+                  <img src={localizedLink.imageUrl} alt={localizedLink.title} loading="lazy" />
                 </picture>
-                <p>{link.description}</p>
+                <p>{localizedLink.description}</p>
             </a>
             </li>
         );
