@@ -1,31 +1,34 @@
-
 [
   {
     "title": "Nifegun",
     "use": "Scaling Tool",
     "url": "https://nifegun.com/scale_tool/scale_tool.html",
     "description": "Ever wondered how to actually have the right scale for your props? Use this!",
-    "imageUrl": "/assets/img/scale_tool_gauntlet.png"
+    "imageUrl": "/assets/img/scale_tool_gauntlet.png",
+    "de": { "title": "Nifegun", "use": "Skalierungswerkzeug", "description": "Hast du dich je gefragt, wie man die richtige Größe für Props erhält? Nutze dies!" }
   },
   {
     "title": "Cosplayshop.be",
     "use": "Cosplay Materials, EU",
     "url": "https://cosplayshop.be/de/",
     "description": "Ordering materials in the EU can be a pain, but this shop has nice stuff!",
-    "imageUrl": "/assets/img/cosplaybe_logo.svg"
+    "imageUrl": "/assets/img/cosplaybe_logo.svg",
+    "de": { "title": "Cosplayshop.be", "use": "Cosplay-Materialien, EU", "description": "Materialien in der EU zu bestellen kann mühsam sein, aber dieser Shop hat tolles Zeug!" }
   },
   {
     "title": "Kamui Cosplay",
     "use": "Tutorials & Patterns",
     "url": "https://www.kamuicosplay.com/",
     "description": "Kamui Cosplay is a well-known cosplayer and prop maker. She has a lot of tutorials and patterns for sale.",
-    "imageUrl": "/assets/img/kamui_logo.png"
+    "imageUrl": "/assets/img/kamui_logo.png",
+    "de": { "title": "Kamui Cosplay", "use": "Tutorials & Schnittmuster", "description": "Kamui Cosplay ist eine bekannte Cosplayerin und Prop-Macherin. Sie bietet viele Tutorials und Schnittmuster zum Verkauf an." }
   },
   {
     "title": "Dr Cos",
     "use": "Patterns",
     "url": "https://dr-cos.info/",
     "description": "A great source for both free and paid patterns. They have a wide range of styles and sizes.",
-    "imageUrl": "/assets/img/drcos_logo.svg"
+    "imageUrl": "/assets/img/drcos_logo.svg",
+    "de": { "title": "Dr Cos", "use": "Schnittmuster", "description": "Eine großartige Quelle für kostenlose und kostenpflichtige Schnittmuster. Sie haben eine breite Palette an Stilen und Größen." }
   }
 ]

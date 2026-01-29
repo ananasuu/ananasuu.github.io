@@ -4,42 +4,48 @@
     "use": "Tutorial",
     "url": "https://www.youtube.com/watch?v=alQGJQzRRFo&ab_channel=SarahSpaceman",
     "description": "Easily pattern and sew a corset.",
-    "imageUrl": "/assets/img/corset_tutorial.jpg"
+    "imageUrl": "/assets/img/corset_tutorial.jpg",
+    "de": { "title": "Ein Korsett nähen", "use": "Tutorial", "description": "Einfach ein Korsett schnittmustern und nähen." }
   },
   {
     "title": "Materials & Tools",
     "use": "Collection",
     "url": "https://www.belloflostsouls.net/2022/08/tools-of-the-trade-a-guide-to-cosplay-materials.html",
     "description": "Cosplay materials and tools overview.",
-    "imageUrl": "/assets/img/belloflostsouls_logo.svg"
+    "imageUrl": "/assets/img/belloflostsouls_logo.svg",
+    "de": { "title": "Materialien & Werkzeuge", "use": "Sammlung", "description": "Überblick über Cosplay-Materialien und Werkzeuge." }
   },
   {
     "title": "Ears on a Budget",
     "use": "Tutorial",
     "url": "https://www.tiktok.com/@ananasu.exe/video/7289790044393442593",
     "description": "How to make animal ears on a budget.",
-    "imageUrl": "/assets/img/tool_img/ears.avif"
+    "imageUrl": "/assets/img/tool_img/ears.avif",
+    "de": { "title": "Ohren mit kleinem Budget", "use": "Tutorial", "description": "Wie man Tierohren mit kleinem Budget bastelt." }
   },
   {
     "title": "Maidheadband",
     "use": "Tutorial",
     "url": "https://www.tiktok.com/@ananasu.exe/video/7246414817773260059",
     "description": "How to make a simple maid headband.",
-    "imageUrl": "/assets/img/tool_img/maidband.avif"
+    "imageUrl": "/assets/img/tool_img/maidband.avif",
+    "de": { "title": "Dienstmädchen-Haarreif", "use": "Tutorial", "description": "Wie man ein einfaches Dienstmädchen-Haarband bastelt." }
   },
   {
     "title": "How to make horns",
     "use": "Tutorial",
     "url": "https://www.tiktok.com/@ananasu.exe/video/7247592635219627290",
     "description": "How to make lightweight horns without a 3d-Printer.",
-    "imageUrl": "/assets/img/tool_img/horns.jpeg"
+    "imageUrl": "/assets/img/tool_img/horns.jpeg",
+    "de": { "title": "Hörner basteln", "use": "Tutorial", "description": "Wie man leichte Hörner ohne 3D-Drucker bastelt." }
   },
   {
     "title": "How to 'understitching'",
     "use": "Tutorial",
     "url": "https://www.tiktok.com/@nikki.drafts/video/7515194801763962117?q=understitching&t=1750061393219",
     "description": "Ever wondered why your seams don't lay flat? This is the solution!",
-    "imageUrl": "/assets/img/tool_img/understitch.jpeg"
+    "imageUrl": "/assets/img/tool_img/understitch.jpeg",
+    "de": { "title": "Wie man 'Untersteppt'", "use": "Tutorial", "description": "Hast du dich je gefragt, warum deine Nähte nicht flach liegen? Das ist die Lösung!" }
   }
 ]
 

@@ -1,8 +1,26 @@
 [
-      "Textile crafts (sewing, crocheting)",
-      "Cosplaying & attending conventions",
-      "Crafting",
-      "Board games & role-playing games like Dungeons & Dragons",
-      "Reading",
-      "Sports (weightlifting)"
-    ]
+  {
+    "en": "Textile crafts (sewing, crocheting)",
+    "de": "Textile Handarbeiten (Nähen, Häkeln)"
+  },
+  {
+    "en": "Cosplaying & attending conventions",
+    "de": "Cosplay & Besuchen von Conventions"
+  },
+  {
+    "en": "Crafting",
+    "de": "Basteln"
+  },
+  {
+    "en": "Board games & role-playing games like Dungeons & Dragons",
+    "de": "Brettspiele & Rollenspiele wie Dungeons & Dragons"
+  },
+  {
+    "en": "Reading",
+    "de": "Lesen"
+  },
+  {
+    "en": "Sports (weightlifting)",
+    "de": "Sport (Krafttraining)"
+  }
+]

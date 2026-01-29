@@ -3,18 +3,33 @@
     "title": "Company Homepage Modernization and Maintenance",
     "role": "Frontend Developer, Design Support",
     "description": "Migration of the company website from an externally managed CMS to a modern, internally operated Astro-based solution. Focus was on performance, accessibility, and long-term maintainability. Continuous improvements are still being implemented.",
-    "url": ""
+    "url": "",
+    "de": {
+      "title": "Modernisierung und Wartung der Firmenhomepage",
+      "role": "Frontend-Entwicklerin, Design-Unterstützung",
+      "description": "Migration der Firmenwebsite von einem extern verwalteten CMS zu einer modernen, intern betriebenen Astro-basierten Lösung. Der Fokus lag auf Performance, Barrierefreiheit und langfristiger Wartbarkeit. Kontinuierliche Verbesserungen werden weiterhin umgesetzt."
+    }
   },
   {
     "title": "Purchase Management System for Local Vendors",
     "role": "Project Management, Frontend Developer, UI/UX Design",
     "description": "Conception and implementation of a web-based system for managing internal orders with local vendors. Instead of manual email orders, the application enables automated creation, processing, and tracking of orders as well as consumption pattern analysis.",
-    "url": ""
+    "url": "",
+    "de": {
+      "title": "Einkaufsverwaltungssystem für lokale Anbieter",
+      "role": "Projektmanagement, Frontend-Entwicklerin, UI/UX-Design",
+      "description": "Konzeption und Umsetzung eines webbasierten Systems zur Verwaltung interner Bestellungen bei lokalen Anbietern. Anstelle manueller E-Mail-Bestellungen ermöglicht die Anwendung die automatisierte Erstellung, Bearbeitung und Nachverfolgung von Bestellungen sowie die Analyse von Verbrauchsmustern."
+    }
   },
   {
     "title": "Employee Profile Generator",
     "role": "Frontend Developer",
     "description": "Development of an internal platform that automatically creates employee skills profiles and integrates them directly into customer-specific templates. The goal was to significantly reduce manual effort in creation.",
-    "url": ""
+    "url": "",
+    "de": {
+      "title": "Mitarbeiterprofilgenerator",
+      "role": "Frontend-Entwicklerin",
+      "description": "Entwicklung einer internen Plattform, die automatisch Mitarbeiterkompetenzenprofile erstellt und diese direkt in kundenspezifische Vorlagen integriert. Ziel war es, den manuellen Aufwand bei der Erstellung erheblich zu reduzieren."
+    }
   }
 ]

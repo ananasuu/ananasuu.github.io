@@ -5,15 +5,17 @@
     "imageUrl": "/assets/img/card_img/Marcille_NF.jpg",
     "genres": "Silly, Powerful & Hungry!",
     "description": "Marcille Donato is a character from a story about adventurers cooking and eating monsters. I made this cosplay for the 2025 S.a.m.t Con cosplay contest and placed 1st.",
-    "buildbookUrl": "https://drive.google.com/file/d/1fD7-P-gT0MA40vvP3u0L8dax4ZUXiO20/view?usp=drive_link"
-    },
+    "buildbookUrl": "https://drive.google.com/file/d/1fD7-P-gT0MA40vvP3u0L8dax4ZUXiO20/view?usp=drive_link",
+    "de": { "genres": "Lustig, Stark & Hungrig!", "description": "Marcille Donato ist eine Figur aus einer Geschichte über Abenteurer, die Monster kochen und essen. Ich habe dieses Cosplay für den Cosplay-Wettbewerb der S.a.m.t Con 2025 gemacht und den 1. Platz belegt." }
+},
     {
     "title": "Frieren",
     "source": "Frieren: Beyond Journey's End",
     "imageUrl": "/assets/img/card_img/Frieren_NF.jpg",
     "genres": "Adventurous, Wise & Kind!",
     "description": "Frieren is a character from a story about an elf mage who travels to understand humanity. I competed with this cosplay at the 2024 Bijutsu & won best in craftsmanship.",
-    "buildbookUrl": ""
+    "buildbookUrl": "",
+    "de": { "genres": "Abenteuerlich, Weise & Freundlich!", "description": "Frieren ist eine Figur aus einer Geschichte über eine Elfenmagierin, die reist, um die Menschheit zu verstehen. Ich habe mit diesem Cosplay bei der Bijutsu 2024 teilgenommen und den Preis für bestes Handwerk gewonnen." }
     },
     {
     "title": "Laudna",
@@ -21,7 +23,8 @@
     "imageUrl": "/assets/img/card_img/Laudna_NF.jpg",
     "genres": "Dark, Spooky & Fun!",
     "description": "Laudna is a character from Critical Role, a D&D show. I made this cosplay for the 2024 Dokomi cosplay contest and placed 3rd.",
-    "buildbookUrl": "https://drive.google.com/file/d/1p_WrvoevjBnTGTBLTPl9-cajugDPxGX6/view?usp=drive_link"
+    "buildbookUrl": "https://drive.google.com/file/d/1p_WrvoevjBnTGTBLTPl9-cajugDPxGX6/view?usp=drive_link",
+    "de": { "genres": "Düster, Gruselig & Spaßig!", "description": "Laudna ist eine Figur aus Critical Role, einer D&D-Show. Ich habe dieses Cosplay für den Cosplay-Wettbewerb der Dokomi 2024 gemacht und den 3. Platz belegt." }
     },
     {
     "title": "Tohru",
@@ -29,7 +32,8 @@
     "imageUrl": "/assets/img/card_img/Tohru_NF.jpg",
     "genres": "Cute, Outgoing & Funny!",
     "description": "Tohru is a dragon mastering her life with her savior Miss Kobayashi. This slice of life anime is a pure comfort show.",
-    "buildbookUrl": ""
+    "buildbookUrl": "",
+    "de": { "genres": "Süß, Aufgeschlossen & Witzig!", "description": "Tohru ist ein Drache, der ihr Leben mit ihrer Retterin Miss Kobayashi meistert. Dieser Slice-of-Life-Anime ist eine reine Wohlfühl-Serie." }
     },
     {
     "title": "Haru",
@@ -37,7 +41,8 @@
     "imageUrl": "/assets/img/card_img/Haru_NF.jpg",
     "genres": "Dramatic, Inspiring & Tough!",
     "description": "Haru is living in a world where carnivores and herbivores are at odds. She is a strong character who fights for her beliefs.",
-    "buildbookUrl": ""
+    "buildbookUrl": "",
+    "de": { "genres": "Dramatisch, Inspirierend & Hart!", "description": "Haru lebt in einer Welt, in der Fleischfresser und Pflanzenfresser im Konflikt stehen. Sie ist eine starke Figur, die für ihre Überzeugungen kämpft." }
     },
     {
     "title": "Fearne Calloway",
@@ -45,6 +50,7 @@
     "imageUrl": "/assets/img/card_img/Fearne_NF.jpg",
     "genres": "Silly, Mischievous & Fun!",
     "description": "Fearne is a character from Critical Role, a D&D show. Her fey nature healed something in me & she enchants enyone who meets her.",
-    "buildbookUrl": ""
+    "buildbookUrl": "",
+    "de": { "genres": "Albern, Verschmitzt & Spaßig!", "description": "Fearne ist eine Figur aus Critical Role, einer D&D-Show. Ihre Feenwesen-Natur hat etwas in mir geheilt und sie verzaubert jeden, der ihr begegnet." }
     }
 ]
