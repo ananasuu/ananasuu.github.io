@@ -1,0 +1,182 @@
+@import "./component.css";
+@import "./layout.css";
+@import "./base.css";
+
+/*
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+* {
+  font-size: var(--font-size);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif, "Source Sans Pro";
+  font-weight: 350;
+  line-height: 1.65;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 400px;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  -ms-overflow-style: scrollbar;
+  background-color: var(--pink-bg);
+  background-image:
+    url("/assets/img/overlay.png"), linear-gradient(var(--orange-pink-gradient));
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding-left: 0;
+  }
+}
+
+a {
+  transition:
+    color 0.2s ease,
+    border-bottom 0.2s ease;
+  text-decoration: none;
+  border-bottom: dotted 1px;
+  color: inherit;
+}
+
+button,
+.button {
+  appearance: none;
+  transition: var(--transition);
+  border-radius: var(--rounded-card-corners);
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 300;
+  height: 2.75em;
+  line-height: 2.75em;
+  min-width: 9.25em;
+  padding: 0 1.5em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  color: #ffffff !important;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &.primary {
+    background-color: var(--primary-button-color);
+    color: #ffffff !important;
+    box-shadow: none;
+
+    &:hover {
+      background-color: var(--primary-button-hover-color);
+    }
+
+    &:active {
+      background-color: #7ec3ee;
+    }
+  }
+}
+
+.button[href=""],
+.button:disabled,
+button.button:disabled {
+  cursor: not-allowed;
+  background-color: var(--primary-button-disabled-color);
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  width: fit-content;
+  justify-self: center;
+}
+
+section {
+  padding: clamp(2.5em, 7vw, 7em) clamp(1em, 5vw, 5em) clamp(2.5em, 7vw, 7em)
+    clamp(1em, 5vw, 5em);
+
+  &:not(:first-of-type) {
+    text-align: center;
+  }
+
+  header {
+    margin-bottom: 3em;
+
+    h2 {
+      &:after {
+        display: block;
+        content: "";
+        height: 3px;
+        margin: 0.5rem auto 1rem auto;
+        border-radius: 2px;
+        background-color: #dddddd;
+        background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+      }
+    }
+
+    p {
+      font-size: var(--font-size-medium);
+    }
+  }
+}
+
+#wrapper {
+  width: min(calc(100% - 4em), 64em);
+  margin-inline: auto;
+  position: relative;
+}
+
+picture {
+
+  img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+}
+
+#projects li {
+  text-align: left;
+  h3 a, h3 {
+    font-size: var(--font-size-larger);
+    margin: 0;
+  }
+
+  p:first-of-type{
+    font-size: var(--font-size-small);
+    color: var(--light-font);
+    margin: 0;
+}
+
+  p:last-of-type {
+    margin-block-start: 0;
+    margin-block-end: 1.5rem;
+  }
+}
+
+#skills {
+  h2 {
+    margin-bottom: 0;
+  }
+
+  ul{
+    padding-block: 0.5rem;
+  }
+}
