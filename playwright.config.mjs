@@ -55,7 +55,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "python3 -m http.server 4321",
+    command: "npm run build && npm run preview -- --port 4321 --host",
     url: "http://localhost:4321",
     reuseExistingServer: !isCI,
   },
