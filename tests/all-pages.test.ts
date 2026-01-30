@@ -6,9 +6,15 @@ import { lighthouseTest, thresholds } from "./fixtures/performance.ts";
 const pages = [
   { url: "/", title: "Cosplay Portfolio", tags: ["@cosplay", "@homepage"] },
   {
-    url: "/work.html",
+    url: "/work/",
     title: "Professional Portfolio",
     tags: ["@work", "@professional"],
+  },
+  { url: "/de/", title: "Startseite", tags: ["@de", "@homepage", "@cosplay"] },
+  {
+    url: "/de/work/",
+    title: "Professionelles Portfolio",
+    tags: ["@de", "@work", "@professional"],
   },
 ];
 
