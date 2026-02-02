@@ -1,4 +1,7 @@
 ---
+import { Picture } from 'astro:assets';
+import ninaPfp from '../../assets/img/Nina_Pfp.jpg';
+import marcilleNf from '../../assets/img/card_img/Marcille_NF.jpg';
 import ListCard from '../../components/ListCard.astro';
 import Certificates from '../../components/Certificates.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -40,16 +43,14 @@ import Resume from '../../components/Resume.astro';
               </p>
             </div>
           <div class="pfp-hover">
-            <picture>
-              <source srcset="/assets/img/Nina_Pfp.avif" type="image/avif" />
-              <img
-                src="/assets/img/Nina_Pfp.jpg"
-                alt="Nina Friedrich"
-                fetchpriority="high"
-                width="272"
-                height="272"
-              />
-            </picture>
+            <Picture
+              src={ninaPfp}
+              alt="Nina Friedrich"
+              width={272}
+              height={272}
+              formats={['avif', 'webp', 'jpeg']}
+              fetchpriority="high"
+            />
           </div>
           </div>
           
@@ -60,7 +61,14 @@ import Resume from '../../components/Resume.astro';
             </div>
             <div class="cosplay-info infocard">
               <h3>Fokus auf meine Kreativität</h3>
-              <img src="assets/img/card_img/Marcille_NF.jpg" alt="" width="1440" height="1440" />
+              <Picture
+                src={marcilleNf}
+                alt=""
+                width={1440}
+                height={1440}
+                formats={['avif', 'webp', 'jpeg']}
+                loading="lazy"
+              />
               <p class="description">
                 Cosplay ist mein kreativer Ausgleich! Vom Entwerfen der Kostüme bis hin zum Eintauchen in die Charaktere liebe ich den gesamten Prozess, der die Figuren und Geschichten für mich greifbar macht.
               </p>

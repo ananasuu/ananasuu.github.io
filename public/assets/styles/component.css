@@ -91,7 +91,8 @@ section:has(.infocard):not(.spotlight),
         margin-block-end: auto;
       }
 
-      picture {
+      picture,
+      .card-media {
         height: 220px;
 
         img {
@@ -121,7 +122,8 @@ section:has(.infocard):not(.spotlight),
         margin-block-start: 0.75rem;
       }
 
-      picture {
+      picture,
+      .card-media {
         height: 450px !important;
 
         img {
@@ -183,13 +185,14 @@ section:has(.infocard):not(.spotlight),
     }
 
 
-    &.cosplay-info img,
-    &:not(.costume) picture {
+    &:not(.costume):not(.cosplay-info) picture,
+    &:not(.costume):not(.cosplay-info) .card-media {
       aspect-ratio: 1 / 1;
     }
 
     &.cosplay-info img,
-    picture {
+    picture,
+    .card-media {
       width: 100%;
       height: auto;
       max-width: 100%;

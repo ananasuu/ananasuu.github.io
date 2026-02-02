@@ -1,4 +1,4 @@
-const CACHE_VERSION = "v1.0.2";
+const CACHE_VERSION = "v1.0.3";
 const CACHE_NAME = `ninumakes-${CACHE_VERSION}`;
 
 // Cache duration: 30 days for static assets (in seconds)
@@ -16,16 +16,13 @@ const PRECACHE_ASSETS = [
   "/assets/styles/base.css",
   "/assets/styles/layout.css",
   "/assets/styles/component.css",
-  "/assets/img/Nina_Pfp.avif",
-  "/assets/img/Nina_Pfp.jpg",
-  "/assets/img/Fun_Pfp.avif",
   "/assets/img/overlay.png",
 ];
 
 // All assets folder content will be cached on first request
 const RUNTIME_CACHE_PATTERNS = [
   /^\/assets\//,  // Alle Dateien aus dem assets-Ordner
-  /\.(?:png|jpg|jpeg|svg|gif|webp|avif)$/,
+  /\.(?:png|jpg|jpeg|svg|gif|webp)$/,
   /\.(?:woff|woff2|ttf|eot)$/,
   /^https:\/\/fonts\.googleapis\.com/,
   /^https:\/\/fonts\.gstatic\.com/,

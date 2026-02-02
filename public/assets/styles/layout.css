@@ -167,8 +167,7 @@ main {
         position: absolute;
         inset: 0;
         border-radius: 100%;
-        background-image: image-set(url("/assets/img/Fun_Pfp.avif") type("image/avif"),
-            url("/assets/img/Fun_Pfp.jpg") type("image/jpeg"));
+        background-image: url("/assets/img/Fun_Pfp.jpg");
         background-size: cover;
         background-position: center;
         opacity: 0;
