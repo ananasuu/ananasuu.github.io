@@ -7,7 +7,7 @@ type PerformanceFixture = {
 
 // Extend base test to provide a port for Lighthouse
 export const lighthouseTest = base.extend<PerformanceFixture>({
-	port: async (_args, use, testInfo) => {
+	port: async ({}, use, testInfo) => {
 		// Use different ports for different chromium projects to avoid conflicts
 		const port = testInfo.project.name === 'chromium-dark' ? 9223 : 9222;
 		await use(port);
