@@ -11,7 +11,13 @@ const issuedLabel = locale === 'de' ? 'Ausgestellt' : 'Issued';
         <li>
             <a href={cert.link}>
                 <h3>{cert.title}</h3>
-                <img src={`/assets/img/institution_logos/${cert.institution.toLowerCase()}.jpg`} alt={`${cert.institution} logo`} width="64" height="64" />
+                                <img
+                                    src={`/assets/img/institution_logos/${cert.institution.toLowerCase()}.jpg`}
+                                    alt={`${cert.institution} logo`}
+                                    width="64"
+                                    height="64"
+                                    loading="lazy"
+                                />
                 <p>{cert.institution}</p>
                 <p>{issuedLabel}: {cert.issued}</p>
             </a>
