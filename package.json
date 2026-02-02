@@ -1,57 +1,56 @@
 {
-  "name": "personal-website",
-  "version": "1.0.0",
-  "description": "My personal website, displaying both my passion for creative work like cosplay, as well as my professional skills in software development.",
-  "scripts": {
-    "start": "astro dev",
-    "clean": "echo 'Static HTML - no clean step required'",
-    "lint": "prettier --check --ignore-unknown --no-error-on-unmatched-pattern . && biome ci .",
-    "lint:fix": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern .&& biome check . --write",
-    "git:pre-commit": "lint-staged",
-    "git:pre-push": "npm test",
-    "prepare": "husky",
-    "test": "npx playwright test",
-    "test:visual": "npx chromatic --exit-zero-on-changes --playwright --project-token=$CHROMATIC_PROJECT_TOKEN",
-    "test:a11y": "npx playwright test -g 'a11y'",
-    "test:performance": "npx playwright test -g 'performance'",
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ananasuu/ananasuu.github.io"
-  },
-  "homepage": "https://ananasuu.github.io/",
-  "dependencies": {
-    "axe-core": "^4.11.1"
-  },
-  "devDependencies": {
-    "@axe-core/playwright": "^4.11.0",
-    "@chromatic-com/playwright": "^0.12.3",
-    "@commitlint/cli": "^20.3.1",
-    "@commitlint/config-conventional": "^20.3.1",
-    "@playwright/test": "^1.58.0",
-    "astro": "^5.17.1",
-    "husky": "^9.1.7",
-    "lighthouse": "^13.0.1",
-    "lint-staged": "^16.2.7",
-    "playwright": "^1.49.0",
-    "playwright-lighthouse": "^4.0.0",
-    "prettier": "^3.8.1"
-  },
-  "commitlint": {
-    "extends": [
-      "./commitlint.config.cjs"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run lint:fix && npm test"
-    }
-  },
-  "private": true,
-  "type": "module"
+	"name": "personal-website",
+	"version": "1.0.0",
+	"description": "My personal website, displaying both my passion for creative work like cosplay, as well as my professional skills in software development.",
+	"scripts": {
+		"start": "astro dev",
+		"clean": "echo 'Static HTML - no clean step required'",
+		"lint": "prettier --check --ignore-unknown --no-error-on-unmatched-pattern . && biome ci .",
+		"lint:fix": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern .&& biome check . --write",
+		"git:pre-commit": "lint-staged",
+		"git:pre-push": "npm test",
+		"prepare": "husky",
+		"test": "npx playwright test",
+		"test:visual": "npx chromatic --exit-zero-on-changes --playwright --project-token=$CHROMATIC_PROJECT_TOKEN",
+		"test:a11y": "npx playwright test -g 'a11y'",
+		"test:performance": "npx playwright test -g 'performance'",
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ananasuu/ananasuu.github.io"
+	},
+	"homepage": "https://ananasuu.github.io/",
+	"dependencies": {
+		"axe-core": "^4.11.1"
+	},
+	"devDependencies": {
+		"@axe-core/playwright": "^4.11.0",
+		"@biomejs/biome": "^1.9.4",
+		"@chromatic-com/playwright": "^0.12.3",
+		"@commitlint/cli": "^20.3.1",
+		"@commitlint/config-conventional": "^20.3.1",
+		"@playwright/test": "^1.58.0",
+		"astro": "^5.17.1",
+		"husky": "^9.1.7",
+		"lighthouse": "^13.0.1",
+		"lint-staged": "^16.2.7",
+		"playwright": "^1.49.0",
+		"playwright-lighthouse": "^4.0.0",
+		"prettier": "^3.8.1"
+	},
+	"commitlint": {
+		"extends": ["./commitlint.config.cjs"]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run lint:fix",
+			"pre-push": "npm run lint:fix && npm test"
+		}
+	},
+	"private": true,
+	"type": "module"
 }

@@ -4,17 +4,17 @@ import type { ImageMetadata } from 'astro';
 import { getLocaleFromUrl, getLocalizedContent } from '../utils/i18n/i18n';
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
-const cosPortfolio = await import('../data/creative/cosplays.json').then(m => m.default);
+const cosPortfolio = await import('../data/creative/cosplays.json').then((m) => m.default);
 const cosplayImages = import.meta.glob('../assets/img/card_img/*.{jpg,jpeg,png}', { eager: true });
 
 const getCosplayImage = (imageUrl: string) => {
-    const fileName = imageUrl.split('/').pop();
-    if (!fileName) {
-        return undefined;
-    }
-    const key = `../assets/img/card_img/${fileName}`;
-    const mod = cosplayImages[key] as { default: ImageMetadata } | undefined;
-    return mod?.default;
+	const fileName = imageUrl.split('/').pop();
+	if (!fileName) {
+		return undefined;
+	}
+	const key = `../assets/img/card_img/${fileName}`;
+	const mod = cosplayImages[key] as { default: ImageMetadata } | undefined;
+	return mod?.default;
 };
 ---
 

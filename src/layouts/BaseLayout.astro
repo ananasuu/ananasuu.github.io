@@ -1,18 +1,18 @@
 ---
 import ninaPfp from '../assets/img/Nina_Pfp.jpg';
 
-const imprint = await import('../data/imprint.json').then(m => m.default);
+const imprint = await import('../data/imprint.json').then((m) => m.default);
 const siteUrl = 'https://ananasuu.github.io/';
 const ninaPfpUrl = new URL(ninaPfp.src, siteUrl).href;
 const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Nina Friedrich',
-  url: siteUrl,
-  image: ninaPfpUrl,
-  jobTitle: 'Cosplayer & Crafter',
-  description: 'Creative portfolio showcasing cosplay and crafting skills',
-  sameAs: ['https://github.com/ananasuu'],
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Nina Friedrich',
+	url: siteUrl,
+	image: ninaPfpUrl,
+	jobTitle: 'Cosplayer & Crafter',
+	description: 'Creative portfolio showcasing cosplay and crafting skills',
+	sameAs: ['https://github.com/ananasuu'],
 };
 ---
 

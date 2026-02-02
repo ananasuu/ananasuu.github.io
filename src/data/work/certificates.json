@@ -1,62 +1,62 @@
 [
-  {
-    "title": "CSS (Basic)",
-    "institution": "Hackerrank",
-    "link": "",
-    "issued": "Oct. 2025"
-  },
-  {
-    "title": "Digital Skills: Digital Marketing - Accenture",
-    "institution": "FutureLearn",
-    "link": "",
-    "issued": "Oct. 2025"
-  },
-  {
-    "title": "Digital Skills: Social Media - Accenture",
-    "institution": "FutureLearn",
-    "link": "",
-    "issued": "Oct. 2025"
-  },
-  {
-    "title": "Digital Skills: User Experience - Accenture",
-    "institution": "FutureLearn",
-    "link": "",
-    "issued": "Oct. 2025"
-  },
-  {
-    "title": "SQL (Basic)",
-    "institution": "Hackerrank",
-    "link": "",
-    "issued": "Oct. 2025"
-  },
-  {
-    "title": "Relational Database",
-    "institution": "freeCodeCamp",
-    "link": "",
-    "issued": "Aug. 2024"
-  },
-  {
-    "title": "Scientific Computing with Python",
-    "institution": "freeCodeCamp",
-    "link": "",
-    "issued": "March 2023"
-  },
-  {
-    "title": "JavaScript Algorithms and Data Structures",
-    "institution": "freeCodeCamp",
-    "link": "",
-    "issued": "Feb. 2023"
-  },
-  {
-    "title": "Responsive Web Design",
-    "institution": "freeCodeCamp",
-    "link": "",
-    "issued": "Feb. 2023"
-  },
-  {
-    "title": "HTML5 Fundamentals",
-    "institution": "LinkedIn",
-    "link": "",
-    "issued": "Nov. 2022"
-  }
+	{
+		"title": "CSS (Basic)",
+		"institution": "Hackerrank",
+		"link": "",
+		"issued": "Oct. 2025"
+	},
+	{
+		"title": "Digital Skills: Digital Marketing - Accenture",
+		"institution": "FutureLearn",
+		"link": "",
+		"issued": "Oct. 2025"
+	},
+	{
+		"title": "Digital Skills: Social Media - Accenture",
+		"institution": "FutureLearn",
+		"link": "",
+		"issued": "Oct. 2025"
+	},
+	{
+		"title": "Digital Skills: User Experience - Accenture",
+		"institution": "FutureLearn",
+		"link": "",
+		"issued": "Oct. 2025"
+	},
+	{
+		"title": "SQL (Basic)",
+		"institution": "Hackerrank",
+		"link": "",
+		"issued": "Oct. 2025"
+	},
+	{
+		"title": "Relational Database",
+		"institution": "freeCodeCamp",
+		"link": "",
+		"issued": "Aug. 2024"
+	},
+	{
+		"title": "Scientific Computing with Python",
+		"institution": "freeCodeCamp",
+		"link": "",
+		"issued": "March 2023"
+	},
+	{
+		"title": "JavaScript Algorithms and Data Structures",
+		"institution": "freeCodeCamp",
+		"link": "",
+		"issued": "Feb. 2023"
+	},
+	{
+		"title": "Responsive Web Design",
+		"institution": "freeCodeCamp",
+		"link": "",
+		"issued": "Feb. 2023"
+	},
+	{
+		"title": "HTML5 Fundamentals",
+		"institution": "LinkedIn",
+		"link": "",
+		"issued": "Nov. 2022"
+	}
 ]

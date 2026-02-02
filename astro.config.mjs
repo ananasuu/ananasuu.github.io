@@ -3,6 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'static',
-  base: '/',        // sehr wichtig, sonst /de/ falsch
+	output: 'static',
+	base: '/', // sehr wichtig, sonst /de/ falsch
 });

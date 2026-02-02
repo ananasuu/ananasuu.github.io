@@ -1,16 +1,24 @@
 ---
 import { getLocaleFromUrl, getLocalizedContent } from '../utils/i18n/i18n';
 
-const {linkCategory} = Astro.props;
+type LinkItem = {
+	title: string;
+	use: string;
+	description: string;
+	url: string;
+	imageUrl: string;
+	de?: Partial<LinkItem>;
+};
+
+const { linkCategory } = Astro.props;
 const locale = getLocaleFromUrl(Astro.url.pathname);
 
-let links: Array<Record<string, any>> = [];
+let links: LinkItem[] = [];
 if (linkCategory === 'helpful') {
-  links = await import('../data/creative/helpful.json').then(m => m.default);
+	links = await import('../data/creative/helpful.json').then((m) => m.default);
 } else if (linkCategory === 'tool') {
-  links = await import('../data/creative/tools.json').then(m => m.default);
+	links = await import('../data/creative/tools.json').then((m) => m.default);
 }
-
 ---
 
 <ul class="infolinks">
