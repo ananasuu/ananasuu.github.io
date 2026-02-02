@@ -4,11 +4,11 @@
     "institution": "Gesamtschule Niederzier/Merzenich",
     "start": "2019",
     "end": "2021",
-    "description": "After relocating from Lower Saxony/Hamburg, I transferred to this school. I completed my degree with English and Social Sciences as advanced courses, German as an oral exam, and Mathematics as a written exam.",
+    "description": "After relocating from Lower Saxony/Hamburg, I continued my education at this school. I completed my Abitur with English and Social Sciences as advanced courses, German as an oral exam, and Mathematics as a written exam.",
     "grade": "1.9",
     "de": {
       "title": "Abitur",
-      "description": "Nach dem Umzug aus Niedersachsen/Hamburg wechselte ich an diese Schule. Ich schloss mein Abitur mit Englisch und Sozialwissenschaften als Leistungskursen, Deutsch als mündlicher Prüfung und Mathematik als schriftlicher Prüfung ab."
+      "description": "Nach dem Umzug aus Niedersachsen/Hamburg setzte ich meine Schullaufbahn an dieser Schule fort. Mein Abitur absolvierte ich mit Englisch und Sozialwissenschaften als Leistungskursen, Deutsch als mündlicher Prüfung und Mathematik als schriftlicher Prüfung."
     }
   },
   {
@@ -16,11 +16,11 @@
     "institution": "Heinrich Heine University Düsseldorf",
     "start": "2021",
     "end": "2022",
-    "description": "Started my studies immediately after graduation. After one year, I realized I preferred working in a more contemporary field. Nevertheless, I gained valuable insights into legal thinking and working methods, including an internship at a lawyer's office.",
+    "description": "I began studying law directly after graduating. After a year, I decided to pursue a more contemporary and creative career path. During this time, I gained valuable insights into legal thinking and working methods, including practical experience through an internship at a law firm.",
     "grade": "",
     "de": {
       "title": "Jurastudium",
-      "description": "Begann mein Studium direkt nach dem Abitur. Nach einem Jahr stellte ich fest, dass ich lieber in einem zeitgemäßeren Bereich arbeiten möchte. Dennoch gewann ich wertvolle Einblicke in juristisches Denken und Arbeitsweisen, einschließlich eines Praktikums in einer Anwaltskanzlei."
+      "description": "Ich begann mein Jurastudium direkt nach dem Abitur. Nach einem Jahr entschied ich mich bewusst für einen zeitgemäßeren und kreativeren Berufsweg. Dennoch gewann ich wertvolle Einblicke in juristisches Denken und Arbeitsweisen, unter anderem durch ein Praktikum in einer Anwaltskanzlei."
     }
   },
   {
@@ -29,23 +29,23 @@
     "start": "2022",
     "end": "Summer 2025",
     "description": [
-      "Started at a company in Düren, then transferred to Aachen",
-      "Development and maintenance of modern & accessible (web) interfaces",
-      "Application of internal component libraries",
+      "Started at a company in Düren, then transferred to another one in Aachen",
+"Development and maintenance of modern, accessible web interfaces",
+      "Working with internal component libraries and design systems",
       "Database-driven web development",
       "First-level support assistance",
-      "Company representation at career fairs & shareholder events"
+      "Representing the company at career fairs and shareholder events"
     ],
     "grade": "88/100 points in the Chamber of Industry and Commerce (IHK) exam",
     "de": {
       "title": "Duale Berufsausbildung zur Fachinformatikerin für Anwendungsentwicklung, Betrieblicher Teil",
       "description": [
-        "Begann in einem Unternehmen in Düren, dann Wechsel nach Aachen",
-        "Entwicklung und Wartung moderner & barrierefreier (Web-)Oberflächen",
-        "Anwendung interner Komponentenbibliotheken",
+        "Gestartet in einem Unternehmen in Düren, dann Wechsel in ein anderes Unternehmen in Aachen",
+        "Entwicklung und Wartung moderner, barrierefreier Web-Oberflächen",
+        "Arbeit mit internen Komponentenbibliotheken und Designsystemen",
         "Datenbankgestützte Webentwicklung",
         "Unterstützung im First-Level-Support",
-        "Unternehmensvertretung auf Berufsmessen & Aktionärsveranstaltungen"
+        "Repräsentation des Unternehmens auf Berufsmessen und Aktionärsveranstaltungen"
       ],
       "grade": "88/100 Punkte in der IHK-Prüfung"
     }
@@ -56,19 +56,19 @@
     "start": "2022",
     "end": "Summer 2025",
     "description": [
-      "Teaching of theoretical computer science fundamentals",
-      "Software development methods & processes",
-      "Databases & network technology",
-      "Team project work"
+ "Foundations of computer science and software development",
+      "Software development methods and processes",
+      "Databases and network technologies",
+      "Collaborative team project work"
     ],
     "grade": "1.5",
     "de": {
       "title": "Duale Berufsausbildung zur Fachinformatikerin für Anwendungsentwicklung, Schulischer Teil",
       "description": [
-        "Vermittlung theoretischer Informatikgrundlagen",
-        "Softwareentwicklungsmethoden & -prozesse",
-        "Datenbanken & Netzwerktechnik",
-        "Teamprojektarbeit"
+"Vermittlung von Informatikgrundlagen und Softwareentwicklung",
+        "Softwareentwicklungsmethoden und -prozesse",
+        "Datenbanken und Netzwerktechnologien",
+        "Team- und Projektarbeit"
       ]
     }
   },
@@ -78,17 +78,17 @@
     "start": "Summer 2025",
     "end": "",
     "description": [
-      "Continuing my previous responsibilities",
-      "Design adjustments",
-      "Supporting new trainees"
+"Continuing and expanding my responsibilities from vocational training",
+      "Implementing design adjustments and UI improvements",
+      "Supporting and mentoring new trainees"
     ],
     "grade": "",
     "de": {
       "title": "Junior Software-Entwicklerin",
       "description": [
-        "Fortführung meiner bisherigen Tätigkeiten",
-        "Design-Anpassungen",
-        "Unterstützung neuer Auszubildender"
+        "Fortführung und Erweiterung meiner Tätigkeiten aus der Ausbildung",
+        "Umsetzung von Design-Anpassungen und UI-Verbesserungen",
+        "Unterstützung und Betreuung neuer Auszubildender"
       ]
     }
   }

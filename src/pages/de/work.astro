@@ -32,15 +32,12 @@ import Resume from '../../components/Resume.astro';
             <header class="major">
               <h2>Nina Friedrich</h2>
             </header>
-            <p>
-              Ich bin leidenschaftlich daran interessiert, benutzerzentrierte, wartbare und
-              barrierefreie Frontends zu erstellen, die echten Einfluss haben.
-            </p>
-            <p>
-              Mit praktischer Erfahrung in moderner Webentwicklung und responsivem
-              Design konzentriere ich mich darauf, digitale Erlebnisse zu gestalten, die nicht nur
-              visuell ansprechend, sondern auch inklusiv und nachhaltig sind.
-            </p>
+ <p>
+                Ich gestalte benutzerzentrierte, wartbare und barrierefreie Frontends, in denen sauberer Code auf durchdachtes Design trifft.
+              </p>
+              <p>
+                Mit Erfahrung in moderner Webentwicklung liegt mein Fokus auf responsiven digitalen Erlebnissen, die inklusiv, langlebig und bewusst gestaltet sind.
+              </p>
             </div>
           <div class="pfp-hover">
             <picture>
@@ -62,11 +59,10 @@ import Resume from '../../components/Resume.astro';
               <ListCard title="interests" />
             </div>
             <div class="cosplay-info infocard">
-              <h3>Interessiert an meiner Kreativität?</h3>
+              <h3>Fokus auf meine Kreativität</h3>
               <img src="assets/img/card_img/Marcille_NF.jpg" alt="" width="1440" height="1440" />
               <p class="description">
-                Schau dir mein Cosplay-Portfolio an, um mehr über meine Arbeit und
-                Leidenschaft für Kostümdesign zu erfahren.
+                Cosplay ist mein kreativer Ausgleich! Vom Entwerfen der Kostüme bis hin zum Eintauchen in die Charaktere liebe ich den gesamten Prozess, der die Figuren und Geschichten für mich greifbar macht.
               </p>
               <a class="button primary" href="/">Mein Cosplay-Portfolio</a>
             </div>
@@ -86,7 +82,7 @@ import Resume from '../../components/Resume.astro';
             <header class="major">
               <h2>Zertifikate</h2>
               <p>
-                Während Zertifikate praktische Fähigkeiten nicht vollständig erfassen können, zeigen sie doch ein Engagement für Lernen und berufliche Weiterentwicklung. Hier sind einige der Zertifizierungen, die ich erworben habe, um mein Wissen und meine Expertise in verschiedenen Bereichen der Webentwicklung und verwandten Gebieten zu validieren.
+                Zertifikate ersetzen keine praktische Erfahrung, zeigen aber mein Engagement für Lernen und Weiterentwicklung. Hier sind einige, die ich erworben habe, um meine Kenntnisse und Expertise zu belegen.
               </p>
             </header>
             <Certificates />
@@ -96,7 +92,7 @@ import Resume from '../../components/Resume.astro';
             <header class="major">
               <h2>Fähigkeiten</h2>
               <p>
-                Es ist schwierig, meine Fähigkeiten genau zu benennen, da ich gerne neue Dinge lerne und offen für Herausforderungen bin, die mein aktuelles Wissen erweitern! Diese Liste deckt möglicherweise nicht alles ab, zeigt aber meine Interessen.
+                Meine Fähigkeiten genau zu benennen ist schwer, da ich neugierig bin und gerne Neues lerne. Diese Liste zeigt die Bereiche, die mich besonders interessieren und mit denen ich aktiv arbeite.
               </p>
             </header>
             <ListCard title="skills" />
@@ -107,48 +103,11 @@ import Resume from '../../components/Resume.astro';
           <header class="major">
             <h2>Projekte</h2>
             <p>
-              Aufgrund der Vertraulichkeit interner Firmenprojekte können keine öffentlichen Repositories bereitgestellt werden. Die beschriebenen Ergebnisse basieren auf meiner praktischen Arbeit innerhalb der jeweiligen Entwicklungsumgebungen.
+              Einige meiner Arbeiten entstanden in internen Unternehmensumgebungen und können nicht öffentlich geteilt werden. Die hier beschriebenen Projekte spiegeln meine praktische Arbeit und die Ergebnisse daraus wider.
             </p>
           </header>
           <Projects />
         </section>
       </main>
-      
-    <script type="module">
-      import {
-        about,
-        certificates,
-        projects,
-        resume,
-        skills,
-      } from "./index.js";
-
-      const aboutSection = document.querySelector("#about");
-      const resumeSection = document.querySelector("#resume");
-      const skillsSection = document.querySelector("#skills");
-      const certificatesSection = document.querySelector("#certificates");
-      const projectsSection = document.querySelector("#projects");
-
-      aboutSection.appendChild(about());
-      resumeSection.appendChild(resume());
-      skillsSection.appendChild(skills());
-      certificatesSection.appendChild(certificates());
-      projectsSection.appendChild(projects());
-    </script>
-    <script>
-      // Register Service Worker for caching and offline functionality
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("/service-worker.js")
-            .then((registration) => {
-              console.log("Service Worker registered:", registration.scope);
-            })
-            .catch((error) => {
-              console.error("Service Worker registration failed:", error);
-            });
-        });
-      }
-    </script>
   </body>
 </html>

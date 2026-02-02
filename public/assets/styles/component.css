@@ -55,6 +55,7 @@ section:has(.infocard):not(.spotlight),
     &#about, &.cosplay-info {
       h3 {
         margin-block: 0.5rem 1rem;
+        font-size: var(--font-size-large);
       }
     }
 

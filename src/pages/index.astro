@@ -32,10 +32,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <h2>Nina Friedrich</h2>
             </header>
             <p>
-              Started by simply gathering matching clothes, ended up competing
-              in completely selfmade outfits with magical props. I've been
-              actively making cosplays from scratch since 2022 and started my
-              career as a software developer shortly after.
+  What started as simply putting together matching clothes quickly turned into creating fully self-made outfits complete with magical props. Since 2022, I've been diving deep into crafting my own cosplays from scratch, bringing characters to life in my own way — all while starting my career as a software developer shortly after.
+
             </p>
             <a
             class="button primary"
@@ -60,19 +58,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <section id="cosplays">
           <header class="major">
             <h2>Cosplays & Buildbooks</h2>
-            <p>
-              All my costumes! If you're interested in having a photoshoot with
-              me, send me an
-              <a href="https://www.instagram.com/ninumakes/" target="_blank"
-                >Instagram DM</a
-              >
-              or an <a href="mailto:nina.friedrich02@gmail.com">E-mail</a>!
-            </p>
-            <p>
-              If available, I've linked my build books. I hope they help you
-              with your own builds! All of them were created with canva and can
-              be accessed through google drive.
-            </p>
+<p>
+  Here you'll find all my costumes! If you'd like to do a photoshoot together, just send me a 
+  <a href="https://www.instagram.com/ninumakes/" target="_blank">DM on Instagram</a> or an 
+  <a href="mailto:nina.friedrich02@gmail.com">email</a> — I’d love to hear from you!
+</p>
+<p>
+  Whenever possible, I’ve linked my build books so you can see how I brought each costume to life. 
+  All of them were created in Canva and are available through Google Drive — I hope they inspire your own projects!
+</p>
           </header>
           <CosCard />
         </section>
@@ -81,8 +75,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <header class="major">
             <h2>Helpful Links</h2>
             <p>
-              Learning from others is the best way to improve your own skills.
-              Here are some of my favorite resources!
+The best way to level up your skills is by learning from others. 
+  Here are a few of my favorite resources that I find really useful!
             </p>
           </header>
           <LinkCard linkCategory="helpful" />
@@ -90,39 +84,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <section id="tools">
           <header class="major">
-            <h2>Tools & Shops</h2>
-            <p>Sometimes you're just missing the right tool & material for the job.</p>
+<h2>Tools & Shops</h2>
+<p>Sometimes the right tool or material makes all the difference — here are the ones I love to use!</p>
           </header>
           <LinkCard linkCategory="tool" />
         </section>
       </main>
     </div>
-
-    <script type="module">
-      import { cosplays, links, tools } from "./index.js";
-
-      const linksSection = document.querySelector("#helpfulLinks");
-      const toolsSection = document.querySelector("#tools");
-      const cosplaysSection = document.querySelector("#cosplays");
-
-      linksSection.appendChild(links());
-      toolsSection.appendChild(tools());
-      cosplaysSection.appendChild(cosplays());
-    </script>
-    <script>
-      // Register Service Worker for caching and offline functionality
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("/service-worker.js")
-            .then((registration) => {
-              console.log("Service Worker registered:", registration.scope);
-            })
-            .catch((error) => {
-              console.error("Service Worker registration failed:", error);
-            });
-        });
-      }
-    </script>
   </body>
 </BaseLayout>
