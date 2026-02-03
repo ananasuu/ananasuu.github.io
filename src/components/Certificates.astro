@@ -9,7 +9,7 @@ const issuedLabel = locale === 'de' ? 'Ausgestellt' : 'Issued';
 <ul>
     {certificatesData.map((cert) => (
         <li>
-            <a href={cert.link}>
+            <a href={cert.link} target="_blank" rel="noopener noreferrer">
                 <h3>{cert.title}</h3>
                                 <img
                                     src={`/assets/img/institution_logos/${cert.institution.toLowerCase()}.jpg`}

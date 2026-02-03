@@ -1,62 +1,68 @@
 [
 	{
+		"title": "IAAP Certified Professionals in Accessibility Core Competencies (CPACC)",
+		"institution": "IAAP -International Association of Accessibility Professionals",
+		"link": "https://www.credly.com/badges/c85880c1-4bde-479c-bd96-274d4e160dce",
+		"issued": "Jan. 2026"
+	},
+	{
 		"title": "CSS (Basic)",
 		"institution": "Hackerrank",
-		"link": "",
+		"link": "https://www.hackerrank.com/certificates/ad43d113b496",
 		"issued": "Oct. 2025"
 	},
 	{
 		"title": "Digital Skills: Digital Marketing - Accenture",
 		"institution": "FutureLearn",
-		"link": "",
+		"link": "https://www.futurelearn.com/certificates/a5pyh56",
 		"issued": "Oct. 2025"
 	},
 	{
 		"title": "Digital Skills: Social Media - Accenture",
 		"institution": "FutureLearn",
-		"link": "",
+		"link": "https://www.futurelearn.com/certificates/tj84gjn",
 		"issued": "Oct. 2025"
 	},
 	{
 		"title": "Digital Skills: User Experience - Accenture",
 		"institution": "FutureLearn",
-		"link": "",
+		"link": "https://www.futurelearn.com/certificates/c9k16s8",
 		"issued": "Oct. 2025"
 	},
 	{
 		"title": "SQL (Basic)",
 		"institution": "Hackerrank",
-		"link": "",
+		"link": "https://www.hackerrank.com/certificates/97533250fd29",
 		"issued": "Oct. 2025"
 	},
 	{
 		"title": "Relational Database",
 		"institution": "freeCodeCamp",
-		"link": "",
+		"link": "https://freecodecamp.org/certification/Ananasuu/relational-database-v8",
 		"issued": "Aug. 2024"
 	},
 	{
 		"title": "Scientific Computing with Python",
 		"institution": "freeCodeCamp",
-		"link": "",
+		"link": "https://freecodecamp.org/certification/Ananasuu/scientific-computing-with-python-v7",
 		"issued": "March 2023"
 	},
 	{
 		"title": "JavaScript Algorithms and Data Structures",
 		"institution": "freeCodeCamp",
-		"link": "",
+		"link": "https://freecodecamp.org/certification/Ananasuu/javascript-algorithms-and-data-structures",
 		"issued": "Feb. 2023"
 	},
 	{
 		"title": "Responsive Web Design",
 		"institution": "freeCodeCamp",
-		"link": "",
+		"link": "https://freecodecamp.org/certification/Ananasuu/responsive-web-design",
 		"issued": "Feb. 2023"
 	},
 	{
 		"title": "HTML5 Fundamentals",
 		"institution": "LinkedIn",
-		"link": "",
+		"link": "https://www.linkedin.com/learning/certificates/ebc14c3402ca7d1728609ed70986f57c0fdb73adc8cbe75969819cd137373f19?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BDsn%2FsrXeT3%2BLEC77liWbTA%3D%3D",
 		"issued": "Nov. 2022"
 	}
 ]
