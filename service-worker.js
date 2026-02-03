@@ -24,9 +24,9 @@ const RUNTIME_CACHE_PATTERNS = [
 	/^\/assets\//, // Alle Dateien aus dem assets-Ordner
 	/\.(?:png|jpg|jpeg|svg|gif|webp)$/,
 	/\.(?:woff|woff2|ttf|eot)$/,
-	/^https:\/\/fonts\.googleapis\.com/,
-	/^https:\/\/fonts\.gstatic\.com/,
-	/^https:\/\/img\.icons8\.com/,
+	/^https:\/\/fonts\.googleapis\.com(?:\/|$)/,
+	/^https:\/\/fonts\.gstatic\.com(?:\/|$)/,
+	/^https:\/\/img\.icons8\.com(?:\/|$)/,
 ];
 
 // Install event - precache critical assets
