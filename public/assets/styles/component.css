@@ -149,6 +149,19 @@ section:has(.infocard):not(.spotlight),
 			}
 		}
 
+		&.cosplay-info picture,
+		&.cosplay-info .card-media {
+			min-height: 450px;
+			height: 100%;
+
+			img {
+				height: 100%;
+				aspect-ratio: unset;
+				max-width: unset;
+				width: 100%;
+			}
+		}
+
 		> h3 {
 			grid-area: title;
 			font-size: var(--font-size-large);
