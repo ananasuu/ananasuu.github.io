@@ -4,6 +4,7 @@ import ninaPfp from '../assets/img/Nina_Pfp.jpg';
 import CosCard from '../components/CosCard.astro';
 import LinkCard from '../components/LinkCard.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Ressources from '../components/Ressources.astro';
 ---
 
 <BaseLayout>
@@ -76,19 +77,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <header class="major">
             <h2>Helpful Links</h2>
             <p>
-The best way to level up your skills is by learning from others. 
-  Here are a few of my favorite resources that I find really useful!
+              Here are some of my favorite resources for cosplay, crafting, and creativity. 
+              Whether you're looking for tutorials, inspiration, or tools, these links have got you covered!
             </p>
-          </header>
-          <LinkCard linkCategory="helpful" />
-        </section>
-
-        <section id="tools">
-          <header class="major">
-<h2>Tools & Shops</h2>
-<p>Sometimes the right tool or material makes all the difference — here are the ones I love to use!</p>
-          </header>
-          <LinkCard linkCategory="tool" />
+          <Ressources />
+          
         </section>
       </main>
     </div>

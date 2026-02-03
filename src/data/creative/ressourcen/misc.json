@@ -1,0 +1,22 @@
+{
+	"title": "Miscellaneous Resources",
+	"description": "A collection of miscellaneous resources for creative projects.",
+	"de": {
+		"title": "Verschiedene Ressourcen",
+		"description": "Eine Sammlung verschiedener Ressourcen für kreative Projekte."
+	},
+	"ressourcen": [
+		{
+			"title": "Materials & Tools",
+			"use": "Collection",
+			"url": "https://www.belloflostsouls.net/2022/08/tools-of-the-trade-a-guide-to-cosplay-materials.html",
+			"description": "An overview of useful cosplay materials and tools.",
+			"imageUrl": "/assets/img/belloflostsouls_logo.svg",
+			"de": {
+				"title": "Materialien & Werkzeuge",
+				"use": "Sammlung",
+				"description": "Ein Überblick über nützliche Cosplay-Materialien und Werkzeuge."
+			}
+		}
+	]
+}

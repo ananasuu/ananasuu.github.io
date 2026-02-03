@@ -1,4 +1,11 @@
-[
+{
+	"title": "Tutorials",
+	"description": "A collection of tutorials for various creative projects.",
+	"de": {
+		"title": "Tutorials",
+		"description": "Eine Sammlung von Tutorials für verschiedene kreative Projekte."
+	},
+	"ressourcen": [
 	{
 		"title": "Sewing a Corset",
 		"use": "Tutorial",
@@ -9,18 +16,6 @@
 			"title": "Ein Korsett nähen",
 			"use": "Tutorial",
 			"description": "Lerne, wie man einfach ein Korsettschnittmuster erstellt und näht."
-		}
-	},
-	{
-		"title": "Materials & Tools",
-		"use": "Collection",
-		"url": "https://www.belloflostsouls.net/2022/08/tools-of-the-trade-a-guide-to-cosplay-materials.html",
-		"description": "An overview of useful cosplay materials and tools.",
-		"imageUrl": "/assets/img/belloflostsouls_logo.svg",
-		"de": {
-			"title": "Materialien & Werkzeuge",
-			"use": "Sammlung",
-			"description": "Ein Überblick über nützliche Cosplay-Materialien und Werkzeuge."
 		}
 	},
 	{
@@ -71,4 +66,4 @@
 			"description": "Fragst du dich, warum deine Nähte nicht flach liegen? Dieses Tutorial zeigt die Lösung."
 		}
 	}
-]
+]}
