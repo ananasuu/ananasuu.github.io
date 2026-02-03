@@ -1,172 +1,94 @@
 [
-  {
-    "title": "Mobility",
-    "skills": ["Driver's license class B", "Own car available"],
-    "de": {
-      "title": "Mobilität",
-      "skills": ["Führerschein Klasse B", "Eigenes Auto vorhanden"]
-    }
-  },
-  {
-    "title": "Languages",
-    "skills": [
-      { "skill": "German", "experience": "Native" },
-      { "skill": "English", "experience": "B2/C1" },
-      { "skill": "French", "experience": "B1" },
-      { "skill": "Latin", "experience": "Basics" }
-    ],
-    "de": {
-      "title": "Sprachen",
-      "skills": [
-        { "skill": "Deutsch", "experience": "Muttersprache" },
-        { "skill": "Englisch", "experience": "B2/C1" },
-        { "skill": "Französisch", "experience": "B1" },
-        { "skill": "Latein", "experience": "Grundlagen" }
-      ]
-    }
-  },
-  {
-    "title": "Softskills",
-    "skills": [
-      "Teamwork",
-      "Quick comprehension",
-      "Communication",
-      "Presentation skills",
-      "Creativity"
-    ],
-    "de": {
-      "title": "Softskills",
-      "skills": [
-        "Teamarbeit",
-        "Schnelle Auffassungsgabe",
-        "Kommunikation",
-        "Präsentationsfähigkeiten",
-        "Kreativität"
-      ]
-    }
-  },
-  {
-    "title": "Technologies & Tools",
-    "skills": [
-      {
-        "skill": "JavaScript",
-        "experience": "3 Years"
-      },
-      {
-        "skill": "HTML & CSS",
-        "experience": "3 Years"
-      },
-      {
-        "skill": "Figma",
-        "experience": "1 Year"
-      },
-      {
-        "skill": "Github",
-        "experience": "3 Years"
-      },
-      {
-        "skill": "Python",
-        "experience": "1 Year"
-      },
-      {
-        "skill": "CI/CD-Pipelines",
-        "experience": "1.5 Years"
-      }
-    ],
-    "de": {
-      "title": "Technologien & Werkzeuge",
-      "skills": [
-        {
-          "skill": "JavaScript",
-          "experience": "3 Jahre"
-        },
-        {
-          "skill": "HTML & CSS",
-          "experience": "3 Jahre"
-        },
-        {
-          "skill": "Figma",
-          "experience": "1 Jahr"
-        },
-        {
-          "skill": "Github",
-          "experience": "3 Jahre"
-        },
-        {
-          "skill": "Python",
-          "experience": "1 Jahr"
-        },
-        {
-          "skill": "CI/CD-Pipelines",
-          "experience": "1,5 Jahre"
-        }
-      ]
-    }
-  },
-  {
-    "title": "Frameworks & Concepts",
-    "skills": [
-      {
-        "skill": "Astro",
-        "experience": "2 Years"
-      },
-      {
-        "skill": "Svelte",
-        "experience": "1 Year"
-      },
-      {
-        "skill": "Vue",
-        "experience": "0.5 Year"
-      },
-      {
-        "skill": "Design Systems",
-        "experience": "3 Years"
-      },
-      {
-        "skill": "Responsive Web Design",
-        "experience": "3 Years"
-      },
-      {
-        "skill": "Accessibility (WCAG)",
-        "experience": "3 Years"
-      },
-      {
-        "skill": "NPM",
-        "experience": "2 Years"
-      }
-    ],
-    "de": {
-      "title": "Frameworks & Konzepte",
-      "skills": [
-        {
-          "skill": "Astro",
-          "experience": "2 Jahre"
-        },
-        {
-          "skill": "Svelte",
-          "experience": "1 Jahr"
-        },
-        {
-          "skill": "Vue",
-          "experience": "0,5 Jahre"
-        },
-        {
-          "skill": "Design-Systeme",
-          "experience": "3 Jahre"
-        },
-        {
-          "skill": "Responsive Web Design",
-          "experience": "3 Jahre"
-        },
-        {
-          "skill": "Barrierefreiheit (WCAG)",
-          "experience": "3 Jahre"
-        },
-        {
-          "skill": "NPM",
-          "experience": "2 Jahre"
-        }
-      ]
-    }
-  }
+	{
+		"title": "Mobility",
+		"skills": ["Driver's license (Class B)", "Own car available"],
+		"de": {
+			"title": "Mobilität",
+			"skills": ["Führerschein Klasse B", "Eigenes Auto vorhanden"]
+		}
+	},
+	{
+		"title": "Languages",
+		"skills": [
+			{ "skill": "German", "experience": "Native" },
+			{ "skill": "English", "experience": "B2/C1" },
+			{ "skill": "French", "experience": "B1" },
+			{ "skill": "Latin", "experience": "Basics" }
+		],
+		"de": {
+			"title": "Sprachen",
+			"skills": [
+				{ "skill": "Deutsch", "experience": "Muttersprache" },
+				{ "skill": "Englisch", "experience": "B2/C1" },
+				{ "skill": "Französisch", "experience": "B1" },
+				{ "skill": "Latein", "experience": "Grundlagen" }
+			]
+		}
+	},
+	{
+		"title": "Soft Skills",
+		"skills": [
+			"Teamwork & collaboration",
+			"Quick comprehension",
+			"Effective communication",
+			"Presentation skills",
+			"Creativity & problem-solving"
+		],
+		"de": {
+			"title": "Softskills",
+			"skills": [
+				"Teamarbeit & Zusammenarbeit",
+				"Schnelle Auffassungsgabe",
+				"Effektive Kommunikation",
+				"Präsentationsfähigkeiten",
+				"Kreativität & Problemlösung"
+			]
+		}
+	},
+	{
+		"title": "Technologies & Tools",
+		"skills": [
+			{ "skill": "JavaScript", "experience": "3 years" },
+			{ "skill": "HTML & CSS", "experience": "3 years" },
+			{ "skill": "Figma", "experience": "1 year" },
+			{ "skill": "GitHub", "experience": "3 years" },
+			{ "skill": "Python", "experience": "1 year" },
+			{ "skill": "CI/CD pipelines", "experience": "1.5 years" }
+		],
+		"de": {
+			"title": "Technologien & Werkzeuge",
+			"skills": [
+				{ "skill": "JavaScript", "experience": "3 Jahre" },
+				{ "skill": "HTML & CSS", "experience": "3 Jahre" },
+				{ "skill": "Figma", "experience": "1 Jahr" },
+				{ "skill": "GitHub", "experience": "3 Jahre" },
+				{ "skill": "Python", "experience": "1 Jahr" },
+				{ "skill": "CI/CD-Pipelines", "experience": "1,5 Jahre" }
+			]
+		}
+	},
+	{
+		"title": "Frameworks & Concepts",
+		"skills": [
+			{ "skill": "Astro", "experience": "2 years" },
+			{ "skill": "Svelte", "experience": "1 year" },
+			{ "skill": "Vue", "experience": "0.5 year" },
+			{ "skill": "Design Systems", "experience": "3 years" },
+			{ "skill": "Responsive Web Design", "experience": "3 years" },
+			{ "skill": "Accessibility (WCAG)", "experience": "3 years" },
+			{ "skill": "NPM", "experience": "2 years" }
+		],
+		"de": {
+			"title": "Frameworks & Konzepte",
+			"skills": [
+				{ "skill": "Astro", "experience": "2 Jahre" },
+				{ "skill": "Svelte", "experience": "1 Jahr" },
+				{ "skill": "Vue", "experience": "0,5 Jahre" },
+				{ "skill": "Design-Systeme", "experience": "3 Jahre" },
+				{ "skill": "Responsive Web Design", "experience": "3 Jahre" },
+				{ "skill": "Barrierefreiheit (WCAG)", "experience": "3 Jahre" },
+				{ "skill": "NPM", "experience": "2 Jahre" }
+			]
+		}
+	}
 ]

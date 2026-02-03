@@ -1,34 +1,50 @@
 [
-  {
-    "title": "Nifegun",
-    "use": "Scaling Tool",
-    "url": "https://nifegun.com/scale_tool/scale_tool.html",
-    "description": "Ever wondered how to actually have the right scale for your props? Use this!",
-    "imageUrl": "/assets/img/scale_tool_gauntlet.png",
-    "de": { "title": "Nifegun", "use": "Skalierungswerkzeug", "description": "Hast du dich je gefragt, wie man die richtige Größe für Props erhält? Nutze dies!" }
-  },
-  {
-    "title": "Cosplayshop.be",
-    "use": "Cosplay Materials, EU",
-    "url": "https://cosplayshop.be/de/",
-    "description": "Ordering materials in the EU can be a pain, but this shop has nice stuff!",
-    "imageUrl": "/assets/img/cosplaybe_logo.svg",
-    "de": { "title": "Cosplayshop.be", "use": "Cosplay-Materialien, EU", "description": "Materialien in der EU zu bestellen kann mühsam sein, aber dieser Shop hat tolles Zeug!" }
-  },
-  {
-    "title": "Kamui Cosplay",
-    "use": "Tutorials & Patterns",
-    "url": "https://www.kamuicosplay.com/",
-    "description": "Kamui Cosplay is a well-known cosplayer and prop maker. She has a lot of tutorials and patterns for sale.",
-    "imageUrl": "/assets/img/kamui_logo.png",
-    "de": { "title": "Kamui Cosplay", "use": "Tutorials & Schnittmuster", "description": "Kamui Cosplay ist eine bekannte Cosplayerin und Prop-Macherin. Sie bietet viele Tutorials und Schnittmuster zum Verkauf an." }
-  },
-  {
-    "title": "Dr Cos",
-    "use": "Patterns",
-    "url": "https://dr-cos.info/",
-    "description": "A great source for both free and paid patterns. They have a wide range of styles and sizes.",
-    "imageUrl": "/assets/img/drcos_logo.svg",
-    "de": { "title": "Dr Cos", "use": "Schnittmuster", "description": "Eine großartige Quelle für kostenlose und kostenpflichtige Schnittmuster. Sie haben eine breite Palette an Stilen und Größen." }
-  }
+	{
+		"title": "Nifegun",
+		"use": "Scaling Tool",
+		"url": "https://nifegun.com/scale_tool/scale_tool.html",
+		"description": "Need the right scale for your props? This tool makes it easy!",
+		"imageUrl": "/assets/img/scale_tool_gauntlet.png",
+		"de": {
+			"title": "Nifegun",
+			"use": "Skalierungswerkzeug",
+			"description": "Die richtige Größe für Props zu bekommen? Mit dieser Seite gar kein Problem!"
+		}
+	},
+	{
+		"title": "Cosplayshop.be",
+		"use": "Cosplay Materials, EU",
+		"url": "https://cosplayshop.be/de/",
+		"description": "Ordering cosplay materials in the EU can be tricky, but this shop has some great finds!",
+		"imageUrl": "/assets/img/cosplaybe_logo.svg",
+		"de": {
+			"title": "Cosplayshop.be",
+			"use": "Cosplay-Materialien, EU",
+			"description": "Cosplay-Materialien in der EU zu bestellen kann knifflig sein, aber in diesem Shop findet man tolle Sachen!"
+		}
+	},
+	{
+		"title": "Kamui Cosplay",
+		"use": "Tutorials & Patterns",
+		"url": "https://www.kamuicosplay.com/",
+		"description": "Kamui Cosplay is a well-known cosplayer and prop maker, offering lots of tutorials and patterns for sale.",
+		"imageUrl": "/assets/img/kamui_logo.png",
+		"de": {
+			"title": "Kamui Cosplay",
+			"use": "Tutorials & Schnittmuster",
+			"description": "Kamui Cosplay ist eine bekannte Cosplayerin und Prop-Macherin und bietet viele Tutorials und Schnittmuster zum Kauf an."
+		}
+	},
+	{
+		"title": "Dr Cos",
+		"use": "Patterns",
+		"url": "https://dr-cos.info/",
+		"description": "A great source for both free and paid patterns, with a wide variety of styles and sizes.",
+		"imageUrl": "/assets/img/drcos_logo.svg",
+		"de": {
+			"title": "Dr Cos",
+			"use": "Schnittmuster",
+			"description": "Eine tolle Quelle für kostenlose und kostenpflichtige Schnittmuster, mit einer breiten Auswahl an Stilen und Größen."
+		}
+	}
 ]

@@ -1,9 +1,12 @@
 ---
-import ListCard from '../components/ListCard.astro';
+import { Picture } from 'astro:assets';
+import ninaPfp from '../assets/img/Nina_Pfp.jpg';
+import marcilleNf from '../assets/img/card_img/Marcille_NF.jpg';
 import Certificates from '../components/Certificates.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ListCard from '../components/ListCard.astro';
 import Projects from '../components/Projects.astro';
 import Resume from '../components/Resume.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout>
@@ -29,44 +32,50 @@ import Resume from '../components/Resume.astro';
         <section class="spotlight">
           <div class="spotlight-top">
             <div class="content">
-            <header class="major">
-              <h2>Nina Friedrich</h2>
-            </header>
-            <p>
-              I’m passionate about building user-centered, maintainable and
-              accessible frontends that create real impact.
-            </p>
-            <p>
-              With hands-on experience in modern web development and responsive
-              design, I focus on crafting digital experiences that are not only
-              visually appealing but also inclusive and sustainable.
-            </p>
+              <header class="major">
+                <h2>Nina Friedrich</h2>
+              </header>
+              <p>
+  I create accessible, user-centered frontends where clean code meets thoughtful
+  design.
+</p>
+<p>
+  With a background in modern web development, I focus on building responsive
+  digital experiences that are inclusive, maintainable and intentionally
+  crafted.
+</p>
             </div>
-          <div class="pfp-hover">
-            <picture>
-              <source srcset="/assets/img/Nina_Pfp.avif" type="image/avif" />
-              <img
-                src="/assets/img/Nina_Pfp.jpg"
+            <div class="pfp-hover">
+              <Picture
+                src={ninaPfp}
                 alt="Nina Friedrich"
+                width={272}
+                height={272}
+                formats={['avif', 'webp', 'jpeg']}
                 fetchpriority="high"
-                width="272"
-                height="272"
+                loading="eager"
               />
-            </picture>
+            </div>
           </div>
-          </div>
-          
+
           <div class="spotlight-bottom">
             <div id="about" class="infocard">
-              <h3>Interests</h3>
               <ListCard title="interests" />
             </div>
             <div class="cosplay-info infocard">
-              <h3>Interested in my Creativity?</h3>
-              <img src="assets/img/card_img/Marcille_NF.jpg" alt="" width="1440" height="1440" />
+              <h3>Where creativity comes to life</h3>
+              <Picture
+                src={marcilleNf}
+                alt="Nina Friedrich posing in an elven cosplay"
+                width={1440}
+                height={1440}
+                formats={['avif', 'webp', 'jpeg']}
+                loading="lazy"
+              />
               <p class="description">
-                Check out my cosplay portfolio to find out more about my work and
-                passion for costume design.
+Cosplay is where my creativity takes over!
+From crafting costumes to researching and understanding the characters behind
+them, I love the entire process of bringing fictional worlds to life.
               </p>
               <a class="button primary" href="/">My Cosplay Portfolio</a>
             </div>
@@ -81,16 +90,13 @@ import Resume from '../components/Resume.astro';
         </section>
 
         <div class="skills-certificates-container">
-
           <section id="certificates">
             <header class="major">
               <h2>Certificates</h2>
               <p>
-                While certificates can't fully capture practical skills, they do
-                demonstrate a commitment to learning and professional development.
-                Here are some of the certifications I've earned to validate my
-                knowledge and expertise in various areas of web development and
-                related fields.
+While certificates don’t replace hands-on experience, they reflect my
+  dedication to learning and growing as a developer. Here are a few I’ve earned
+  along the way.
               </p>
             </header>
             <Certificates />
@@ -100,7 +106,9 @@ import Resume from '../components/Resume.astro';
             <header class="major">
               <h2>Skills</h2>
               <p>
-                Pinpointing my skills is hard, since I like to learn new things & am open to challenges that extend my current knowledge! This list might not cover everything, but it shows my interests.
+  It’s hard to pin down my skills, as I’m always curious and enjoy learning new
+  things. This list doesn’t cover everything, but it highlights the areas I’m most
+  interested in and actively working with.
               </p>
             </header>
             <ListCard title="skills" />
@@ -111,51 +119,14 @@ import Resume from '../components/Resume.astro';
           <header class="major">
             <h2>Projects</h2>
             <p>
-              Due to the confidentiality of internal company projects, public
-              repositories cannot be provided. The described results are based
-              on my practical work within the respective development
-              environments.
+  Some of my work was created in internal company environments and can’t be
+  shared publicly. The projects described here are based on my hands-on
+  experience and the results of that work.
             </p>
           </header>
           <Projects />
         </section>
       </main>
-      
-    <script type="module">
-      import {
-        about,
-        certificates,
-        projects,
-        resume,
-        skills,
-      } from "./index.js";
-
-      const aboutSection = document.querySelector("#about");
-      const resumeSection = document.querySelector("#resume");
-      const skillsSection = document.querySelector("#skills");
-      const certificatesSection = document.querySelector("#certificates");
-      const projectsSection = document.querySelector("#projects");
-
-      aboutSection.appendChild(about());
-      resumeSection.appendChild(resume());
-      skillsSection.appendChild(skills());
-      certificatesSection.appendChild(certificates());
-      projectsSection.appendChild(projects());
-    </script>
-    <script>
-      // Register Service Worker for caching and offline functionality
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("/service-worker.js")
-            .then((registration) => {
-              console.log("Service Worker registered:", registration.scope);
-            })
-            .catch((error) => {
-              console.error("Service Worker registration failed:", error);
-            });
-        });
-      }
-    </script>
+    </div>
   </body>
-</html>
+</BaseLayout>

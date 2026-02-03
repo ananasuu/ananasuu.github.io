@@ -1,7 +1,7 @@
 ---
 import { getLocaleFromUrl, getLocalizedContent } from '../utils/i18n/i18n';
 
-const projectData = await import('../data/work/projects.json').then(m => m.default);
+const projectData = await import('../data/work/projects.json').then((m) => m.default);
 const locale = getLocaleFromUrl(Astro.url.pathname);
 ---
 

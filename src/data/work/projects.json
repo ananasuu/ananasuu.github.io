@@ -1,35 +1,35 @@
 [
-  {
-    "title": "Company Homepage Modernization and Maintenance",
-    "role": "Frontend Developer, Design Support",
-    "description": "Migration of the company website from an externally managed CMS to a modern, internally operated Astro-based solution. Focus was on performance, accessibility, and long-term maintainability. Continuous improvements are still being implemented.",
-    "url": "",
-    "de": {
-      "title": "Modernisierung und Wartung der Firmenhomepage",
-      "role": "Frontend-Entwicklerin, Design-Unterstützung",
-      "description": "Migration der Firmenwebsite von einem extern verwalteten CMS zu einer modernen, intern betriebenen Astro-basierten Lösung. Der Fokus lag auf Performance, Barrierefreiheit und langfristiger Wartbarkeit. Kontinuierliche Verbesserungen werden weiterhin umgesetzt."
-    }
-  },
-  {
-    "title": "Purchase Management System for Local Vendors",
-    "role": "Project Management, Frontend Developer, UI/UX Design",
-    "description": "Conception and implementation of a web-based system for managing internal orders with local vendors. Instead of manual email orders, the application enables automated creation, processing, and tracking of orders as well as consumption pattern analysis.",
-    "url": "",
-    "de": {
-      "title": "Einkaufsverwaltungssystem für lokale Anbieter",
-      "role": "Projektmanagement, Frontend-Entwicklerin, UI/UX-Design",
-      "description": "Konzeption und Umsetzung eines webbasierten Systems zur Verwaltung interner Bestellungen bei lokalen Anbietern. Anstelle manueller E-Mail-Bestellungen ermöglicht die Anwendung die automatisierte Erstellung, Bearbeitung und Nachverfolgung von Bestellungen sowie die Analyse von Verbrauchsmustern."
-    }
-  },
-  {
-    "title": "Employee Profile Generator",
-    "role": "Frontend Developer",
-    "description": "Development of an internal platform that automatically creates employee skills profiles and integrates them directly into customer-specific templates. The goal was to significantly reduce manual effort in creation.",
-    "url": "",
-    "de": {
-      "title": "Mitarbeiterprofilgenerator",
-      "role": "Frontend-Entwicklerin",
-      "description": "Entwicklung einer internen Plattform, die automatisch Mitarbeiterkompetenzenprofile erstellt und diese direkt in kundenspezifische Vorlagen integriert. Ziel war es, den manuellen Aufwand bei der Erstellung erheblich zu reduzieren."
-    }
-  }
+	{
+		"title": "Company Homepage Modernization and Maintenance",
+		"role": "Frontend Developer, Design Support",
+		"description": "As part of the frontend team, I contributed to migrating our company website from an external CMS to a modern, internally operated Astro-based solution. Together, we focused on improving performance, accessibility, and maintainability, continuously refining the site to meet both user needs and long-term goals.",
+		"url": "",
+		"de": {
+			"title": "Modernisierung und Wartung der Firmenhomepage",
+			"role": "Frontend-Entwicklerin, Design-Unterstützung",
+			"description": "Im Team der Frontend-Entwicklung arbeitete ich an der Migration unserer Firmenwebsite von einem externen CMS zu einer modernen, intern betriebenen Astro-basierten Lösung mit. Gemeinsam konzentrierten wir uns auf Performance, Barrierefreiheit und langfristige Wartbarkeit und optimieren die Seite kontinuierlich, um Nutzer:innen und langfristigen Anforderungen gerecht zu werden."
+		}
+	},
+	{
+		"title": "Purchase Management System for Local Vendors",
+		"role": "Project Management, Frontend Developer, UI/UX Design",
+		"description": "I designed and built a web-based system for managing orders with local vendors. By replacing manual email processes, the platform automates creation, tracking, and processing of orders, providing clear insights into consumption patterns and saving significant manual effort for the team.",
+		"url": "",
+		"de": {
+			"title": "Einkaufsverwaltungssystem für lokale Anbieter",
+			"role": "Projektmanagement, Frontend-Entwicklerin, UI/UX-Design",
+			"description": "Ich konzipierte und entwickelte ein webbasiertes System zur Verwaltung von Bestellungen bei lokalen Anbietern. Statt manueller E-Mail-Prozesse automatisiert die Plattform Erstellung, Nachverfolgung und Bearbeitung der Bestellungen, liefert klare Einblicke in Verbrauchsmuster und spart dem Team erheblichen manuellen Aufwand."
+		}
+	},
+	{
+		"title": "Employee Profile Generator",
+		"role": "Frontend Developer",
+		"description": "I contributed to developing an internal platform that automatically generates employee skill profiles and merges them into customer-specific templates. Working alongside my colleagues, we significantly reduced manual work and streamlined internal processes, allowing the team to focus on higher-value tasks.",
+		"url": "",
+		"de": {
+			"title": "Mitarbeiterprofilgenerator",
+			"role": "Frontend-Entwicklerin",
+			"description": "Ich arbeitete gemeinsam mit meinen Kolleg:innen an der Entwicklung einer internen Plattform, die automatisch Mitarbeiterkompetenzenprofile erstellt und direkt in kundenspezifische Vorlagen integriert. Zusammen reduzierten wir den manuellen Aufwand erheblich und optimierten interne Prozesse, sodass das Team sich auf wertvollere Aufgaben konzentrieren konnte."
+		}
+	}
 ]

@@ -1,7 +1,9 @@
 ---
-import CosCard from '../../components/CosCard.astro';
-import LinkCard from '../../components/LinkCard.astro';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Picture } from "astro:assets";
+import ninaPfp from "../../assets/img/Nina_Pfp.jpg";
+import CosCard from "../../components/CosCard.astro";
+import LinkCard from "../../components/LinkCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
@@ -32,25 +34,24 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <h2>Nina Friedrich</h2>
             </header>
             <p>
-              Angefangen habe ich damit, einfach passende Kleidung zusammenzusuchen, und schließlich habe ich an Wettbewerben mit komplett selbstgemachten Outfits und magischen Requisiten teilgenommen. Seit 2022 fertige ich aktiv Cosplays von Grund auf an und habe kurz darauf meine Karriere als Softwareentwicklerin begonnen.
+              Angefangen habe ich damit, einfach passende Kleidung
+              zusammenzustellen. Schon bald entstanden komplette, selbstgemachte
+              Outfits mit magischen Requisiten. Seit 2022 bastle ich aktiv
+              Cosplays von Grund auf und habe kurz darauf meine Karriere als
+              Softwareentwicklerin gestartet.
             </p>
-            <a
-            class="button primary"
-            href="/work.html">
-            Meine Arbeit
-            </a>
+            <a class="button primary" href="/work.html"> Meine Arbeit </a>
           </div>
           <div class="pfp-hover">
-            <picture>
-              <source srcset="/assets/img/Nina_Pfp.avif" type="image/avif" />
-              <img
-                src="/assets/img/Nina_Pfp.jpg"
-                alt="Nina Friedrich"
-                fetchpriority="high"
-                width="272"
-                height="272"
-              />
-            </picture>
+            <Picture
+              src={ninaPfp}
+              alt="Nina Friedrich"
+              width={272}
+              height={272}
+              formats={["avif", "webp", "jpeg"]}
+              fetchpriority="high"
+              loading="eager"
+            />
           </div>
         </section>
 
@@ -58,14 +59,19 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <header class="major">
             <h2>Cosplays & Buildbooks</h2>
             <p>
-              All meine Kostüme! Wenn du Interesse an einem Fotoshooting mit mir hast, schick mir eine
+              Hier findest du alle meine Kostüme! Wenn du Lust auf ein
+              gemeinsames Fotoshooting hast, schick mir einfach eine
               <a href="https://www.instagram.com/ninumakes/" target="_blank"
-                >Instagram DM</a
-              >
-              oder eine <a href="mailto:nina.friedrich02@gmail.com">E-Mail</a>!
+                >Instagram-DM</a
+              > oder eine
+              <a href="mailto:nina.friedrich02@gmail.com">E-Mail</a> — ich freue mich
+              darauf!
             </p>
             <p>
-              Falls verfügbar, habe ich meine Buildbooks verlinkt. Ich hoffe, sie helfen dir bei deinen eigenen Projekten! Alle wurden mit Canva erstellt und sind über Google Drive zugänglich.
+              Wann immer möglich, habe ich meine Buildbooks verlinkt, damit du
+              sehen kannst, wie ich jedes Kostüm umgesetzt habe. Alle wurden in
+              Canva erstellt und sind über Google Drive verfügbar — vielleicht
+              inspirieren sie dich für eigene Projekte!
             </p>
           </header>
           <CosCard />
@@ -75,8 +81,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <header class="major">
             <h2>Hilfreiche Links</h2>
             <p>
-              Von anderen zu lernen ist der beste Weg, um die eigenen Fähigkeiten zu verbessern.
-              Hier sind einige meiner Lieblingsressourcen!
+              Der beste Weg, um seine Fähigkeiten zu verbessern, ist von anderen
+              zu lernen. Hier sind ein paar meiner Lieblingsressourcen, die ich
+              selbst sehr nützlich finde!
             </p>
           </header>
           <LinkCard linkCategory="helpful" />
@@ -85,38 +92,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <section id="tools">
           <header class="major">
             <h2>Werkzeuge & Shops</h2>
-            <p>Manchmal fehlt einfach das richtige Werkzeug & Material für den Job.</p>
+            <p>
+              Manchmal macht erst das richtige Werkzeug oder Material den
+              Unterschied — hier sind die, die ich am liebsten benutze!
+            </p>
           </header>
           <LinkCard linkCategory="tool" />
         </section>
       </main>
     </div>
-
-    <script type="module">
-      import { cosplays, links, tools } from "./index.js";
-
-      const linksSection = document.querySelector("#helpfulLinks");
-      const toolsSection = document.querySelector("#tools");
-      const cosplaysSection = document.querySelector("#cosplays");
-
-      linksSection.appendChild(links());
-      toolsSection.appendChild(tools());
-      cosplaysSection.appendChild(cosplays());
-    </script>
-    <script>
-      // Register Service Worker for caching and offline functionality
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("/service-worker.js")
-            .then((registration) => {
-              console.log("Service Worker registered:", registration.scope);
-            })
-            .catch((error) => {
-              console.error("Service Worker registration failed:", error);
-            });
-        });
-      }
-    </script>
   </body>
 </BaseLayout>

@@ -1,5 +1,19 @@
 ---
-const imprint = await import('../data/imprint.json').then(m => m.default);
+import ninaPfp from '../assets/img/Nina_Pfp.jpg';
+
+const imprint = await import('../data/imprint.json').then((m) => m.default);
+const siteUrl = 'https://ananasuu.github.io/';
+const ninaPfpUrl = new URL(ninaPfp.src, siteUrl).href;
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Nina Friedrich',
+	url: siteUrl,
+	image: ninaPfpUrl,
+	jobTitle: 'Cosplayer & Crafter',
+	description: 'Creative portfolio showcasing cosplay and crafting skills',
+	sameAs: ['https://github.com/ananasuu'],
+};
 ---
 
 <!doctype html>
@@ -20,19 +34,16 @@ const imprint = await import('../data/imprint.json').then(m => m.default);
     <meta property="og:url" content="https://ananasuu.github.io/" />
     <meta property="og:title" content="NinuMakes - Cosplay & Crafting Portfolio" />
     <meta property="og:description" content="Nina's creative portfolio showcasing her cosplay and crafting skills while also showcasing good resources." />
-    <meta property="og:image" content="https://ananasuu.github.io/assets/img/Nina_Pfp.jpg" />
+    <meta property="og:image" content={ninaPfpUrl} />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://ananasuu.github.io/" />
     <meta property="twitter:title" content="NinuMakes - Cosplay & Crafting Portfolio" />
     <meta property="twitter:description" content="Nina's creative portfolio showcasing her cosplay and crafting skills while also showcasing good resources." />
-    <meta property="twitter:image" content="https://ananasuu.github.io/assets/img/Nina_Pfp.jpg" />
+    <meta property="twitter:image" content={ninaPfpUrl} />
     <!-- Critical CSS loaded synchronously -->
     <link rel="stylesheet" href="/assets/styles/index.css" />
-    <!-- Preload LCP image -->
-    <link rel="preload" href="/assets/img/Nina_Pfp.avif" as="image" type="image/avif" fetchpriority="high" />
-    <link rel="preload" href="/assets/img/Nina_Pfp.jpg" as="image" type="image/jpeg" fetchpriority="high" />
     <!-- Preload JavaScript modules -->
     <link rel="modulepreload" href="./index.js" />
     <link rel="modulepreload" href="./data.js" />
@@ -67,20 +78,7 @@ const imprint = await import('../data/imprint.json').then(m => m.default);
     <title>NinuMakes - Cosplay & Crafting Portfolio</title>    
 
     <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Nina Friedrich",
-      "url": "https://ananasuu.github.io/",
-      "image": "https://ananasuu.github.io/assets/img/Nina_Pfp.jpg",
-      "jobTitle": "Cosplayer & Crafter",
-      "description": "Creative portfolio showcasing cosplay and crafting skills",
-      "sameAs": [
-        "https://github.com/ananasuu"
-      ]
-    }
-    </script>
+    <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
   </head>
 
   <slot />
@@ -105,6 +103,7 @@ const imprint = await import('../data/imprint.json').then(m => m.default);
                   alt="Instagram"
                   width="50"
                   height="50"
+                  loading="lazy"
                 />
               </a>
             </li>
@@ -115,6 +114,7 @@ const imprint = await import('../data/imprint.json').then(m => m.default);
                   alt="GitHub"
                   width="50"
                   height="50"
+                  loading="lazy"
                 />
               </a>
             </li>
@@ -125,6 +125,7 @@ const imprint = await import('../data/imprint.json').then(m => m.default);
                   alt="TikTok"
                   width="50"
                   height="50"
+                  loading="lazy"
                 />
               </a>
             </li>
@@ -133,4 +134,20 @@ const imprint = await import('../data/imprint.json').then(m => m.default);
             © Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
           </p>
         </footer>
+
+        <script>
+      // Register Service Worker for caching and offline functionality
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+              console.log("Service Worker registered:", registration.scope);
+            })
+            .catch((error) => {
+              console.error("Service Worker registration failed:", error);
+            });
+        });
+      }
+    </script>
 </html>
