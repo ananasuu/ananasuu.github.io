@@ -12,7 +12,7 @@ section:has(.infocard):not(.spotlight),
 	}
 
 	ul:has(.infocard),
-	div:has(.infocard) {
+	div:has(.infocard):not(.resources-list, .resources-list-content) {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
 		grid-template-rows: auto;
@@ -90,11 +90,12 @@ section:has(.infocard):not(.spotlight),
 
 			h3 {
 				margin-block-end: auto;
+				font-size: var(--font-size-larger);
 			}
 
 			picture,
 			.card-media {
-				height: 220px;
+				height: 150px;
 
 				img {
 					object-fit: contain !important;
@@ -104,6 +105,8 @@ section:has(.infocard):not(.spotlight),
 			p:last-of-type {
 				grid-area: description;
 				align-self: end;
+				font-size: var(--font-size-small);
+				margin-block-start: 0.5rem;
 			}
 		}
 
@@ -403,4 +406,86 @@ ul li img[src$=".png"],
 ul li img[src$=".svg"] {
 	width: auto;
 	object-fit: initial;
+}
+
+.resources-list {
+	width: 100%;
+	display: flex !important;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin-top: 2rem;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+section:has(.infocard) .resources-list {
+	display: flex !important;
+}
+
+.resources-list > details {
+	display: contents;
+}
+
+.resources-list summary {
+	width: max-content;
+	height: 100%;
+	max-width: 100%;
+	display: grid;
+    padding: .5rem 1.5rem;
+	border-bottom: none;
+	border-radius: var(--rounded-card-corners) var(--rounded-card-corners) 0 0;
+	cursor: pointer;
+	list-style: none;
+	white-space: nowrap;
+	position: relative;
+	z-index: 2;
+	order: 1;
+}
+
+.resources-list summary::-webkit-details-marker {
+	display: none;
+}
+
+.resources-list summary:focus-visible {
+	outline: 2px solid var(--dark-font);
+	outline-offset: 2px;
+}
+
+.resources-list summary > span:first-child {
+	font-size: var(--font-size-large);
+	font-weight: 700;
+}
+
+.resources-list summary > span:last-child {
+	font-size: var(--font-size-small);
+}
+
+.resources-list details[open] summary {
+	background: #ffffff;
+}
+
+.resources-list details[open] > :not(summary) {
+	flex-basis: 100%;
+	width: 100%;
+	order: 2;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 0 0 var(--rounded-card-corners) var(--rounded-card-corners);
+	background: #ffffff;
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+	margin-top: -1px;
+	padding: 1rem;
+	position: relative;
+	z-index: 1;
+
+	h3 {
+		font-size: var(--font-size-large);
+		margin-block-end: 0.5rem;
+	}
+
+	p, h3 {
+		margin-block-start: 0;
+	}
+
+	p {
+		margin-block-end: 1.5rem;
+	}
 }

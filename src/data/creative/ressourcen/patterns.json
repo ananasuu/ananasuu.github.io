@@ -8,7 +8,7 @@
 	"ressourcen": [
 		{
 			"title": "Kamui Cosplay",
-			"use": "Tutorials & Patterns",
+			"use": "Sewing, Crafting",
 			"url": "https://www.kamuicosplay.com/",
 			"description": "Kamui Cosplay is a well-known cosplayer and prop maker, offering lots of tutorials and patterns for sale.",
 			"imageUrl": "/assets/img/kamui_logo.png",
@@ -20,7 +20,7 @@
 		},
 		{
 			"title": "Dr Cos",
-			"use": "Patterns",
+			"use": "Sewing",
 			"url": "https://dr-cos.info/",
 			"description": "A great source for both free and paid patterns, with a wide variety of styles and sizes.",
 			"imageUrl": "/assets/img/drcos_logo.svg",

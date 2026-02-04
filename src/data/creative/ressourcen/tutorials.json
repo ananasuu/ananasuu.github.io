@@ -8,61 +8,61 @@
 	"ressourcen": [
 	{
 		"title": "Sewing a Corset",
-		"use": "Tutorial",
+		"use": "Sewing",
 		"url": "https://www.youtube.com/watch?v=alQGJQzRRFo&ab_channel=SarahSpaceman",
 		"description": "Learn how to easily pattern and sew a corset.",
 		"imageUrl": "/assets/img/corset_tutorial.jpg",
 		"de": {
 			"title": "Ein Korsett nähen",
-			"use": "Tutorial",
+			"use": "Nähen",
 			"description": "Lerne, wie man einfach ein Korsettschnittmuster erstellt und näht."
 		}
 	},
 	{
 		"title": "Ears on a Budget",
-		"use": "Tutorial",
+		"use": "Crafting, Headpiece, Animal",
 		"url": "https://www.tiktok.com/@ananasu.exe/video/7289790044393442593",
 		"description": "A guide to making animal ears without breaking the bank.",
 		"imageUrl": "/assets/img/tool_img/ears.jpg",
 		"de": {
 			"title": "Ohren mit kleinem Budget",
-			"use": "Tutorial",
+			"use": "Basteln, Kopfschmuck, Tier",
 			"description": "Anleitung, wie man Tierohren mit kleinem Budget bastelt."
 		}
 	},
 	{
 		"title": "Maidheadband",
-		"use": "Tutorial",
+		"use": "Crafting, Sewing, Headpiece",
 		"url": "https://www.tiktok.com/@ananasu.exe/video/7246414817773260059",
 		"description": "Step-by-step guide to making a simple maid headband.",
 		"imageUrl": "/assets/img/tool_img/maidband.jpg",
 		"de": {
 			"title": "Dienstmädchen-Haarreif",
-			"use": "Tutorial",
+			"use": "Basteln, Nähen, Kopfschmuck",
 			"description": "Schritt-für-Schritt-Anleitung für ein einfaches Dienstmädchen-Haarband."
 		}
 	},
 	{
 		"title": "How to make horns",
-		"use": "Tutorial",
+		"use": "Crafting, Headpiece, Animal",
 		"url": "https://www.tiktok.com/@ananasu.exe/video/7247592635219627290",
 		"description": "Learn to make lightweight horns without needing a 3D printer.",
 		"imageUrl": "/assets/img/tool_img/horns.jpeg",
 		"de": {
 			"title": "Hörner basteln",
-			"use": "Tutorial",
+			"use": "Basteln, Kopfschmuck, Tier",
 			"description": "Lerne, wie man leichte Hörner ohne 3D-Drucker herstellt."
 		}
 	},
 	{
 		"title": "How to 'understitching'",
-		"use": "Tutorial",
+		"use": "Sewing",
 		"url": "https://www.tiktok.com/@nikki.drafts/video/7515194801763962117?q=understitching&t=1750061393219",
 		"description": "Wondering why your seams don’t lie flat? This tutorial shows the solution.",
 		"imageUrl": "/assets/img/tool_img/understitch.jpeg",
 		"de": {
 			"title": "Wie man 'Untersteppt'",
-			"use": "Tutorial",
+			"use": "Nähen",
 			"description": "Fragst du dich, warum deine Nähte nicht flach liegen? Dieses Tutorial zeigt die Lösung."
 		}
 	}
