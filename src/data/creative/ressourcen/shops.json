@@ -1,0 +1,22 @@
+{
+	"title": "Shops",
+	"description": "Sometimes the right tool or material makes all the difference — here are the shops I like!",
+	"de": {
+		"title": "Shops",
+		"description": "Manchmal macht erst das richtige Werkzeug oder Material den Unterschied — hier sind die Shops, die ich am liebsten benutze!"
+	},
+	"ressourcen": [
+		{
+			"title": "Cosplayshop.be",
+			"use": "Cosplay Materials, EU",
+			"url": "https://cosplayshop.be/de/",
+			"description": "Ordering cosplay materials in the EU can be tricky, but this shop has some great finds!",
+			"imageUrl": "/assets/img/cosplaybe_logo.svg",
+			"de": {
+				"title": "Cosplayshop.be",
+				"use": "Cosplay-Materialien, EU",
+				"description": "Cosplay-Materialien in der EU zu bestellen kann knifflig sein, aber in diesem Shop findet man tolle Sachen!"
+			}
+		}
+	]
+}

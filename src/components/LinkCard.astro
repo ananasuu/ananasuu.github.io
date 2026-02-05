@@ -1,40 +1,28 @@
 ---
-import { getLocaleFromUrl, getLocalizedContent } from '../utils/i18n/i18n';
-
 type LinkItem = {
-	title: string;
-	use: string;
-	description: string;
-	url: string;
-	imageUrl: string;
-	de?: Partial<LinkItem>;
+    title: string;
+    url: string;
+    use?: string;
+    description?: string;
+    imageUrl?: string;
 };
 
-const { linkCategory } = Astro.props;
-const locale = getLocaleFromUrl(Astro.url.pathname);
-
-let links: LinkItem[] = [];
-if (linkCategory === 'helpful') {
-	links = await import('../data/creative/helpful.json').then((m) => m.default);
-} else if (linkCategory === 'tool') {
-	links = await import('../data/creative/tools.json').then((m) => m.default);
-}
+const { links = [] } = Astro.props as { links?: LinkItem[] };
 ---
 
 <ul class="infolinks">
-    {links.map((link) => {
-        const localizedLink = getLocalizedContent(link, locale);
-        return (
-            <li>
-                <a class="infocard link" href={localizedLink.url}>
-                <h3>{localizedLink.title}</h3>
-                <p class="use">{localizedLink.use}</p>
-                <picture>
-                  <img src={localizedLink.imageUrl} alt={localizedLink.title} loading="lazy" />
-                </picture>
-                <p>{localizedLink.description}</p>
+    {links.map((link) => (
+        <li>
+            <a class="infocard link" href={link.url}>
+                <h3>{link.title}</h3>
+                {link.use ? <p class="use">{link.use}</p> : null}
+                {link.imageUrl ? (
+                    <picture>
+                        <img src={link.imageUrl} alt={link.title} loading="lazy" />
+                    </picture>
+                ) : null}
+                {link.description ? <p>{link.description}</p> : null}
             </a>
-            </li>
-        );
-    })}
+        </li>
+    ))}
 </ul>

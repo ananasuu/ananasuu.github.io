@@ -1,0 +1,34 @@
+{
+	"title": "Patterns",
+	"description": "A collection of pattern resources for cosplay and sewing projects.",
+	"de": {
+		"title": "Schnittmuster",
+		"description": "Eine Sammlung von Schnittmuster-Ressourcen für Cosplay- und Nähprojekte."
+	},
+	"ressourcen": [
+		{
+			"title": "Kamui Cosplay",
+			"use": "Sewing, Crafting",
+			"url": "https://www.kamuicosplay.com/",
+			"description": "Kamui Cosplay is a well-known cosplayer and prop maker, offering lots of tutorials and patterns for sale.",
+			"imageUrl": "/assets/img/kamui_logo.png",
+			"de": {
+				"title": "Kamui Cosplay",
+				"use": "Nähen, Basteln",
+				"description": "Kamui Cosplay ist eine bekannte Cosplayerin und Prop-Macherin und bietet viele Tutorials und Schnittmuster zum Kauf an."
+			}
+		},
+		{
+			"title": "Dr Cos",
+			"use": "Sewing",
+			"url": "https://dr-cos.info/",
+			"description": "A great source for both free and paid patterns, with a wide variety of styles and sizes.",
+			"imageUrl": "/assets/img/drcos_logo.svg",
+			"de": {
+				"title": "Dr Cos",
+				"use": "Schnittmuster",
+				"description": "Eine tolle Quelle für kostenlose und kostenpflichtige Schnittmuster, mit einer breiten Auswahl an Stilen und Größen."
+			}
+		}
+	]
+}

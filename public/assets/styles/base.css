@@ -12,7 +12,9 @@
 	--white: #ffffff;
 	--black: #000000;
 	--dark-font: #414141;
+	--secondary-font: #585858;
 	--light-font: #6e6e6e;
+	--middle-grey: #e0e0e0;
 	--light-grey: #f7f7f7;
 	--lighter-grey: #fafafa;
 	--link-card-light-grey-hover: #eaeaea;
@@ -22,4 +24,8 @@
 	--primary-button-color: #1a7bb9;
 	--primary-button-hover-color: #145a8f;
 	--primary-button-disabled-color: #627689;
+	--secondary-button-color: #a47ab3;
+	--secondary-button-hover-color: #6e4a7a;
+	--secondary-button-active-color: #8b3fa3;
+	--secondary-button-disabled-color: #8c5ca9;
 }

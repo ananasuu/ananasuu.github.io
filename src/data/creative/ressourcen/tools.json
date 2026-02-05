@@ -1,0 +1,22 @@
+{
+	"title": "Tools",
+	"description": "Need the right tool or material? Here are the ones I love to use!",
+	"de": {
+		"title": "Werkzeuge",
+		"description": "Das richtige Werkzeug oder Material macht oft den Unterschied — hier sind meine Favoriten!"
+	},
+	"ressourcen": [
+		{
+			"title": "Nifegun",
+			"use": "Scaling Tool",
+			"url": "https://nifegun.com/scale_tool/scale_tool.html",
+			"description": "Need the right scale for your props? This tool makes it easy!",
+			"imageUrl": "/assets/img/scale_tool_gauntlet.png",
+			"de": {
+				"title": "Nifegun",
+				"use": "Skalierungswerkzeug",
+				"description": "Die richtige Größe für Props zu bekommen? Mit dieser Seite gar kein Problem!"
+			}
+		}
+	]
+}

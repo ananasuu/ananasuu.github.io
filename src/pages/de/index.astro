@@ -2,8 +2,8 @@
 import { Picture } from "astro:assets";
 import ninaPfp from "../../assets/img/Nina_Pfp.jpg";
 import CosCard from "../../components/CosCard.astro";
-import LinkCard from "../../components/LinkCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Ressources from "../../components/Ressources.astro";
 ---
 
 <BaseLayout>
@@ -22,6 +22,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           <li><a href="#cosplays">Cosplays & Buildbooks</a></li>
           <li><a href="#helpfulLinks">Hilfreiche Links</a></li>
           <li><a href="#tools">Werkzeuge & Shops</a></li>
+          <li><a href="#impressum">Impressum</a></li>
         </ul>
       </nav>
 
@@ -81,23 +82,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           <header class="major">
             <h2>Hilfreiche Links</h2>
             <p>
-              Der beste Weg, um seine Fähigkeiten zu verbessern, ist von anderen
-              zu lernen. Hier sind ein paar meiner Lieblingsressourcen, die ich
-              selbst sehr nützlich finde!
+              Hier findest du einige meiner liebsten Ressourcen rund um Cosplay,
+              Crafting und Kreativität. Egal ob du nach Tutorials, Inspiration
+              oder Tools suchst — diese Links helfen dir weiter!
             </p>
           </header>
-          <LinkCard linkCategory="helpful" />
-        </section>
-
-        <section id="tools">
-          <header class="major">
-            <h2>Werkzeuge & Shops</h2>
-            <p>
-              Manchmal macht erst das richtige Werkzeug oder Material den
-              Unterschied — hier sind die, die ich am liebsten benutze!
-            </p>
-          </header>
-          <LinkCard linkCategory="tool" />
+          <Ressources />
         </section>
       </main>
     </div>
