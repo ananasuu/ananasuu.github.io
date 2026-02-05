@@ -1,0 +1,53 @@
+@media (prefers-reduced-motion: no-preference) {
+	@keyframes page-load-stagger {
+		from {
+			opacity: 0;
+			transform: translateY(12px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	main > section {
+		opacity: 0;
+		transform: translateY(12px);
+		animation: page-load-stagger 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+		animation-delay: calc(var(--stagger-index) * 80ms);
+		animation-delay: --stagger-delay(var(--stagger-index));
+	}
+
+	main > section:nth-of-type(1) {
+		--stagger-index: 1;
+	}
+
+	main > section:nth-of-type(2) {
+		--stagger-index: 2;
+	}
+
+	main > section:nth-of-type(3) {
+		--stagger-index: 3;
+	}
+
+	main > section:nth-of-type(4) {
+		--stagger-index: 4;
+	}
+
+	main > section:nth-of-type(5) {
+		--stagger-index: 5;
+	}
+
+	main > section:nth-of-type(6) {
+		--stagger-index: 6;
+	}
+
+	main > section:nth-of-type(7) {
+		--stagger-index: 7;
+	}
+
+	main > section:nth-of-type(8) {
+		--stagger-index: 8;
+	}
+}
