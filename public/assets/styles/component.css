@@ -420,10 +420,23 @@ ul li img[src$=".svg"] {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	background-color: var(--light-grey);
 	padding-block-start: 0.5rem;
-}
+	position: relative;
+	overflow: clip;
+	border-radius: var(--rounded-card-corners);
 
-.resources-list>details {
-	display: contents;
+	details {
+		display: contents;
+
+		&[open] {
+			--details-link-bg: #fff;
+			--details-pointer-events: none;
+			--details-link-border-radius: .5rem .5rem 0 0;
+
+			&::details-content {
+				display: contents;
+			}
+		}
+	}
 }
 
 .resources-list summary {
