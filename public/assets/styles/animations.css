@@ -88,4 +88,27 @@
 		transition: background-color 320ms ease, color 320ms ease;
 	}
 
+	a.button::after {
+		transition: transform 200ms ease;
+		will-change: transform;
+	}
+
+	a.button:hover::after,
+	a.button:focus-visible::after {
+		--icon-x: 4px;
+	}
+
+	#certificates > ul > li > a::after {
+		transition: transform 200ms ease;
+		transform: translateX(0);
+		will-change: transform;
+	}
+
+	#certificates > ul > li > a:hover::after,
+	#certificates > ul > li > a:focus-visible::after,
+	#certificates > ul > li:hover > a::after,
+	#certificates > ul > li:focus-within > a::after {
+		transform: translateX(6px);
+	}
+
 }

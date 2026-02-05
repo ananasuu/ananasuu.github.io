@@ -93,6 +93,31 @@ button,
 	}
 }
 
+a.button {
+	position: relative;
+}
+
+a.button::after {
+	content: "";
+	width: 1.5em;
+	height: 1.5em;
+	margin-left: 0.5em;
+	display: inline-block;
+	background-color: #ffffff;
+	mask-image: url("/assets/img/arrow-right-short.svg");
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-position: center;
+	-webkit-mask-image: url("/assets/img/arrow-right-short.svg");
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
+	-webkit-mask-position: center;
+	vertical-align: middle;
+	--icon-x: 0;
+	--icon-y: 0.1em;
+	transform: translate(var(--icon-x), var(--icon-y));
+}
+
 .button[href=""],
 .button:disabled,
 button.button:disabled {

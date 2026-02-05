@@ -354,6 +354,9 @@ section:has(#about) {
 		column-gap: 1rem;
 		text-align: left;
 		border-bottom: none;
+		position: relative;
+		padding-inline-end: 2.5rem;
+		padding-block-end: 0.5rem;
 
 		img,
 		picture {
@@ -386,6 +389,25 @@ section:has(#about) {
 				font-size: var(--font-size-small);
 				color: var(--light-font);
 			}
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0.5rem;
+			bottom: -0.5rem;
+			transform: translateY(0.8em);
+			width: 2.2em;
+			height: 2.2em;
+			background-color: var(--dark-font);
+			mask-image: url("/assets/img/arrow-right-short.svg");
+			mask-repeat: no-repeat;
+			mask-size: contain;
+			mask-position: center;
+			-webkit-mask-image: url("/assets/img/arrow-right-short.svg");
+			-webkit-mask-repeat: no-repeat;
+			-webkit-mask-size: contain;
+			-webkit-mask-position: center;
 		}
 	}
 }

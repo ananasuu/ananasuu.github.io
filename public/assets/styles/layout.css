@@ -265,7 +265,7 @@ footer {
 	}
 
 	li {
-		text-align: center;
+		text-align: center !important;
 		list-style: none;
 		height: fit-content;
 
