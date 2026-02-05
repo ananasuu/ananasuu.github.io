@@ -1,6 +1,7 @@
 /* Infocard Styles */
-section:has(.infocard):not(.spotlight),
-.spotlight-bottom {
+section:has(.infocard):not(.spotlight, #helpfulLinks),
+.spotlight-bottom,
+ul:has(.infocard) {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
 	grid-template-rows: auto;
@@ -419,12 +420,6 @@ ul li img[src$=".svg"] {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	background-color: var(--light-grey);
 	padding-block-start: 0.5rem;
-
-
-}
-
-section:has(.infocard) .resources-list {
-	display: flex !important;
 }
 
 .resources-list>details {
@@ -434,7 +429,6 @@ section:has(.infocard) .resources-list {
 .resources-list summary {
 	padding: 0.5rem 1rem;
 	font-size: 1.1rem;
-	display: block;
 	border-radius: 1.5rem;
 	border: 2px solid transparent;
 	width: max-content;
@@ -452,7 +446,9 @@ section:has(.infocard) .resources-list {
 	margin: 0.3rem 0.5rem;
 	color: var(--black);
 
-	&:hover, &:focus-visible, &:active {
+	&:hover,
+	&:focus-visible,
+	&:active {
 		background-color: var(--secondary-button-hover-color);
 		color: var(--white);
 	}
@@ -486,7 +482,6 @@ section:has(.infocard) .resources-list {
 	position: relative;
 	z-index: 1;
 	background: #ffffff;
-
 
 	h3 {
 		font-size: var(--font-size-large);
