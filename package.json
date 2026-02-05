@@ -28,7 +28,7 @@
 		"axe-core": "^4.11.1"
 	},
 	"devDependencies": {
-		"@axe-core/playwright": "^4.11.0",
+		"@axe-core/playwright": "^4.11.1",
 		"@biomejs/biome": "^2.3.14",
 		"@chromatic-com/playwright": "^0.12.8",
 		"@commitlint/cli": "^20.4.1",
