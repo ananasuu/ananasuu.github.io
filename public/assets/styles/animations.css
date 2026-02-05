@@ -15,8 +15,7 @@
 		opacity: 0;
 		transform: translateY(12px);
 		animation: page-load-stagger 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
-		animation-delay: calc(var(--stagger-index) * 80ms);
-		animation-delay: --stagger-delay(var(--stagger-index));
+		animation-delay: calc(var(--stagger-index) * 100ms);
 	}
 
 	main > section:nth-of-type(1) {
@@ -50,4 +49,22 @@
 	main > section:nth-of-type(8) {
 		--stagger-index: 8;
 	}
+
+	.infocard,
+	#resume > ul > li,
+	#certificates > ul > li {
+		transition: transform 200ms ease, box-shadow 200ms ease;
+		will-change: transform, box-shadow;
+	}
+
+	.infocard:hover,
+	.infocard:focus-within,
+	#resume > ul > li:hover,
+	#resume > ul > li:focus-within,
+	#certificates > ul > li:hover,
+	#certificates > ul > li:focus-within {
+		transform: translateY(-6px);
+		box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18), 0 4px 8px rgba(0, 0, 0, 0.12);
+	}
+
 }
