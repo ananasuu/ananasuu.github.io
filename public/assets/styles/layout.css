@@ -248,6 +248,10 @@ footer {
 	section:last-of-type {
 		border-top: solid 1px #dddddd;
 	}
+
+	#skills > div > div.infocard > ul > li {
+		height: fit-content !important;
+	}
 }
 
 #skills {
