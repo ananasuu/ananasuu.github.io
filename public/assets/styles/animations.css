@@ -81,4 +81,11 @@
 		transform: rotate(5deg) scale(1.15);
 	}
 
+	button,
+	.button,
+	nav a 
+	 {
+		transition: background-color 320ms ease, color 320ms ease;
+	}
+
 }

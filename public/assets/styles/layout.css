@@ -46,7 +46,6 @@ h1 {
 			vertical-align: middle;
 
 			a {
-				transition: font-size 0.2s ease;
 				display: inline-block;
 				height: 2.25em;
 				line-height: 2.25em;
