@@ -65,10 +65,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <Picture
                 src={marcilleNf}
                 alt="Nina Friedrich in einem Elfen-Cosplay"
-                width={1440}
-                height={1440}
+                widths={[480, 768, 1024, 1280]}
+                sizes="(min-width: 1000px) 40vw, 90vw"
                 formats={['avif', 'webp', 'jpeg']}
                 loading="lazy"
+                decoding="async"
               />
               <p class="description">
                 Cosplay ist mein kreativer Ausgleich! Vom Entwerfen der Kostüme bis hin zum Eintauchen in die Charaktere liebe ich den gesamten Prozess, der die Figuren und Geschichten für mich greifbar macht.

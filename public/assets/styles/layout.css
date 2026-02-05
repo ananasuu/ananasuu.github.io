@@ -265,6 +265,8 @@ footer {
 	li {
 		text-align: center;
 		list-style: none;
+				height: fit-content;
+
 
 		&:not(:first-of-type) {
 			border-top: solid 1px #dddddd;
@@ -288,7 +290,7 @@ footer {
 		span:last-of-type {
 			justify-self: start;
 			text-align: left;
-			color: var(--light-font);
+			color: var(--secondary-font);
 		}
 	}
 }
