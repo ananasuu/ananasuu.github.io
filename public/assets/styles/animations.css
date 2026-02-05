@@ -50,15 +50,15 @@
 		--stagger-index: 8;
 	}
 
-	.infocard,
+	.infocard.link,
 	#resume > ul > li,
 	#certificates > ul > li {
 		transition: transform 200ms ease, box-shadow 200ms ease;
 		will-change: transform, box-shadow;
 	}
 
-	.infocard:hover,
-	.infocard:focus-within,
+	.infocard.link:hover,
+	.infocard.link:focus-within,
 	#resume > ul > li:hover,
 	#resume > ul > li:focus-within,
 	#certificates > ul > li:hover,
