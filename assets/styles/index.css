@@ -1,6 +1,7 @@
 @import "./component.css";
 @import "./layout.css";
 @import "./base.css";
+@import "./animations.css";
 
 /*
 	Stellar by HTML5 UP
@@ -50,7 +51,7 @@ a {
 button,
 .button {
 	appearance: none;
-	transition: var(--transition);
+	transition: var(--transition), transform 0.15s ease;
 	border-radius: var(--rounded-card-corners);
 	border: 0;
 	cursor: pointer;
@@ -69,12 +70,15 @@ button,
 	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
 	color: #ffffff !important;
 
-	&:hover {
+	&:hover,
+	&:focus-visible {
 		background-color: rgba(255, 255, 255, 0.075);
+		transform: scale(1.02);
 	}
 
 	&:active {
 		background-color: rgba(255, 255, 255, 0.2);
+		transform: scale(0.99);
 	}
 
 	&.primary {
@@ -90,6 +94,31 @@ button,
 			background-color: #7ec3ee;
 		}
 	}
+}
+
+a.button {
+	position: relative;
+}
+
+a.button::after {
+	content: "";
+	width: 1.5em;
+	height: 1.5em;
+	margin-left: 0.5em;
+	display: inline-block;
+	background-color: #ffffff;
+	mask-image: url("/assets/img/arrow-right-short.svg");
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-position: center;
+	-webkit-mask-image: url("/assets/img/arrow-right-short.svg");
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
+	-webkit-mask-position: center;
+	vertical-align: middle;
+	--icon-x: 0;
+	--icon-y: 0.1em;
+	transform: translate(var(--icon-x), var(--icon-y));
 }
 
 .button[href=""],
