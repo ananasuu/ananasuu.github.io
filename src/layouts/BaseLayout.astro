@@ -1,6 +1,8 @@
 ---
 import ninaPfp from '../assets/img/Nina_Pfp.jpg';
 
+const { title = 'NinuMakes - Cosplay & Crafting Portfolio' } = Astro.props;
+
 const imprint = await import('../data/imprint.json').then((m) => m.default);
 const siteUrl = 'https://ananasuu.github.io/';
 const ninaPfpUrl = new URL(ninaPfp.src, siteUrl).href;
@@ -36,14 +38,14 @@ const structuredData = {
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ananasuu.github.io/" />
-    <meta property="og:title" content="NinuMakes - Cosplay & Crafting Portfolio" />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content="Nina's creative portfolio showcasing her cosplay and crafting skills while also showcasing good resources." />
     <meta property="og:image" content={ninaPfpUrl} />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://ananasuu.github.io/" />
-    <meta property="twitter:title" content="NinuMakes - Cosplay & Crafting Portfolio" />
+    <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content="Nina's creative portfolio showcasing her cosplay and crafting skills while also showcasing good resources." />
     <meta property="twitter:image" content={ninaPfpUrl} />
     <!-- Critical CSS loaded synchronously -->
@@ -79,7 +81,7 @@ const structuredData = {
         rel="stylesheet"
       />
     </noscript>
-    <title>NinuMakes - Cosplay & Crafting Portfolio</title>    
+    <title>{title}</title>    
 
     <!-- Structured Data -->
     <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
