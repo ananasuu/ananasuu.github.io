@@ -8,25 +8,26 @@ const gradeLabel = locale === 'de' ? 'Note' : 'Grade';
 ---
 
 <ul>
-    {[...resumeData]
-        .reverse()
-        .map((entry) => getLocalizedContent(entry, locale))
-        .map((entry) => (
+    {[...resumeData].reverse().map((entry) => {
+        const localizedEntry = getLocalizedContent(entry, locale);
+
+        return (
             <li>
-                <h3>{entry.title}</h3>
+                <h3>{localizedEntry.title}</h3>
                 <p>
-                    {entry.institution}, {entry.start} - {entry.end || presentLabel}
+                    {localizedEntry.institution}, {localizedEntry.start} - {localizedEntry.end || presentLabel}
                 </p>
-                {typeof entry.description === 'string' ? (
-                    <p>{entry.description}</p>
+                {typeof localizedEntry.description === 'string' ? (
+                    <p>{localizedEntry.description}</p>
                 ) : (
                     <ul>
-                        {entry.description.map((item) => (
+                        {localizedEntry.description.map((item) => (
                             <li>{item}</li>
                         ))}
                     </ul>
                 )}
-                {entry.grade ? <p>{gradeLabel}: {entry.grade}</p> : null}
+                {localizedEntry.grade ? <p>{gradeLabel}: {localizedEntry.grade}</p> : null}
             </li>
-        ))}
+        );
+    })}
 </ul>
