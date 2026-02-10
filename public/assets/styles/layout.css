@@ -101,6 +101,7 @@ main {
 
 				&> :last-child {
 					margin-bottom: 0;
+					margin-top: 1em;
 				}
 			}
 		}
@@ -360,6 +361,6 @@ footer {
 	}
 
 	.pfp-hover {
-		margin-top: 5.5em;
+		margin-top: 7em;
 	}
 }
