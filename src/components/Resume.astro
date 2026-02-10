@@ -1,22 +1,32 @@
 ---
+import { getLocaleFromUrl, getLocalizedContent } from '../utils/i18n/i18n';
+
 const resumeData = await import('../data/work/resume.json').then((m) => m.default);
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const presentLabel = locale === 'de' ? 'Heute' : 'Present';
+const gradeLabel = locale === 'de' ? 'Note' : 'Grade';
 ---
 
 <ul>
-    {[...resumeData].reverse().map((link) => (
-        <li>
-            <h3>{link.title}</h3>
-            <p>{link.institution}, {link.start} - {link.end || "Present"}</p>
-            {typeof link.description === "string" ? (
-                <p>{link.description}</p>
-            ) : (
-                <ul>
-                    {link.description.map((item) => (
-                        <li>{item}</li>
-                    ))}
-                </ul>
-            )}
-            {link.grade ? <p>Grade: {link.grade}</p> : null}
-        </li>
-    ))}
+    {[...resumeData]
+        .reverse()
+        .map((entry) => getLocalizedContent(entry, locale))
+        .map((entry) => (
+            <li>
+                <h3>{entry.title}</h3>
+                <p>
+                    {entry.institution}, {entry.start} - {entry.end || presentLabel}
+                </p>
+                {typeof entry.description === 'string' ? (
+                    <p>{entry.description}</p>
+                ) : (
+                    <ul>
+                        {entry.description.map((item) => (
+                            <li>{item}</li>
+                        ))}
+                    </ul>
+                )}
+                {entry.grade ? <p>{gradeLabel}: {entry.grade}</p> : null}
+            </li>
+        ))}
 </ul>
