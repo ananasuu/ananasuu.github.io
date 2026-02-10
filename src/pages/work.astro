@@ -7,25 +7,13 @@ import ListCard from "../components/ListCard.astro";
 import Projects from "../components/Projects.astro";
 import Resume from "../components/Resume.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
 ---
 
 <BaseLayout title="NinuMakes - Development & Accessibility">
   <body>
     <div id="wrapper">
-      <header>
-        <h1>Nina Friedrich</h1>
-        <p>Developing | Accessibility | Cosplay</p>
-      </header>
-      <nav>
-        <ul>
-          <li><a href="#about" class="active">About</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#certificates">Certificates</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#impressum">Imprint</a></li>
-        </ul>
-      </nav>
+      <Header header="Nina Friedrich" description="Developing | Accessibility | Cosplay" nav={[["#about", "About"], ["#resume", "Resume"], ["#skills", "Skills"], ["#certificates", "Certificates"], ["#projects", "Projects"], ["#impressum", "Imprint"]]} />
 
       <!-- Main -->
       <main>

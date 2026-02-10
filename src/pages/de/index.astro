@@ -4,26 +4,14 @@ import ninaPfp from "../../assets/img/Nina_Pfp.jpg";
 import CosCard from "../../components/CosCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Ressources from "../../components/Ressources.astro";
+import Header from "../../components/Header.astro";
 ---
 
 <BaseLayout>
   <body>
     <div id="wrapper">
       <!-- Header -->
-      <header>
-        <h1>NinuMakes</h1>
-        <p>Cosplay | Crafting | Developing</p>
-      </header>
-
-      <!-- Nav -->
-      <nav>
-        <ul>
-          <li><a href="#intro" class="active">Vorstellung</a></li>
-          <li><a href="#cosplays">Cosplays</a></li>
-          <li><a href="#helpfulLinks">Hilfreiche Links</a></li>
-          <li><a href="#impressum">Impressum</a></li>
-        </ul>
-      </nav>
+        <Header header="NinuMakes" description="Cosplay | Crafting | Developing" nav={[["#intro", "Vorstellung"], ["#cosplays", "Cosplays"], ["#helpfulLinks", "Hilfreiche Links"], ["#impressum", "Impressum"]]} />
 
       <!-- Main -->
       <main>
