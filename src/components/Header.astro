@@ -1,12 +1,15 @@
 ---
 const { header, description, nav } = Astro.props;
 
+import { getLocaleFromUrl } from '../utils/i18n/i18n';
+
 const pathname = Astro.url.pathname;
-const hash = Astro.url.hash ?? "";
-const isGerman = pathname === "/de" || pathname.startsWith("/de/");
+const currentLocale = getLocaleFromUrl(Astro.url.pathname);
+const isGerman = currentLocale === "de";
+const ariaLabel = isGerman ? "Sprachauswahl" : "Language switch";
 
 const normalizeFromGerman = (path: string) =>
-    path.replace(/^\/de(\/|$)/, "/");
+    path.replace(/^\/de(\/|$)/, (_, suffix) => suffix || "/");
 
 const englishPath = isGerman ? normalizeFromGerman(pathname) : pathname;
 const germanPath = isGerman
@@ -23,10 +26,10 @@ const activeLang = isGerman ? "de" : "en";
         class="language-switch"
         data-active={activeLang}
         role="group"
-        aria-label="Language switch"
+        aria-label={ariaLabel}
     >
         <a
-            href={`${englishPath}${hash}`}
+            href={englishPath}
             class="language-link"
             data-active={!isGerman ? "true" : undefined}
             aria-current={!isGerman ? "page" : undefined}
@@ -35,7 +38,7 @@ const activeLang = isGerman ? "de" : "en";
         </a>
 
         <a
-            href={`${germanPath}${hash}`}
+            href={germanPath}
             class="language-link"
             data-active={isGerman ? "true" : undefined}
             aria-current={isGerman ? "page" : undefined}
@@ -68,9 +71,6 @@ const activeLang = isGerman ? "de" : "en";
             const target = event.target;
             if (!(target instanceof HTMLAnchorElement)) return;
 
-            // 👉 Navigation kurz aufhalten
-            event.preventDefault();
-
             const label = target.textContent?.trim().toLowerCase();
             if (label !== "en" && label !== "de") return;
 
@@ -83,7 +83,12 @@ const activeLang = isGerman ? "de" : "en";
                     link.textContent?.trim().toLowerCase() === label;
 
                 link.toggleAttribute("data-active", isActive);
-                link.toggleAttribute("aria-current", isActive);
+
+                if (isActive) {
+                    link.setAttribute("aria-current", "page");
+                } else {
+                    link.removeAttribute("aria-current");
+                }
             });
 
             // 👉 Seite sanft ausblenden
@@ -91,7 +96,8 @@ const activeLang = isGerman ? "de" : "en";
 
             // 👉 nach Animation navigieren
             setTimeout(() => {
-                window.location.href = target.href;
+                const currentHash = window.location.hash;
+                window.location.href = target.href + currentHash;
             }, 250); // entspricht deiner CSS-transition
         });
     }
