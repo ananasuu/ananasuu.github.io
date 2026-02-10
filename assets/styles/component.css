@@ -298,13 +298,12 @@ section:has(#about) {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	min-width: 3.25em;
-	padding: 0.35em 0.9em;
+	min-width: 3em;
 	border-bottom: 0;
 	border-radius: 999px;
 	color: var(--dark-font);
 	transition: color 0.1s ease;
-	font-weight: 500;
+	font-weight: 300;
 }
 
 .language-switch .language-link[data-active="true"] {

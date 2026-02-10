@@ -1,5 +1,6 @@
 #wrapper>header {
-	padding-block: 3em;
+	padding-block-start: 3em;
+	padding-block-end: 2em;
 	text-align: center;
 
 	>* {
