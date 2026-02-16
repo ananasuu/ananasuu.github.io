@@ -29,7 +29,7 @@
 	},
 	"devDependencies": {
 		"@axe-core/playwright": "^4.11.1",
-		"@biomejs/biome": "^2.4.0",
+		"@biomejs/biome": "^2.4.1",
 		"@chromatic-com/playwright": "^0.12.8",
 		"@commitlint/cli": "^20.4.1",
 		"@commitlint/config-conventional": "^20.4.1",
