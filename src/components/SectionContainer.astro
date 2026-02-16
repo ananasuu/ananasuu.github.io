@@ -1,0 +1,35 @@
+---
+// SectionContainer.astro - Reusable section component to reduce boilerplate
+import type { AstroComponentFactory } from 'astro';
+
+interface Props {
+	id: string;
+	title: string;
+	description?: string;
+	component?: AstroComponentFactory;
+	componentProps?: Record<string, any>;
+	class?: string;
+}
+
+const { id, title, description, component: Component, componentProps = {}, class: className } = Astro.props;
+---
+
+<section id={id} class:list={['section-container', className]}>
+	<header class="major">
+		<h2>{title}</h2>
+		{description && <p>{description}</p>}
+	</header>
+	
+	{Component && <Component {...componentProps} />}
+	<slot />
+</section>
+
+<style>
+	.section-container {
+		margin: 2rem 0;
+	}
+
+	.section-container .major {
+		margin-bottom: 1.5rem;
+	}
+</style>
