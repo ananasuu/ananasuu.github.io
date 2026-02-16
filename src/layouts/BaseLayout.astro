@@ -1,7 +1,8 @@
 ---
 import ninaPfp from '../assets/img/Nina_Pfp.jpg';
+import Header from '../components/Header.astro';
 
-const { title = 'NinuMakes - Cosplay & Crafting Portfolio' } = Astro.props;
+const { title = 'NinuMakes - Cosplay & Crafting Portfolio', header } = Astro.props;
 
 const imprint = await import('../data/imprint.json').then((m) => m.default);
 const siteUrl = 'https://ananasuu.github.io/';
@@ -82,9 +83,14 @@ const structuredData = {
     <!-- Structured Data -->
     <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
   </head>
-
-  <slot />
-
+  <body>
+     <div id="wrapper">
+    {header && <Header {...header} />}
+    <main>
+    <slot />
+    </main>
+    </div>
+  </body>
           <footer>
           <h2>Impressum</h2>
           <p>

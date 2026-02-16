@@ -7,17 +7,23 @@ import ListCard from "../../components/ListCard.astro";
 import Projects from "../../components/Projects.astro";
 import Resume from "../../components/Resume.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Header from "../../components/Header.astro";
+
+const header = {
+  header: "Nina Friedrich",
+  description: "Developing | Accessibility | Cosplay",
+  nav: [
+    ["#about", "Über mich"],
+    ["#resume", "Lebenslauf"],
+    ["#skills", "Fähigkeiten"],
+    ["#certificates", "Zertifikate"],
+    ["#projects", "Projekte"],
+    ["#impressum", "Impressum"]
+  ]
+};
 ---
 
-<BaseLayout>
-  <body>
-    <div id="wrapper">
-      <Header header="Nina Friedrich" description="Developing | Accessibility | Cosplay" nav={[["#about", "Über mich"], ["#resume", "Lebenslauf"], ["#skills", "Fähigkeiten"], ["#certificates", "Zertifikate"], ["#projects", "Projekte"], ["#impressum", "Impressum"]]} />
-
-      <!-- Main -->
-      <main>
-        <!-- Introduction -->
+<BaseLayout header={header}>
+          <!-- Introduction -->
         <section class="spotlight">
           <div class="spotlight-top">
             <div class="content">
@@ -120,7 +126,4 @@ import Header from "../../components/Header.astro";
           </header>
           <Projects />
         </section>
-      </main>
-    </div>
-  </body></BaseLayout
->
+</BaseLayout>
