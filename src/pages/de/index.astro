@@ -1,10 +1,9 @@
 ---
-import { Picture } from "astro:assets";
-import ninaPfp from "../../assets/img/Nina_Pfp.jpg";
 import CosCard from "../../components/CosCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Section from "../../layouts/Section.astro";
 import Ressources from "../../components/Ressources.astro";
+import Spotlight from "../../layouts/Spotlight.astro";
 
 const header = {
   header: "NinuMakes",
@@ -13,67 +12,50 @@ const header = {
     ["#intro", "Vorstellung"],
     ["#cosplays", "Cosplays"],
     ["#helpfulLinks", "Hilfreiche Links"],
-    ["#impressum", "Impressum"]
-  ]
+    ["#impressum", "Impressum"],
+  ],
 };
 ---
 
 <BaseLayout header={header}>
-        <!-- Introduction -->
-        <section id="intro" class="spotlight">
-          <div class="content">
-            <header class="major">
-              <h2>Nina Friedrich</h2>
-            </header>
-            <p>
-              Angefangen habe ich damit, einfach passende Kleidung
-              zusammenzustellen. Schon bald entstanden komplette, selbstgemachte
-              Outfits mit magischen Requisiten. Seit 2022 bastle ich aktiv
-              Cosplays von Grund auf und habe kurz darauf meine Karriere als
-              Softwareentwicklerin gestartet.
-            </p>
-            <a class="button primary" href="/de/work"> Meine Arbeit </a>
-          </div>
-          <div class="pfp-hover">
-            <Picture
-              src={ninaPfp}
-              alt="Nina Friedrich"
-              width={272}
-              height={272}
-              formats={["avif", "webp", "jpeg"]}
-              fetchpriority="high"
-              loading="eager"
-            />
-          </div>
-        </section>
+  <Spotlight>
+    <Fragment slot="description">
+      <p>
+        Angefangen habe ich damit, einfach passende Kleidung zusammenzustellen.
+        Schon bald entstanden komplette, selbstgemachte Outfits mit magischen
+        Requisiten. Seit 2022 bastle ich aktiv Cosplays von Grund auf und habe
+        kurz darauf meine Karriere als Softwareentwicklerin gestartet.
+      </p>
+      <a class="button primary" href="/de/work"> Meine Arbeit </a>
+    </Fragment>
+  </Spotlight>
 
-        <Section id="cosplays" title="Cosplays & Buildbooks">
-          <Fragment slot="description">
-            <p>
-              Hier findest du alle meine Kostüme! Wenn du Lust auf ein
-              gemeinsames Fotoshooting hast, schick mir einfach eine
-              <a href="https://www.instagram.com/ninumakes/" target="_blank"
-                >Instagram-DM</a
-              > oder eine
-             <a href="mailto:nina.friedrich02@gmail.com">E-Mail</a> — ich freue mich
-              darauf!
-            </p>
-            <p>
-              Wann immer möglich, habe ich meine Buildbooks verlinkt, damit du
-              sehen kannst, wie ich jedes Kostüm umgesetzt habe. Alle wurden in
-              Canva erstellt und sind über Google Drive verfügbar — vielleicht
-              inspirieren sie dich für eigene Projekte!
-            </p>
-          </Fragment>
-          <CosCard />
-        </Section>
+  <Section id="cosplays" title="Cosplays & Buildbooks">
+    <Fragment slot="description">
+      <p>
+        Hier findest du alle meine Kostüme! Wenn du Lust auf ein gemeinsames
+        Fotoshooting hast, schick mir einfach eine
+        <a href="https://www.instagram.com/ninumakes/" target="_blank"
+          >Instagram-DM</a
+        > oder eine
+        <a href="mailto:nina.friedrich02@gmail.com">E-Mail</a> — ich freue mich darauf!
+      </p>
+      <p>
+        Wann immer möglich, habe ich meine Buildbooks verlinkt, damit du sehen
+        kannst, wie ich jedes Kostüm umgesetzt habe. Alle wurden in Canva
+        erstellt und sind über Google Drive verfügbar — vielleicht inspirieren
+        sie dich für eigene Projekte!
+      </p>
+    </Fragment>
+    <CosCard />
+  </Section>
 
-        <Section id="helpfulLinks" title="Hilfreiche Links">
-           <p slot="description">
-              Hier findest du einige meiner liebsten Ressourcen rund um Cosplay,
-              Crafting und Kreativität. Egal ob du nach Tutorials, Inspiration
-              oder Tools suchst — diese Links helfen dir weiter!
-            </p>
-            <Ressources />
-        </Section>
-      </BaseLayout>
+  <Section id="helpfulLinks" title="Hilfreiche Links">
+    <p slot="description">
+      Hier findest du einige meiner liebsten Ressourcen rund um Cosplay,
+      Crafting und Kreativität. Egal ob du nach Tutorials, Inspiration oder
+      Tools suchst — diese Links helfen dir weiter!
+    </p>
+    <Ressources />
+  </Section>
+</BaseLayout>
