@@ -90,7 +90,6 @@ const structuredData = {
     <slot />
     </main>
     </div>
-  </body>
           <footer>
           <h2>Impressum</h2>
           <p>
@@ -145,20 +144,6 @@ const structuredData = {
             © Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
           </p>
         </footer>
+          </body>
 
-        <script>
-      // Register Service Worker for caching and offline functionality
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("/service-worker.js")
-            .then((registration) => {
-              console.log("Service Worker registered:", registration.scope);
-            })
-            .catch((error) => {
-              console.error("Service Worker registration failed:", error);
-            });
-        });
-      }
-    </script>
 </html>
