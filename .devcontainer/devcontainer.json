@@ -30,7 +30,8 @@
         "GitHub.vscode-pull-request-github",
         "GitHub.vscode-codeql",
         "GitHub.copilot",
-        "GitHub.remotehub"
+        "GitHub.remotehub",
+        "astro-build.astro-vscode"
       ]
     }
   }

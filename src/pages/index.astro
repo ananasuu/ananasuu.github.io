@@ -1,83 +1,63 @@
 ---
-import { Picture } from "astro:assets";
-import ninaPfp from "../assets/img/Nina_Pfp.jpg";
+
 import CosCard from "../components/CosCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Ressources from "../components/Ressources.astro";
-import Header from "../components/Header.astro";
+import Section from "../components/layout/Section.astro";
+import Spotlight from "../components/layout/Spotlight.astro";
+
+
+const header = {
+  header: "NinuMakes",
+  description: "Cosplay | Crafting | Developing",
+  nav: [
+    ["#intro", "Introduction"],
+    ["#cosplays", "Cosplays"],
+    ["#helpfulLinks", "Helpful Links"],
+    ["#impressum", "Imprint"],
+  ],
+};
 ---
 
-<BaseLayout title="NinuMakes - Cosplay & Crafting Portfolio">
-  <body>
-    <div id="wrapper">
-      <!-- Header -->
-      <Header header="NinuMakes" description="Cosplay | Crafting | Developing" nav={[["#intro", "Introduction"], ["#cosplays", "Cosplays"], ["#helpfulLinks", "Helpful Links"], ["#impressum", "Imprint"]]} />
+<BaseLayout title="NinuMakes - Cosplay & Crafting Portfolio" header={header}>
+  <Spotlight>
+    <Fragment slot="description">
+      <p>What started as simply putting together matching clothes quickly turned
+      into creating fully self-made outfits complete with magical props. Since
+      2022, I've been diving deep into crafting my own cosplays from scratch,
+      bringing characters to life in my own way — all while starting my career
+      as a software developer shortly after.</p>
+      <a class="button primary" href="/work"> About my Work </a>
+        </Fragment>
+  </Spotlight>
+</BaseLayout>
 
-      <!-- Main -->
-      <main>
-        <!-- Introduction -->
-        <section id="intro" class="spotlight">
-          <div class="content">
-            <header class="major">
-              <h2>Nina Friedrich</h2>
-            </header>
-            <p>
-              What started as simply putting together matching clothes quickly
-              turned into creating fully self-made outfits complete with magical
-              props. Since 2022, I've been diving deep into crafting my own
-              cosplays from scratch, bringing characters to life in my own way —
-              all while starting my career as a software developer shortly
-              after.
-            </p>
-            <a class="button primary" href="/work"> About my Work </a>
-          </div>
-          <div class="pfp-hover">
-            <Picture
-              src={ninaPfp}
-              alt="Nina Friedrich"
-              width={272}
-              height={272}
-              formats={["avif", "webp", "jpeg"]}
-              fetchpriority="high"
-              loading="eager"
-            />
-          </div>
-        </section>
+<Section id="cosplays" title="Cosplays & Buildbooks">
+  <Fragment slot="description">
+    <p>
+      Here you'll find all my costumes! If you'd like to do a photoshoot
+      together, just send me a
+      <a href="https://www.instagram.com/ninumakes/" target="_blank"
+        >DM on Instagram</a
+      > or an
+      <a href="mailto:nina.friedrich02@gmail.com">email</a> — I’d love to hear from
+      you!
+    </p>
+    <p>
+      Whenever possible, I’ve linked my build books so you can see how I brought
+      each costume to life. All of them were created in Canva and are available
+      through Google Drive — I hope they inspire your own projects!
+    </p>
+  </Fragment>
+  <CosCard />
+</Section>
 
-        <section id="cosplays">
-          <header class="major">
-            <h2>Cosplays & Buildbooks</h2>
-            <p>
-              Here you'll find all my costumes! If you'd like to do a photoshoot
-              together, just send me a
-              <a href="https://www.instagram.com/ninumakes/" target="_blank"
-                >DM on Instagram</a
-              > or an
-              <a href="mailto:nina.friedrich02@gmail.com">email</a> — I’d love to
-              hear from you!
-            </p>
-            <p>
-              Whenever possible, I’ve linked my build books so you can see how I
-              brought each costume to life. All of them were created in Canva
-              and are available through Google Drive — I hope they inspire your
-              own projects!
-            </p>
-          </header>
-          <CosCard />
-        </section>
-
-        <section id="helpfulLinks">
-          <header class="major">
-            <h2>Helpful Links</h2>
-            <p>
-              Here are some of my favorite resources for cosplay, crafting, and
-              creativity. Whether you're looking for tutorials, inspiration, or
-              tools, these links have got you covered!
-            </p>
-          </header>
-          <Ressources />
-        </section>
-      </main>
-    </div>
-  </body>
+<Section id="helpfulLinks" title="Helpful Links">
+  <p slot="description">
+    Here are some of my favorite resources for cosplay, crafting, and
+    creativity. Whether you're looking for tutorials, inspiration, or tools,
+    these links have got you covered!
+  </p>
+  <Ressources />
+</Section>
 </BaseLayout>

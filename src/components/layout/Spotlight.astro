@@ -1,0 +1,55 @@
+---
+/**
+ * Spotlight Layout Component
+ *
+ * A hero section layout that displays a profile spotlight with an image and content slots.
+ *
+ * @component
+ *
+ * @slot {HTML} description - Main content area below the profile header
+ * @slot {HTML} first-card - First card element in the bottom section (optional)
+ * @slot {HTML} second-card - Second card element in the bottom section (optional)
+ *
+ * @description
+ * Renders a two-part spotlight section featuring:
+ * - Top section: Profile header with name "Nina Friedrich" and description slot
+ * - Profile image: Optimized with multiple formats (avif, webp, jpeg) with high fetch priority
+ * - Bottom section: Conditionally renders two card slots if both are provided
+ *
+ * The component uses Astro's Picture component for responsive image optimization
+ * and checks for slot availability before rendering the bottom card section.
+ */
+
+import ninaPfp from "../../assets/img/Nina_Pfp.jpg";
+import { Picture } from "astro:assets";
+---
+
+<section class="spotlight">
+    <div class="spotlight-top">
+        <div class="content">
+            <header class="major">
+                <h2>Nina Friedrich</h2>
+            </header>
+            <slot name="description" />
+        </div>
+        <div class="pfp-hover">
+            <Picture
+                src={ninaPfp}
+                alt="Nina Friedrich"
+                width={272}
+                height={272}
+                formats={["avif", "webp", "jpeg"]}
+                fetchpriority="high"
+                loading="eager"
+            />
+        </div>
+    </div>
+    {
+        Astro.slots.has("first-card") && Astro.slots.has("second-card") && (
+            <div class="spotlight-bottom">
+                <slot name="first-card" />
+                <slot name="second-card" />
+            </div>
+        )
+    }
+</section>

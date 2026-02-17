@@ -1,126 +1,99 @@
 ---
 import { Picture } from "astro:assets";
-import ninaPfp from "../../assets/img/Nina_Pfp.jpg";
 import marcilleNf from "../../assets/img/card_img/Marcille_NF.jpg";
 import Certificates from "../../components/Certificates.astro";
 import ListCard from "../../components/ListCard.astro";
 import Projects from "../../components/Projects.astro";
 import Resume from "../../components/Resume.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Header from "../../components/Header.astro";
+import Section from "../../components/layout/Section.astro";
+import Spotlight from "../../components/layout/Spotlight.astro";
+
+
+const header = {
+  header: "Nina Friedrich",
+  description: "Developing | Accessibility | Cosplay",
+  nav: [
+    ["#about", "Über mich"],
+    ["#resume", "Lebenslauf"],
+    ["#skills", "Fähigkeiten"],
+    ["#certificates", "Zertifikate"],
+    ["#projects", "Projekte"],
+    ["#impressum", "Impressum"],
+  ],
+};
 ---
 
-<BaseLayout>
-  <body>
-    <div id="wrapper">
-      <Header header="Nina Friedrich" description="Developing | Accessibility | Cosplay" nav={[["#about", "Über mich"], ["#resume", "Lebenslauf"], ["#skills", "Fähigkeiten"], ["#certificates", "Zertifikate"], ["#projects", "Projekte"], ["#impressum", "Impressum"]]} />
+<BaseLayout header={header}>
+  <Spotlight>
+    <Fragment slot="description">
+      <p>
+        Ich gestalte benutzerzentrierte, wartbare und barrierefreie Frontends,
+        in denen sauberer Code auf durchdachtes Design trifft.
+      </p>
+      <p>
+        Mit Erfahrung in moderner Webentwicklung liegt mein Fokus auf
+        responsiven digitalen Erlebnissen, die inklusiv, langlebig und bewusst
+        gestaltet sind.
+      </p>
+    </Fragment>
+    <Fragment slot="first-card">
+      <div id="about" class="infocard">
+        <ListCard title="interests" />
+      </div>
+    </Fragment>
+    <Fragment slot="second-card">
+      <div class="cosplay-info infocard">
+        <h3>Fokus auf meine Kreativität</h3>
+        <Picture
+          src={marcilleNf}
+          alt="Nina Friedrich in einem Elfen-Cosplay"
+          widths={[480, 768, 1024, 1280]}
+          sizes="(min-width: 1000px) 40vw, 90vw"
+          formats={["avif", "webp", "jpeg"]}
+          loading="lazy"
+          decoding="async"
+        />
+        <p class="description">
+          Cosplay ist mein kreativer Ausgleich! Vom Entwerfen der Kostüme bis
+          hin zum Eintauchen in die Charaktere liebe ich den gesamten Prozess,
+          der die Figuren und Geschichten für mich greifbar macht.
+        </p>
+        <a class="button primary" href="/de">Mein Cosplay-Portfolio</a>
+      </div>
+    </Fragment>
+  </Spotlight>
 
-      <!-- Main -->
-      <main>
-        <!-- Introduction -->
-        <section class="spotlight">
-          <div class="spotlight-top">
-            <div class="content">
-              <header class="major">
-                <h2>Nina Friedrich</h2>
-              </header>
-              <p>
-                Ich gestalte benutzerzentrierte, wartbare und barrierefreie
-                Frontends, in denen sauberer Code auf durchdachtes Design
-                trifft.
-              </p>
-              <p>
-                Mit Erfahrung in moderner Webentwicklung liegt mein Fokus auf
-                responsiven digitalen Erlebnissen, die inklusiv, langlebig und
-                bewusst gestaltet sind.
-              </p>
-            </div>
-            <div class="pfp-hover">
-              <Picture
-                src={ninaPfp}
-                alt="Nina Friedrich"
-                width={272}
-                height={272}
-                formats={["avif", "webp", "jpeg"]}
-                fetchpriority="high"
-                loading="eager"
-              />
-            </div>
-          </div>
+  <Section id="resume" title="Lebenslauf">
+    <Resume />
+  </Section>
 
-          <div class="spotlight-bottom">
-            <div id="about" class="infocard">
-              <ListCard title="interests" />
-            </div>
-            <div class="cosplay-info infocard">
-              <h3>Fokus auf meine Kreativität</h3>
-              <Picture
-                src={marcilleNf}
-                alt="Nina Friedrich in einem Elfen-Cosplay"
-                widths={[480, 768, 1024, 1280]}
-                sizes="(min-width: 1000px) 40vw, 90vw"
-                formats={["avif", "webp", "jpeg"]}
-                loading="lazy"
-                decoding="async"
-              />
-              <p class="description">
-                Cosplay ist mein kreativer Ausgleich! Vom Entwerfen der Kostüme
-                bis hin zum Eintauchen in die Charaktere liebe ich den gesamten
-                Prozess, der die Figuren und Geschichten für mich greifbar
-                macht.
-              </p>
-              <a class="button primary" href="/de">Mein Cosplay-Portfolio</a>
-            </div>
-          </div>
-        </section>
+  <div class="skills-certificates-container">
+    <Section id="certificates" title="Zertifikate">
+      <p slot="description">
+        Zertifikate ersetzen keine praktische Erfahrung, zeigen aber mein
+        Engagement für Lernen und Weiterentwicklung. Hier sind einige, die ich
+        erworben habe, um meine Kenntnisse und Expertise zu belegen.
+      </p>
+      <Certificates />
+    </Section>
 
-        <section id="resume">
-          <header class="major">
-            <h2>Lebenslauf</h2>
-          </header>
-          <Resume />
-        </section>
+    <Section id="skills" title="Fähigkeiten">
+      <p slot="description">
+        Meine Fähigkeiten genau zu benennen ist schwer, da ich neugierig bin und
+        gerne Neues lerne. Diese Liste zeigt die Bereiche, die mich besonders
+        interessieren und mit denen ich aktiv arbeite.
+      </p>
+      <ListCard title="skills" />
+    </Section>
+  </div>
 
-        <div class="skills-certificates-container">
-          <section id="certificates">
-            <header class="major">
-              <h2>Zertifikate</h2>
-              <p>
-                Zertifikate ersetzen keine praktische Erfahrung, zeigen aber
-                mein Engagement für Lernen und Weiterentwicklung. Hier sind
-                einige, die ich erworben habe, um meine Kenntnisse und Expertise
-                zu belegen.
-              </p>
-            </header>
-            <Certificates />
-          </section>
-
-          <section id="skills">
-            <header class="major">
-              <h2>Fähigkeiten</h2>
-              <p>
-                Meine Fähigkeiten genau zu benennen ist schwer, da ich neugierig
-                bin und gerne Neues lerne. Diese Liste zeigt die Bereiche, die
-                mich besonders interessieren und mit denen ich aktiv arbeite.
-              </p>
-            </header>
-            <ListCard title="skills" />
-          </section>
-        </div>
-
-        <section id="projects">
-          <header class="major">
-            <h2>Projekte</h2>
-            <p>
-              Einige meiner Arbeiten entstanden in internen
-              Unternehmensumgebungen und können nicht öffentlich geteilt werden.
-              Die hier beschriebenen Projekte spiegeln meine praktische Arbeit
-              und die Ergebnisse daraus wider.
-            </p>
-          </header>
-          <Projects />
-        </section>
-      </main>
-    </div>
-  </body></BaseLayout
->
+  <Section id="projects" title="Projekte">
+    <p slot="description">
+      Einige meiner Arbeiten entstanden in internen Unternehmensumgebungen und
+      können nicht öffentlich geteilt werden. Die hier beschriebenen Projekte
+      spiegeln meine praktische Arbeit und die Ergebnisse daraus wider.
+    </p>
+    <Projects />
+  </Section>
+</BaseLayout>

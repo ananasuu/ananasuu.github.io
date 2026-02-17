@@ -1,36 +1,42 @@
 ---
-import { getLocaleFromUrl, getLocalizedContent } from '../utils/i18n/i18n';
-import LinkCard from './LinkCard.astro';
+import { getLocaleFromUrl, getLocalizedContent } from "../utils/i18n/i18n";
+import LinkCard from "./LinkCard.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const resourceCategories = [
-    (await import('../data/creative/ressourcen/tutorials.json')).default,
-    (await import('../data/creative/ressourcen/patterns.json')).default,
-    (await import('../data/creative/ressourcen/tools.json')).default,
-    (await import('../data/creative/ressourcen/shops.json')).default,
-    (await import('../data/creative/ressourcen/misc.json')).default,
+    (await import("../data/creative/ressourcen/tutorials.json")).default,
+    (await import("../data/creative/ressourcen/patterns.json")).default,
+    (await import("../data/creative/ressourcen/tools.json")).default,
+    (await import("../data/creative/ressourcen/shops.json")).default,
+    (await import("../data/creative/ressourcen/misc.json")).default,
 ];
 
 const localizedCategories = resourceCategories.map((category) => {
     const localizedCategory = getLocalizedContent(category, locale);
     return {
         ...localizedCategory,
-        ressourcen: category.ressourcen.map((resource) => getLocalizedContent(resource, locale)),
+        ressourcen: category.ressourcen.map((resource) =>
+            getLocalizedContent(resource, locale),
+        ),
     };
 });
 ---
 
 <div class="resources-list">
-    {localizedCategories.map((category, index) => (
-        <details name="resources" open={index === 0}>
-            <summary>
-                <span>{category.title}</span>
-            </summary>
-            <div class="resources-list-content">
-                <h3>{category.title}</h3>
-            {category.description ? <p>{category.description}</p> : null}
-            <LinkCard links={category.ressourcen} />
-            </div>
-        </details>
-    ))}
+    {
+        localizedCategories.map((category, index) => (
+            <details name="resources" open={index === 0}>
+                <summary>
+                    <span>{category.title}</span>
+                </summary>
+                <div class="resources-list-content">
+                    <h3>{category.title}</h3>
+                    {category.description ? (
+                        <p>{category.description}</p>
+                    ) : null}
+                    <LinkCard links={category.ressourcen} />
+                </div>
+            </details>
+        ))
+    }
 </div>

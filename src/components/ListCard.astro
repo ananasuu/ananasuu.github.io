@@ -4,20 +4,27 @@ import { getLocaleFromUrl, getLocalizedContent } from '../utils/i18n/i18n';
 const { title } = Astro.props;
 const locale = getLocaleFromUrl(Astro.url.pathname);
 
+interface List {
+  title: string;
+  description?: string;
+  items: (string[] | { skill: string; experience: string }[]);
+  de?: {
+    title?: string;
+    description?: string;
+    items?: (string[] | { skill: string; experience: string }[]);
+  };
+}
+
 // Lade die entsprechende JSON-Datei basierend auf dem title
-let lists = [];
+let lists: List[] = [];
 let isSimpleArray = false;
 
 if (title === 'skills') {
 	const rawData = await import('../data/work/skills.json').then((m) => m.default);
 	lists = rawData.map((item) => getLocalizedContent(item, locale));
-} else if (title === 'certificates') {
-	const rawData = await import('../data/work/certificates.json').then((m) => m.default);
-	lists = rawData.map((item) => getLocalizedContent(item, locale));
 } else if (title === 'interests') {
 	const data = await import('../data/work/interests.json').then((m) => m.default);
 	isSimpleArray = true;
-	// Interests hat ein anderes Format: { en: "...", de: "..." }
 	const localizedItems = data.map((item) => (locale === 'de' ? item.de : item.en));
 	const description =
 		locale === 'de'
@@ -48,7 +55,7 @@ if (title === 'skills') {
         <h3>{list.title}</h3>
         {list.description && <p>{list.description}</p>}
         <ul>
-          {Array.isArray(list.skills) && list.skills.map((skill: any) => (
+          {Array.isArray(list.items) && list.items.map((skill: any) => (
             <li>
               {typeof skill === 'string' ? skill : <><span>{skill.skill}</span><span>{skill.experience}</span></>}
             </li>

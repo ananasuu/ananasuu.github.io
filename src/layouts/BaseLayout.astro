@@ -1,7 +1,8 @@
 ---
 import ninaPfp from '../assets/img/Nina_Pfp.jpg';
+import Header from '../components/Header.astro';
 
-const { title = 'NinuMakes - Cosplay & Crafting Portfolio' } = Astro.props;
+const { title = 'NinuMakes - Cosplay & Crafting Portfolio', header } = Astro.props;
 
 const imprint = await import('../data/imprint.json').then((m) => m.default);
 const siteUrl = 'https://ananasuu.github.io/';
@@ -82,9 +83,13 @@ const structuredData = {
     <!-- Structured Data -->
     <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
   </head>
-
-  <slot />
-
+  <body>
+     <div id="wrapper">
+    {header && <Header {...header} />}
+    <main>
+    <slot />
+    </main>
+    </div>
           <footer>
           <h2>Impressum</h2>
           <p>
@@ -139,20 +144,6 @@ const structuredData = {
             © Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
           </p>
         </footer>
+          </body>
 
-        <script>
-      // Register Service Worker for caching and offline functionality
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("/service-worker.js")
-            .then((registration) => {
-              console.log("Service Worker registered:", registration.scope);
-            })
-            .catch((error) => {
-              console.error("Service Worker registration failed:", error);
-            });
-        });
-      }
-    </script>
 </html>
