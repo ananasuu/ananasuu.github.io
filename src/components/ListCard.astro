@@ -25,7 +25,6 @@ if (title === 'skills') {
 } else if (title === 'interests') {
 	const data = await import('../data/work/interests.json').then((m) => m.default);
 	isSimpleArray = true;
-	// Interests hat ein anderes Format: { en: "...", de: "..." }
 	const localizedItems = data.map((item) => (locale === 'de' ? item.de : item.en));
 	const description =
 		locale === 'de'

@@ -3,6 +3,7 @@ import { Picture } from "astro:assets";
 import ninaPfp from "../assets/img/Nina_Pfp.jpg";
 import CosCard from "../components/CosCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../layouts/Section.astro";
 import Ressources from "../components/Ressources.astro";
 
 const header = {
@@ -47,9 +48,8 @@ const header = {
           </div>
         </section>
 
-        <section id="cosplays">
-          <header class="major">
-            <h2>Cosplays & Buildbooks</h2>
+        <Section id="cosplays" title="Cosplays & Buildbooks">
+          <Fragment slot="description">
             <p>
               Here you'll find all my costumes! If you'd like to do a photoshoot
               together, just send me a
@@ -65,19 +65,17 @@ const header = {
               and are available through Google Drive — I hope they inspire your
               own projects!
             </p>
-          </header>
+          </Fragment>
           <CosCard />
-        </section>
+        </Section>
 
-        <section id="helpfulLinks">
-          <header class="major">
-            <h2>Helpful Links</h2>
-            <p>
-              Here are some of my favorite resources for cosplay, crafting, and
-              creativity. Whether you're looking for tutorials, inspiration, or
-              tools, these links have got you covered!
-            </p>
-          </header>
+             
+        <Section id="helpfulLinks" title="Helpful Links">
+          <p slot="description">
+            Here are some of my favorite resources for cosplay, crafting, and
+            creativity. Whether you're looking for tutorials, inspiration, or
+            tools, these links have got you covered!
+          </p>
           <Ressources />
-        </section>
+        </Section>
 </BaseLayout>

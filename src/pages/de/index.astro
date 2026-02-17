@@ -3,6 +3,7 @@ import { Picture } from "astro:assets";
 import ninaPfp from "../../assets/img/Nina_Pfp.jpg";
 import CosCard from "../../components/CosCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Section from "../../layouts/Section.astro";
 import Ressources from "../../components/Ressources.astro";
 
 const header = {
@@ -46,16 +47,15 @@ const header = {
           </div>
         </section>
 
-        <section id="cosplays">
-          <header class="major">
-            <h2>Cosplays & Buildbooks</h2>
+        <Section id="cosplays" title="Cosplays & Buildbooks">
+          <Fragment slot="description">
             <p>
               Hier findest du alle meine Kostüme! Wenn du Lust auf ein
               gemeinsames Fotoshooting hast, schick mir einfach eine
               <a href="https://www.instagram.com/ninumakes/" target="_blank"
                 >Instagram-DM</a
               > oder eine
-              <a href="mailto:nina.friedrich02@gmail.com">E-Mail</a> — ich freue mich
+             <a href="mailto:nina.friedrich02@gmail.com">E-Mail</a> — ich freue mich
               darauf!
             </p>
             <p>
@@ -64,19 +64,16 @@ const header = {
               Canva erstellt und sind über Google Drive verfügbar — vielleicht
               inspirieren sie dich für eigene Projekte!
             </p>
-          </header>
+          </Fragment>
           <CosCard />
-        </section>
+        </Section>
 
-        <section id="helpfulLinks">
-          <header class="major">
-            <h2>Hilfreiche Links</h2>
-            <p>
+        <Section id="helpfulLinks" title="Hilfreiche Links">
+           <p slot="description">
               Hier findest du einige meiner liebsten Ressourcen rund um Cosplay,
               Crafting und Kreativität. Egal ob du nach Tutorials, Inspiration
               oder Tools suchst — diese Links helfen dir weiter!
             </p>
-          </header>
-          <Ressources />
-        </section>
+            <Ressources />
+        </Section>
       </BaseLayout>

@@ -7,6 +7,7 @@ import ListCard from "../../components/ListCard.astro";
 import Projects from "../../components/Projects.astro";
 import Resume from "../../components/Resume.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Section from "../../layouts/Section.astro";
 
 const header = {
   header: "Nina Friedrich",
@@ -80,50 +81,38 @@ const header = {
           </div>
         </section>
 
-        <section id="resume">
-          <header class="major">
-            <h2>Lebenslauf</h2>
-          </header>
+        <Section id="resume" title="Lebenslauf">
           <Resume />
-        </section>
+        </Section>
 
         <div class="skills-certificates-container">
-          <section id="certificates">
-            <header class="major">
-              <h2>Zertifikate</h2>
-              <p>
+          <Section id="certificates" title="Zertifikate">
+              <p slot="description">
                 Zertifikate ersetzen keine praktische Erfahrung, zeigen aber
                 mein Engagement für Lernen und Weiterentwicklung. Hier sind
                 einige, die ich erworben habe, um meine Kenntnisse und Expertise
                 zu belegen.
               </p>
-            </header>
             <Certificates />
-          </section>
+          </Section>
 
-          <section id="skills">
-            <header class="major">
-              <h2>Fähigkeiten</h2>
-              <p>
+          <Section id="skills" title="Fähigkeiten">
+              <p slot="description">
                 Meine Fähigkeiten genau zu benennen ist schwer, da ich neugierig
                 bin und gerne Neues lerne. Diese Liste zeigt die Bereiche, die
                 mich besonders interessieren und mit denen ich aktiv arbeite.
               </p>
-            </header>
             <ListCard title="skills" />
-          </section>
+          </Section>
         </div>
 
-        <section id="projects">
-          <header class="major">
-            <h2>Projekte</h2>
-            <p>
-              Einige meiner Arbeiten entstanden in internen
-              Unternehmensumgebungen und können nicht öffentlich geteilt werden.
-              Die hier beschriebenen Projekte spiegeln meine praktische Arbeit
-              und die Ergebnisse daraus wider.
-            </p>
-          </header>
+        <Section id="projects" title="Projekte">
+          <p slot="description">
+            Einige meiner Arbeiten entstanden in internen
+            Unternehmensumgebungen und können nicht öffentlich geteilt werden.
+            Die hier beschriebenen Projekte spiegeln meine praktische Arbeit
+            und die Ergebnisse daraus wider.
+          </p>
           <Projects />
-        </section>
-</BaseLayout>
+        </Section>
+       </BaseLayout>
