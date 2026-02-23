@@ -1,42 +1,5 @@
-/* Spotlight/Hero Section Styles */
-main {
-    container-type: inline-size;
-    container-name: main-content;
-    background-color: #ffffff;
-    border-radius: var(--rounded-corners);
-    color: var(--dark-font);
-
-    .spotlight .image {
-        border-color: #dddddd;
-    }
-
-    >section:not(:first-of-type) {
-        border-top: solid 1px #dddddd;
-        box-sizing: border-box;
-
-        &:first-child {
-            border-top: 0;
-        }
-    }
-
     .spotlight {
         margin: 0 0 2em 0;
-
-        /* Standard spotlight layout (für index.html) */
-        &:not(:has(.spotlight-top)) {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            .content {
-                width: 70%;
-
-                &> :last-child {
-                    margin-bottom: 0;
-                    margin-top: 1em;
-                }
-            }
-        }
 
         /* Erweiterte spotlight layout mit top/bottom (für work.html) */
         .spotlight-top {
@@ -53,6 +16,10 @@ main {
                     margin-bottom: 0;
                 }
             }
+        }
+
+        &:not(:has(.spotlight-bottom)) .spotlight-top {
+            margin-bottom: 0;
         }
 
         .spotlight-bottom {
@@ -109,46 +76,45 @@ main {
         }
     }
 
-    >section:first-of-type h2 {
-        justify-self: start;
-    }
-
     section>header {
         margin: 0 0 2em 0;
     }
-}
 
-@media screen and (max-width: 980px) {
-    section:first-of-type h2 {
-        justify-self: center !important;
-    }
+    @media screen and (max-width: 980px) {
+        section:first-of-type {
+            padding-top: 0;
 
-    .spotlight {
-
-        /* Standard spotlight (index.html) */
-        &:not(:has(.spotlight-top)) {
-            flex-direction: column-reverse;
-            text-align: center;
-        }
-
-        /* Erweiterte spotlight mit top/bottom (work.html) */
-        .spotlight-top {
-            flex-direction: column-reverse;
-            text-align: center;
-        }
-
-        .content {
-            width: 100%;
-            justify-content: center;
-
-            header.major h2:after {
-                margin-left: auto;
-                margin-right: auto;
+            h2 {
+                justify-self: center !important;
             }
         }
-    }
 
-    .pfp-hover {
-        margin-top: 7em;
+        .spotlight {
+
+            /* Standard spotlight (index.html) */
+            &:not(:has(.spotlight-top)) {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            /* Erweiterte spotlight mit top/bottom (work.html) */
+            .spotlight-top {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .content {
+                width: 100%;
+                justify-content: center;
+
+                header.major h2:after {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+
+        .pfp-hover {
+            margin-top: 9rem;
+        }
     }
-}

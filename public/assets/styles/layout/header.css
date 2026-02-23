@@ -3,12 +3,6 @@
     padding-block-start: 3em;
     padding-block-end: 2em;
     text-align: center;
-
-    >* {
-        transition: opacity var(--transition-slow) ease;
-        transition-delay: 0.5s;
-        opacity: 1;
-    }
 }
 
 h1 {
@@ -28,10 +22,9 @@ h1 {
     color: var(--dark-font);
     position: absolute;
     width: 100%;
-    padding: 1em;
+    padding: 0.5em;
     border-top-left-radius: var(--rounded-corners);
     border-top-right-radius: var(--rounded-corners);
-    cursor: default;
     text-align: center;
     box-sizing: border-box;
     z-index: 1000;
@@ -44,7 +37,6 @@ h1 {
         width: 100%;
 
         li {
-            transition: margin var(--transition-base) ease;
             display: inline-block;
             margin: 0 0.35em;
             padding: 0;
@@ -65,10 +57,6 @@ h1 {
             }
         }
     }
-}
-
-nav+main {
-    padding-top: 3.25em;
 }
 
 /* Language Switch */

@@ -1,11 +1,32 @@
 /* Section Container & Main Styles */
 
+main {
+    container-type: inline-size;
+    container-name: main-content;
+    background-color: #ffffff;
+    border-radius: var(--rounded-corners);
+    color: var(--dark-font);
+
+    >section:not(:first-of-type) {
+        border-top: solid 1px #dddddd;
+        box-sizing: border-box;
+
+        &:first-child {
+            border-top: 0;
+        }
+    }
+
+    >section:first-of-type h2 {
+        justify-self: start;
+    }
+}
+
 /* Skills & Certificates Combined Layout */
 .skills-certificates-container {
     display: grid;
     grid-template-columns: 1fr;
     align-items: start;
-    border-top: solid 1px #dddddd;
+    border-top: var(--divider);
 
     section {
         text-align: center;
@@ -13,7 +34,7 @@
     }
 
     section:last-of-type {
-        border-top: solid 1px #dddddd;
+        border-top: var(--divider);
     }
 
     #skills>div>div.infocard>ul>li {
@@ -27,10 +48,6 @@
 
     div {
         width: 100%;
-
-        div {
-            width: 100%;
-        }
     }
 
     li {
@@ -38,7 +55,7 @@
         height: fit-content;
 
         &:not(:first-of-type) {
-            border-top: solid 1px #dddddd;
+            border-top: var(--divider);
             margin-block-start: 0.25rem;
             padding-block-start: 0.25rem;
         }

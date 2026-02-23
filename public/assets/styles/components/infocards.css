@@ -126,7 +126,6 @@ ul:has(.infocard) {
         picture,
         .card-media {
             width: 100%;
-            height: auto;
             max-width: 100%;
             border-radius: var(--rounded-card-corners);
             grid-area: img;

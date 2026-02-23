@@ -33,6 +33,7 @@
   --spacing-half: 0.5rem;
   --spacing-base: 1rem;
   --border-subtle: rgba(0, 0, 0, 0.1);
+  --divider: solid 1px #dddddd;
   --primary-button-color: #1a7bb9;
   --primary-button-hover-color: #145a8f;
   --primary-button-disabled-color: #627689;
@@ -183,7 +184,7 @@ h2 {
 }
 
 section {
-  padding: clamp(2.5em, 7vw, 7em) clamp(1em, 5vw, 5em) clamp(2.5em, 7vw, 7em) clamp(1em, 5vw, 5em);
+  padding: clamp(6rem, 7vw, 7em) clamp(1em, 5vw, 5em) clamp(2.5em, 7vw, 7em) clamp(1em, 5vw, 5em);
 
   &:not(:first-of-type) {
     text-align: center;
