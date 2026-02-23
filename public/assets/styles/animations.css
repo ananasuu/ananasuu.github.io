@@ -1,7 +1,8 @@
 @media (prefers-reduced-motion: no-preference) {
+
   .infocard.link,
-  #resume > ul > li,
-  #certificates > ul > li {
+  #resume>ul>li,
+  #certificates>ul>li {
     transition:
       transform 200ms ease,
       box-shadow 200ms ease;
@@ -10,19 +11,17 @@
 
   .infocard.link:hover,
   .infocard.link:focus-within,
-  #resume > ul > li:hover,
-  #resume > ul > li:focus-within,
-  #certificates > ul > li:hover,
-  #certificates > ul > li:focus-within {
+  #resume>ul>li:hover,
+  #resume>ul>li:focus-within,
+  #certificates>ul>li:hover,
+  #certificates>ul>li:focus-within {
     transform: translateY(-6px);
-    box-shadow:
-      0 10px 18px rgba(0, 0, 0, 0.18),
-      0 4px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-hover);
   }
 
   .icon-motion {
     display: inline-block;
-    transition: transform 160ms ease;
+    transition: transform var(--transition-fast) ease;
     transform-origin: center;
     will-change: transform;
   }
@@ -52,16 +51,16 @@
     --icon-x: 4px;
   }
 
-  #certificates > ul > li > a::after {
-    transition: transform 200ms ease;
+  #certificates>ul>li>a::after {
+    transition: transform var(--transition-base) ease;
     transform: translateX(0);
     will-change: transform;
   }
 
-  #certificates > ul > li > a:hover::after,
-  #certificates > ul > li > a:focus-visible::after,
-  #certificates > ul > li:hover > a::after,
-  #certificates > ul > li:focus-within > a::after {
+  #certificates>ul>li>a:hover::after,
+  #certificates>ul>li>a:focus-visible::after,
+  #certificates>ul>li:hover>a::after,
+  #certificates>ul>li:focus-within>a::after {
     transform: translateX(6px);
   }
 }
