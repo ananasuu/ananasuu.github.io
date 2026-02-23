@@ -1,11 +1,9 @@
 ---
-
-import CosCard from "../components/CosCard.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Ressources from "../components/Ressources.astro";
-import Section from "../components/layout/Section.astro";
-import Spotlight from "../components/layout/Spotlight.astro";
-
+import CosCard from "@/components/CosCard.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Ressources from "@/components/Ressources.astro";
+import Section from "@/components/layout/Section.astro";
+import Spotlight from "@/components/layout/Spotlight.astro";
 
 const header = {
   header: "NinuMakes",
@@ -19,7 +17,7 @@ const header = {
 };
 ---
 
-<BaseLayout title="NinuMakes - Cosplay & Crafting Portfolio" header={header}>
+<BaseLayout title="NinuMakes - Cosplay & Crafting" header={header}>
   <Spotlight>
     <Fragment slot="description">
       <p>What started as simply putting together matching clothes quickly turned
@@ -30,7 +28,6 @@ const header = {
       <a class="button primary" href="/work"> About my Work </a>
         </Fragment>
   </Spotlight>
-</BaseLayout>
 
 <Section id="cosplays" title="Cosplays & Buildbooks">
   <Fragment slot="description">

@@ -1,9 +1,10 @@
 ---
-import CosCard from "../../components/CosCard.astro";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import Section from "../../components/layout/Section.astro";
-import Spotlight from "../../components/layout/Spotlight.astro";
-import Ressources from "../../components/Ressources.astro";
+import CosCard from "@/components/CosCard.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Section from "@/components/layout/Section.astro";
+import Spotlight from "@/components/layout/Spotlight.astro";
+import Ressources from "@/components/Ressources.astro";
+import { siteConfig } from "@/config/site";
 
 const header = {
   header: "NinuMakes",
@@ -17,7 +18,7 @@ const header = {
 };
 ---
 
-<BaseLayout header={header}>
+<BaseLayout title="NinuMakes - Cosplay & Crafting" header={header}>
   <Spotlight>
     <Fragment slot="description">
       <p>

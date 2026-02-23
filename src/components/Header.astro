@@ -1,7 +1,8 @@
 ---
-const { header, description, nav } = Astro.props;
+import { getLocaleFromUrl } from '@/utils/i18n/i18n';
+import type { HeaderConfig } from '@/types';
 
-import { getLocaleFromUrl } from '../utils/i18n/i18n';
+const { header, description, nav } = Astro.props as HeaderConfig;
 
 const pathname = Astro.url.pathname;
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);

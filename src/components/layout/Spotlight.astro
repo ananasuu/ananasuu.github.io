@@ -12,7 +12,7 @@
  *
  * @description
  * Renders a two-part spotlight section featuring:
- * - Top section: Profile header with name "Nina Friedrich" and description slot
+ * - Top section: Profile header with name and description slot
  * - Profile image: Optimized with multiple formats (avif, webp, jpeg) with high fetch priority
  * - Bottom section: Conditionally renders two card slots if both are provided
  *
@@ -22,20 +22,21 @@
 
 import ninaPfp from "../../assets/img/Nina_Pfp.jpg";
 import { Picture } from "astro:assets";
+import { siteConfig } from "@/config/site";
 ---
 
 <section class="spotlight">
     <div class="spotlight-top">
         <div class="content">
             <header class="major">
-                <h2>Nina Friedrich</h2>
+                <h2>{siteConfig.author}</h2>
             </header>
             <slot name="description" />
         </div>
         <div class="pfp-hover">
             <Picture
                 src={ninaPfp}
-                alt="Nina Friedrich"
+                alt={siteConfig.author}
                 width={272}
                 height={272}
                 formats={["avif", "webp", "jpeg"]}

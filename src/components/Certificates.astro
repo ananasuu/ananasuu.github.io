@@ -1,5 +1,5 @@
 ---
-import { getLocaleFromUrl } from '../utils/i18n/i18n';
+import { getLocaleFromUrl } from '@/utils/i18n/i18n';
 
 const certificatesData = await import('../data/work/certificates.json').then((m) => m.default);
 const locale = getLocaleFromUrl(Astro.url.pathname);

@@ -1,22 +1,12 @@
 ---
-import { getLocaleFromUrl, getLocalizedContent } from '../utils/i18n/i18n';
+import { getLocaleFromUrl, getLocalizedContent } from '@/utils/i18n/i18n';
+import type { ListItem } from '@/types';
 
 const { title } = Astro.props;
 const locale = getLocaleFromUrl(Astro.url.pathname);
 
-interface List {
-  title: string;
-  description?: string;
-  items: (string[] | { skill: string; experience: string }[]);
-  de?: {
-    title?: string;
-    description?: string;
-    items?: (string[] | { skill: string; experience: string }[]);
-  };
-}
-
 // Lade die entsprechende JSON-Datei basierend auf dem title
-let lists: List[] = [];
+let lists: ListItem[] = [];
 let isSimpleArray = false;
 
 if (title === 'skills') {
