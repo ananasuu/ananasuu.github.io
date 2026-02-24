@@ -2,9 +2,14 @@
 import ninaPfp from '../assets/img/Nina_Pfp.jpg';
 import Header from '@/components/layout/Header.astro';
 import { siteConfig } from '@/config/site';
+import { getLocaleFromUrl } from '@/utils/i18n/i18n';
+import { useTranslations } from '@/utils/i18n/ui';
 import type { BaseLayoutProps } from '@/types';
 
 const { title = siteConfig.title, header, description = siteConfig.meta.description.en } = Astro.props as BaseLayoutProps;
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = useTranslations(locale);
 
 const imprint = await import('../data/imprint.json').then((m) => m.default);
 const ninaPfpUrl = new URL(ninaPfp.src, siteConfig.url).href;
@@ -91,7 +96,7 @@ const structuredData = {
           {imprint.address} <br />
           {imprint.street} <br />
           {imprint.city} <br /><a href={`mailto:${imprint.email}`}>{imprint.email}</a><br />
-          <a href={imprint.url}>Contact Formular</a>
+          <a href={imprint.url}>{t('footer.contactForm')}</a>
         </p>
         <ul>
           <li>

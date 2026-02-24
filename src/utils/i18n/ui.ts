@@ -52,7 +52,7 @@ export const ui = {
     "section.projects.description":
       "Some of my work was created in internal company environments and can't be shared publicly. The projects described here are based on my hands-on experience and the results of that work.",
     "section.interests.description":
-      "Somehow I've managed to reach the point of having so many hobbies, that I sometimes get hit with decision fatigue! But I love them nontheless",
+      "Somehow I've managed to reach the point of having so many hobbies, that I sometimes get hit with decision fatigue! But I love them nonetheless",
 
     // Spotlight/Hero sections
     "hero.cosplay.intro":
@@ -70,7 +70,7 @@ export const ui = {
 
     // Footer
     "footer.copyright": "Design",
-    "footer.contactForm": "Contact Formular",
+    "footer.contactForm": "Contact Form",
 
     // Page titles
     "title.cosplay": "NinuMakes - Cosplay & Crafting Portfolio",

@@ -44,7 +44,6 @@ Große Komponenten, die **mit JSON-Daten arbeiten** und komplette Listen rendern
 
 - **CosCard.astro**: Rendert alle Cosplay-Einträge aus JSON
 - **Certificates.astro**: Rendert Zertifikate aus JSON
-- **Certificates.astro**: Rendert Zertifikate aus JSON
 - **ListCard.astro**: Generische Listen-Komponente (Skills, Interests)
 - **Projects.astro**: Rendert Projekte aus JSON
 - **Resume.astro**: Rendert Lebenslauf-Einträge aus JSON
