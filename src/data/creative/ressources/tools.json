@@ -17,6 +17,18 @@
         "use": "Skalierungswerkzeug",
         "description": "Die richtige Größe für Props zu bekommen? Mit dieser Seite gar kein Problem!"
       }
+    },
+    {
+      "title": "Tinkercad",
+      "use": "3D Modeling",
+      "url": "https://www.tinkercad.com/",
+      "description": "Tinkercad is a user-friendly 3D modeling tool that's perfect for beginners and great for creating simple cosplay props.",
+      "imageUrl": "/assets/img/tinkercad_logo.png",
+      "de": {
+        "title": "Tinkercad",
+        "use": "3D-Modellierung",
+        "description": "Tinkercad ist ein benutzerfreundliches 3D-Modellierungstool, das perfekt für Anfänger geeignet ist und sich hervorragend für die Erstellung einfacher Cosplay-Requisiten eignet."
+      }
     }
   ]
 }
