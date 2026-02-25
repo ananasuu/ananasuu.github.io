@@ -1,4 +1,4 @@
-// src/utils/i18n/ui.ts - Zentrale UI-Übersetzungen
+// src/utils/i18n/ui.ts - Central UI translations
 import type { Locale } from "../../types";
 
 /**
@@ -157,7 +157,7 @@ export type UIKey = keyof (typeof ui)["en"];
  *
  * @example
  * const t = useTranslations('de');
- * t('nav.about') // returns 'Über mich'
+ * t('nav.about') // returns the translated string for the given locale
  */
 export function useTranslations(locale: Locale) {
   return (key: UIKey): string => {
