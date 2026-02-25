@@ -1,0 +1,120 @@
+    .spotlight {
+        margin: 0 0 2em 0;
+
+        /* Erweiterte spotlight layout mit top/bottom (für work.html) */
+        .spotlight-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5em;
+            grid-column: 1 / -1;
+
+            .content {
+                width: 70%;
+
+                &> :last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &:not(:has(.spotlight-bottom)) .spotlight-top {
+            margin-bottom: 0;
+        }
+
+        .spotlight-bottom {
+            width: 100%;
+
+            header.major {
+                margin: 2em 0 2em 0;
+            }
+        }
+
+        header.major {
+            margin: 0 0 2em 0;
+        }
+
+        /* Profilbild Hover mit Animation und Bildwechsel */
+        .pfp-hover {
+            width: 272px;
+            height: 272px;
+            border-radius: 100%;
+            position: relative;
+            box-shadow: var(--shadow-subtle);
+            overflow: hidden;
+
+            /* Style für das img Tag */
+            img,
+            picture {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 100%;
+                display: block;
+            }
+
+            &:hover::after {
+                opacity: 1;
+                transform: scale(1.1) rotate(-2deg);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 100%;
+                background-image: url("/assets/img/Fun_Pfp.jpg");
+                background-size: cover;
+                background-position: center;
+                opacity: 0;
+                transform: scale(0.95) rotate(-2deg);
+                transition:
+                    opacity 0.5s cubic-bezier(0.77, 0, 0.18, 1),
+                    transform 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+                z-index: 2;
+            }
+        }
+    }
+
+    section>header {
+        margin: 0 0 2em 0;
+    }
+
+    @media screen and (max-width: 980px) {
+        section:first-of-type {
+            padding-top: 0;
+
+            h2 {
+                justify-self: center !important;
+            }
+        }
+
+        .spotlight {
+
+            /* Standard spotlight (index.html) */
+            &:not(:has(.spotlight-top)) {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            /* Erweiterte spotlight mit top/bottom (work.html) */
+            .spotlight-top {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .content {
+                width: 100%;
+                justify-content: center;
+
+                header.major h2:after {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+
+        .pfp-hover {
+            margin-top: 9rem;
+        }
+    }

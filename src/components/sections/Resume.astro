@@ -1,0 +1,42 @@
+---
+import { getLocaleFromUrl, getLocalizedContent } from "@/utils/i18n/i18n";
+
+const resumeData = await import("@/data/work/resume.json").then(
+    (m) => m.default,
+);
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const presentLabel = locale === "de" ? "Heute" : "Present";
+const gradeLabel = locale === "de" ? "Note" : "Grade";
+---
+
+<ul>
+    {
+        [...resumeData].reverse().map((entry) => {
+            const localizedEntry = getLocalizedContent(entry, locale);
+
+            return (
+                <li>
+                    <h3>{localizedEntry.title}</h3>
+                    <p>
+                        {localizedEntry.institution}, {localizedEntry.start} -{" "}
+                        {localizedEntry.end || presentLabel}
+                    </p>
+                    {typeof localizedEntry.description === "string" ? (
+                        <p>{localizedEntry.description}</p>
+                    ) : (
+                        <ul>
+                            {localizedEntry.description.map((item) => (
+                                <li>{item}</li>
+                            ))}
+                        </ul>
+                    )}
+                    {localizedEntry.grade ? (
+                        <p>
+                            {gradeLabel}: {localizedEntry.grade}
+                        </p>
+                    ) : null}
+                </li>
+            );
+        })
+    }
+</ul>
