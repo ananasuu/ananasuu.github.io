@@ -1,82 +1,82 @@
 # Component Structure
 
-Components sind in drei logische Kategorien organisiert, um Wartbarkeit und Verständlichkeit zu verbessern.
+Components are organized into three logical categories to improve maintainability and understandability.
 
-## 📁 Verzeichnis-Struktur
+## 📁 Directory Structure
 
 ```
 src/components/
-├── layout/           # Layout-Container (globale Struktur)
-│   ├── Header.astro        # Globale Navigation
-│   ├── Section.astro       # Allgemeiner Section-Container
-│   └── Spotlight.astro     # Hero/Spotlight-Section-Container
-├── features/         # Kleine, reusable UI-Komponenten
-│   └── LinkCard.astro      # Link-Karten für Ressourcen
-└── sections/         # Große, daten-rendernde Komponenten
-    ├── CosCard.astro       # Cosplay-Portfolio-Liste
-    ├── Certificates.astro  # Zertifikate-Liste
-    ├── ListCard.astro      # Generische Listen (Skills, Interests)
-    ├── Projects.astro      # Projekts-Liste
-    ├── Resume.astro        # Lebenslauf-Einträge
-    └── Ressources.astro    # Ressourcen/Links nach Kategorien
+├── layout/           # Layout containers (global structure)
+│   ├── Header.astro        # Global navigation
+│   ├── Section.astro       # General section container
+│   └── Spotlight.astro     # Hero/Spotlight section container
+├── features/         # Small, reusable UI components
+│   └── LinkCard.astro      # Link cards for resources
+└── sections/         # Large, data-rendering components
+    ├── CosCard.astro       # Cosplay portfolio list
+    ├── Certificates.astro  # Certificates list
+    ├── ListCard.astro      # Generic lists (Skills, Interests)
+    ├── Projects.astro      # Projects list
+    ├── Resume.astro        # Resume entries
+    └── Ressources.astro    # Resources/links by categories
 ```
 
-## 🎯 Komponenten-Kategorien
+## 🎯 Component Categories
 
-### `layout/` - Layout-Container
-Komponenten, die die **globale Struktur** definieren.
+### `layout/` - Layout Containers
+Components that define the **global structure**.
 
-- **Header.astro**: Globale Navigation mit Language-Switch
-- **Section.astro**: Container für Content-Sections (mit ID, Title, Description-Slot)
-- **Spotlight.astro**: Hero-Section mit Profil-Bild und Card-Slots
+- **Header.astro**: Global navigation with language switch
+- **Section.astro**: Container for content sections (with ID, Title, Description slot)
+- **Spotlight.astro**: Hero section with profile image and card slots
 
-**Verwendung**: In Pages als Wrapper um Inhalte.
+**Usage**: In pages as a wrapper around content.
 
-### `features/` - Reusable UI-Komponenten
-Kleine, **in sich geschlossene** UI-Komponenten, die unabhängig verwendet werden können.
+### `features/` - Reusable UI Components
+Small, **self-contained** UI components that can be used independently.
 
-- **LinkCard.astro**: Karte für extern verlinkte Ressourcen
+- **LinkCard.astro**: Card for externally linked resources
 
-**Verwendung**: Importiert von anderen Komponenten (z.B. Ressources.astro).
+**Usage**: Imported by other components (e.g., Ressources.astro).
 
-### `sections/` - Daten-rendernde Komponenten
-Große Komponenten, die **mit JSON-Daten arbeiten** und komplette Listen rendern.
+### `sections/` - Data-Rendering Components
+Large components that **work with JSON data** and render complete lists.
 
-- **CosCard.astro**: Rendert alle Cosplay-Einträge aus JSON
-- **Certificates.astro**: Rendert Zertifikate aus JSON
-- **ListCard.astro**: Generische Listen-Komponente (Skills, Interests)
-- **Projects.astro**: Rendert Projekte aus JSON
-- **Resume.astro**: Rendert Lebenslauf-Einträge aus JSON
-- **Ressources.astro**: Rendert Ressourcen nach Kategorien aus JSON
+- **CosCard.astro**: Renders all cosplay entries from JSON
+- **Certificates.astro**: Renders certificates from JSON
+- **ListCard.astro**: Generic list component (Skills, Interests)
+- **Projects.astro**: Renders projects from JSON
+- **Resume.astro**: Renders resume entries from JSON
+- **Ressources.astro**: Renders resources by categories from JSON
 
-**Merkmale**:
-- Laden JSON-Daten via `import()`
-- Verwenden i18n für Lokalisierung
-- Rendern komplette Listen/Seiten
+**Features**:
+- Load JSON data via `import()`
+- Use i18n for localization
+- Render complete lists/pages
 
-**Verwendung**: In Pages als einzelne Komponente.
+**Usage**: In pages as a single component.
 
-## 🔄 Import-Konventionen
+## 🔄 Import Conventions
 
 ```astro
-// ✅ Pages importieren Komponenten mit vollständigem Pfad
+// ✅ Pages import components with full path
 import Header from "@/components/layout/Header.astro";
 import CosCard from "@/components/sections/CosCard.astro";
 import Section from "@/components/layout/Section.astro";
 
-// ✅ Komponenten verwenden @ Alias für Daten
+// ✅ Components use @ alias for data
 import data from "@/data/work/projects.json";
 
-// ✅ Relationale Imports innerhalb eines Verzeichnisses
+// ✅ Relative imports within a directory
 import LinkCard from "../features/LinkCard.astro";
 ```
 
 ## 📝 Best Practices
 
-1. **Neue Komponenten einstufen**: Ist es Daten-basiert → `sections/`, ist es reusable UI → `features/`, ist es strukturell → `layout/`
-2. **Imports konsistent halten**: Verwende `@/` Alias für Data-Imports
-3. **Lokalisierung**: Alle Komponenten sollten `getLocaleFromUrl()` und `getLocalizedContent()` verwenden
-4. **Props typen**: Definiere Props-Types in `src/types/index.ts`
+1. **Categorize new components**: If data-based → `sections/`, if reusable UI → `features/`, if structural → `layout/`
+2. **Keep imports consistent**: Use `@/` alias for data imports
+3. **Localization**: All components should use `getLocaleFromUrl()` and `getLocalizedContent()`
+4. **Props types**: Define props types in `src/types/index.ts`
 
 ## 🎨 Component Props Template
 

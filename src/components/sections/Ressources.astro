@@ -4,18 +4,18 @@ import LinkCard from "../features/LinkCard.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const resourceCategories = [
-    (await import("@/data/creative/ressourcen/tutorials.json")).default,
-    (await import("@/data/creative/ressourcen/patterns.json")).default,
-    (await import("@/data/creative/ressourcen/tools.json")).default,
-    (await import("@/data/creative/ressourcen/shops.json")).default,
-    (await import("@/data/creative/ressourcen/misc.json")).default,
+    (await import("@/data/creative/resources/tutorials.json")).default,
+    (await import("@/data/creative/resources/patterns.json")).default,
+    (await import("@/data/creative/resources/tools.json")).default,
+    (await import("@/data/creative/resources/shops.json")).default,
+    (await import("@/data/creative/resources/misc.json")).default,
 ];
 
 const localizedCategories = resourceCategories.map((category) => {
     const localizedCategory = getLocalizedContent(category, locale);
     return {
         ...localizedCategory,
-        ressourcen: category.ressourcen.map((resource) =>
+        resources: category.resources.map((resource) =>
             getLocalizedContent(resource, locale),
         ),
     };
@@ -34,7 +34,7 @@ const localizedCategories = resourceCategories.map((category) => {
                     {category.description ? (
                         <p>{category.description}</p>
                     ) : null}
-                    <LinkCard links={category.ressourcen} />
+                    <LinkCard links={category.resources} />
                 </div>
             </details>
         ))

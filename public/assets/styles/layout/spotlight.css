@@ -1,7 +1,7 @@
     .spotlight {
         margin: 0 0 2em 0;
 
-        /* Erweiterte spotlight layout mit top/bottom (für work.html) */
+        /* Extended spotlight layout with top/bottom (for work.html) */
         .spotlight-top {
             display: flex;
             align-items: center;
@@ -34,7 +34,7 @@
             margin: 0 0 2em 0;
         }
 
-        /* Profilbild Hover mit Animation und Bildwechsel */
+        /* Profile picture hover with animation and image change */
         .pfp-hover {
             width: 272px;
             height: 272px;
@@ -43,7 +43,7 @@
             box-shadow: var(--shadow-subtle);
             overflow: hidden;
 
-            /* Style für das img Tag */
+            /* Style for img tag */
             img,
             picture {
                 width: 100%;
@@ -97,7 +97,7 @@
                 text-align: center;
             }
 
-            /* Erweiterte spotlight mit top/bottom (work.html) */
+            /* Extended spotlight with top/bottom (work.html) */
             .spotlight-top {
                 flex-direction: column-reverse;
                 text-align: center;

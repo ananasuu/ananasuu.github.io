@@ -12,6 +12,17 @@
     }
   },
   {
+    "title": "Chimera Falin",
+    "source": "Delicious in Dungeon",
+    "imageUrl": "/assets/img/card_img/Falin_NF.jpg",
+    "genres": "Süß, Besessen & Hungrig!",
+    "description": "Chimera Falin is a character from a story about adventurers cooking and eating monsters to search for their dear friend Falin. But something has changed, she doesn't seem as human as before...",
+    "de": {
+      "genres": "Süß, Besessen & Hungrig!",
+      "description": "Chimera Falin ist eine Figur aus einer Geschichte über Abenteurer, die Monster kochen und essen, um ihre liebe Freundin Falin zu finden. Aber etwas hat sich verändert, sie scheint nicht mehr so menschlich wie zuvor zu sein..."
+    }
+  },
+  {
     "title": "Frieren",
     "source": "Frieren: Beyond Journey's End",
     "imageUrl": "/assets/img/card_img/Frieren_NF.jpg",

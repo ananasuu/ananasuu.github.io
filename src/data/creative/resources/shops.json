@@ -5,7 +5,7 @@
     "title": "Shops",
     "description": "Manchmal macht erst das richtige Werkzeug oder Material den Unterschied — hier sind die Shops, die ich am liebsten benutze!"
   },
-  "ressourcen": [
+  "resources": [
     {
       "title": "Cosplayshop.be",
       "use": "Cosplay Materials, EU",
@@ -16,6 +16,18 @@
         "title": "Cosplayshop.be",
         "use": "Cosplay-Materialien, EU",
         "description": "Cosplay-Materialien in der EU zu bestellen kann knifflig sein, aber in diesem Shop findet man tolle Sachen!"
+      }
+    },
+    {
+      "title": "Foamlord",
+      "use": "Cosplay Materials, Foam, EU",
+      "url": "https://www.foamlord.de/",
+      "description": "FoamLord is a great source for high-quality foam materials, perfect for crafting props and armor.",
+      "imageUrl": "/assets/img/foamlord_logo.png",
+      "de": {
+        "title": "Foamlord",
+        "use": "Cosplay-Materialien, Schaumstoff, EU",
+        "description": "FoamLord ist eine tolle Quelle für hochwertigen Schaumstoff (\"Foam\"), perfekt für die Herstellung von Requisiten und Rüstungen."
       }
     }
   ]
