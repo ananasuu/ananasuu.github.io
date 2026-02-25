@@ -13,11 +13,7 @@ const locale = getLocaleFromUrl(Astro.url.pathname);
             const localizedProject = getLocalizedContent(project, locale);
             return (
                 <li>
-                    <h3>
-                        <a href={localizedProject.url}>
-                            {localizedProject.title}
-                        </a>
-                    </h3>
+                    <h3>{localizedProject.title}</h3>
                     <p>{localizedProject.role}</p>
                     <p>{localizedProject.description}</p>
                 </li>

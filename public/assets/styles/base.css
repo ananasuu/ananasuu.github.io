@@ -227,14 +227,19 @@ picture {
 
 #projects li {
   text-align: left;
+  margin-block-end: 1rem;
 
-  h3 a,
-  a h3 {
-    color: var(--primary-button-color);
-    border-bottom: 1px dotted var(--primary-button-color);
+  h3 {
+    font-size: var(--font-size-large);
+    margin: 0;
+  }
 
-    &:hover {
-      border-bottom: 1px solid var(--primary-button-color);
+  p {
+    margin: 0;
+
+    &:first-of-type {
+      color: var(--secondary-font);
+      font-size: var(--font-size-small);
     }
   }
 }
