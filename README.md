@@ -97,7 +97,7 @@ Content lives in data as JSON files with the following structure:
 
 Cosplay Content (creative)
 cosplays.json - Portfolio items
-ressourcen/ - Resource categories (tutorials, tools, etc.)
+resources/ - Resource categories (tutorials, tools, etc.)
 Professional Content (work)
 projects.json - Work projects
 resume.json - Education & experience

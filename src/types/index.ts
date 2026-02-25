@@ -165,5 +165,5 @@ export interface ResourceLink {
 export interface ResourceCategory {
   title: string;
   description?: string;
-  ressourcen: ResourceLink[];
+  resources: ResourceLink[];
 }
