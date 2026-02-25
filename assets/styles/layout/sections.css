@@ -50,6 +50,11 @@ main {
         width: 100%;
     }
 
+    .infocard ul {
+        list-style: none !important;
+        padding: 1.5rem;
+    }
+
     li {
         text-align: center !important;
         height: fit-content;
