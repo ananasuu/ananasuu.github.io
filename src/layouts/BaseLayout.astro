@@ -1,145 +1,25 @@
 ---
-import ninaPfp from '../assets/img/Nina_Pfp.jpg';
-import Header from '@/components/layout/Header.astro';
+import BasicLayout from "@ninumakes/ui/BasicLayout.astro"
 import { siteConfig } from '@/config/site';
 import { getLocaleFromUrl } from '@/utils/i18n/i18n';
 import { useTranslations } from '@/utils/i18n/ui';
 import type { BaseLayoutProps } from '@/types';
+import "../../public/assets/styles/index.css"
 
 const { title = siteConfig.title, header, description = siteConfig.meta.description.en } = Astro.props as BaseLayoutProps;
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = useTranslations(locale);
 
-const imprint = await import('../data/imprint.json').then((m) => m.default);
-const ninaPfpUrl = new URL(ninaPfp.src, siteConfig.url).href;
-
-const structuredData = {
-	...siteConfig.structuredData,
-	name: siteConfig.author,
-	url: siteConfig.url,
-	image: ninaPfpUrl,
-	description,
-	sameAs: [siteConfig.social.github],
-};
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <meta name="keywords" content={siteConfig.meta.keywords} />
-    <meta name="author" content={siteConfig.author} />
-    
-    <link rel="canonical" href={siteConfig.url} />
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={siteConfig.url} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={ninaPfpUrl} />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={siteConfig.url} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={ninaPfpUrl} />
-    
-    <!-- Critical CSS -->
-    <link rel="stylesheet" href="/assets/styles/index.css" />
-    
-    <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Preload Google Fonts -->
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet" />
-    </noscript>
-    
-    <title>{title}</title>
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-  </head>
-  <body>
-    <div id="wrapper">
-      {header && <Header {...header} />}
-      <main>
-        <slot />
-      </main>
-      <footer>
-        <h2>Impressum</h2>
-        <p>
-          {imprint.name}<br />
-          {imprint.address} <br />
-          {imprint.street} <br />
-          {imprint.city} <br /><a href={`mailto:${imprint.email}`}>{imprint.email}</a><br />
-          <a href={imprint.url}>{t('footer.contactForm')}</a>
-        </p>
-        <ul>
-          <li>
-            <a href={imprint.socialMedia.instagram} aria-label="Instagram">
-              <img
-                src="/assets/img/icons8_instagram.png"
-                alt="Instagram"
-                width="50"
-                height="50"
-                loading="lazy"
-                class="icon-motion"
-              />
-            </a>
-          </li>
-          <li>
-            <a href={imprint.socialMedia.github} aria-label="GitHub">
-              <img
-                src="/assets/img/icons8_github.png"
-                alt="GitHub"
-                width="50"
-                height="50"
-                loading="lazy"
-                class="icon-motion"
-              />
-            </a>
-          </li>
-          <li>
-            <a href={imprint.socialMedia.tiktok} aria-label="TikTok">
-              <img
-                src="/assets/img/icons8_tiktok.png"
-                alt="TikTok"
-                width="50"
-                height="50"
-                loading="lazy"
-                class="icon-motion"
-              />
-            </a>
-          </li>
-        </ul>
-        <p class="copyright">
-          © Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
-        </p>
-      </footer>
-    </div>
-  </body>
-</html>
+<BasicLayout
+title={title}
+  description={description}
+  siteUrl={siteConfig.url}
+  author={siteConfig.author}
+  keywords={siteConfig.meta.keywords}
+  header={header}
+  >
+<slot />
+</BasicLayout>
