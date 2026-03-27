@@ -25,6 +25,7 @@
   },
   "homepage": "https://ananasuu.github.io/",
   "dependencies": {
+    "@ninumakes/ui": "github:ananasuu/ninumakes-ui",
     "axe-core": "^4.11.1"
   },
   "devDependencies": {
